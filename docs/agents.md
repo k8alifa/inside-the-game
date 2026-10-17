@@ -81,3 +81,25 @@ itg-live data/samples/NBA-HCF-7 --jsonl        # one JSON object per line, for a
 ```
 
 Each output line carries `fact_ids`, `evidence` (event ids), `source` (`model`, `template`, or `template-fallback`) and `blocked` reasons.
+
+# Recap writer
+
+An automated, fact-checked match report (`agents/recap.py`). It reuses the analyst workflow (draft, fact-check, one revision round) with a different writer, so the same checker guards every paragraph. Paragraphs keep their `order` through revisions; any that still fail are dropped. The report ends with an evidence list: fact ids and event ids per paragraph.
+
+```bash
+itg-recap data/samples/NBA-HCF-7
+```
+
+# Translator
+
+Translates verified English lines and reports (`agents/translator.py`), then checks the translation against its source, because translating can add errors:
+
+- **Numbers:** the set of numbers must be identical, counting repeats. Arabic-Indic digits and decimal commas are normalized first.
+- **Names:** in Latin-script languages, every squad surname in the source must appear. Arabic, Japanese and Hindi transliterate names, so only the number check applies there.
+
+A blocked translation is not shown; the English line is used instead. The translator needs a model.
+
+```bash
+itg-live  data/samples/NBA-HCF-7 --lang ar,es
+itg-recap data/samples/NBA-HCF-7 --lang ar,es
+```

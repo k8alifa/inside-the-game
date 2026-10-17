@@ -11,7 +11,8 @@ Explainable, multi-agent match intelligence on synthetic football data. Built fo
 | Synthetic match generator | Done |
 | Analyst + fact-checker (Agent Framework workflow) | Done, offline. Live model not wired yet |
 | Live narrator (fact-checked, safe fallback) | Done, offline |
-| Recap and translator agents | Not started |
+| Recap writer (fact-checked) | Done, offline |
+| Translator (numbers and names re-checked) | Done; needs a model to run |
 | Orchestration and hosting | Not started |
 
 ## Synthetic match generator
@@ -38,6 +39,18 @@ Every insight cites facts computed from the events. A separate fact-checker rebu
 ```bash
 itg-analyze data/samples/NBA-HCF-7          # post-match insights
 itg-live data/samples/NBA-HCF-7 --speed 60  # live commentary on a replayed feed
+itg-recap data/samples/NBA-HCF-7            # match report
+itg-live data/samples/NBA-HCF-7 --lang ar,es  # with translations (needs a model)
+```
+
+## Connect a model (Microsoft Foundry)
+
+Run `scripts/azure-setup.sh` in Azure Cloud Shell, then:
+
+```bash
+pip install -e ".[foundry]"
+export ITG_MODEL_PROVIDER=foundry FOUNDRY_PROJECT_ENDPOINT=... FOUNDRY_MODEL=gpt-5-mini
+itg-live data/samples/NBA-HCF-7
 ```
 
 ## Tests
