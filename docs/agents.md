@@ -62,3 +62,22 @@ itg-analyze data/samples/NBA-HCF-7 --json        # full report with evidence ids
 pip install -e ".[foundry]"
 ITG_MODEL_PROVIDER=foundry FOUNDRY_PROJECT_ENDPOINT=... FOUNDRY_MODEL=... itg-analyze data/samples/NBA-HCF-7
 ```
+
+# Live narrator
+
+Real-time commentary from a streaming feed (`agents/narrator.py`).
+
+```
+event feed -> MomentDetector -> moment fact -> narrator -> fact-checker -> line
+```
+
+- **MomentDetector** sees one event at a time and only knows the past. It raises a moment for kickoff, goals (with assist, running score, and counter-attack speed), saves from chances of 0.12+ xG, big chances missed (0.30+ xG), cards, substitutions, momentum swings (checked every 15 minutes), half-time and full-time.
+- **Narrator**: `LLMNarrator` (Agent Framework agent, one line of 30 words or fewer per moment) or `TemplateNarrator` (offline).
+- **Safety rule for live:** there is no time for a revision round. If the model's line fails the check, the template line, built only from the moment's figures, is used instead. The blocked line and its reasons are logged on the output line.
+
+```bash
+itg-live data/samples/NBA-HCF-7 --speed 60     # 90 minutes in about 90 seconds
+itg-live data/samples/NBA-HCF-7 --jsonl        # one JSON object per line, for a UI
+```
+
+Each output line carries `fact_ids`, `evidence` (event ids), `source` (`model`, `template`, or `template-fallback`) and `blocked` reasons.

@@ -19,11 +19,15 @@ _FIRST = (
     "Yusuf", "Zane", "Luca", "Adam", "Tariq", "Emre", "Joel", "Kai", "Milo",
 )
 _LAST = (
-    "Ashwell", "Brennick", "Calloway", "Dunmore", "Elstead", "Farrow",
-    "Galbraith", "Holloway", "Ingram", "Jessop", "Kirkwood", "Lindqvist",
-    "Marlow", "Northcott", "Okonjo", "Pemberton", "Quill", "Radley",
-    "Sutcombe", "Thorne", "Upworth", "Varga", "Whitlock", "Yardley", "Zeller",
-    "Abara", "Benhali", "Castellan", "Delmonte", "Esterly", "Fenwick", "Haldane",
+    "Ashwell", "Brennick", "Calloway", "Dunmore", "Elstead", "Farrow", "Galbraith", "Holloway",
+    "Ingram", "Jessop", "Kirkwood", "Lindqvist", "Marlow", "Northcott", "Okonjo", "Pemberton",
+    "Quill", "Radley", "Sutcombe", "Thorne", "Upworth", "Varga", "Whitlock", "Yardley",
+    "Zeller", "Abara", "Benhali", "Castellan", "Delmonte", "Esterly", "Fenwick", "Haldane",
+    "Amberley", "Blackmore", "Corriden", "Dovecote", "Ebbsworth", "Fairbank", "Gorsuch", "Hartwell",
+    "Isleworth", "Jardine", "Kettering", "Langstone", "Merrow", "Nethercott", "Oakhurst", "Pellow",
+    "Rosslyn", "Selbourne", "Tamworth", "Underhill", "Vossberg", "Wexley", "Ackroyd", "Bramhall",
+    "Cardew", "Dellacourt", "Eskdale", "Fontaine", "Greystoke", "Hambleton", "Ivers", "Kessling",
+    "Lowther", "Moorcroft", "Nakagawa", "Ostrander", "Penhallow", "Rinaldi", "Stavros", "Talbeck",
 )
 
 
@@ -73,17 +77,21 @@ class TeamProfile:
         }
 
 
+_USED_SURNAMES: set[str] = set()
+
+
 def _roster(team_id: str, seed: int) -> tuple[Player, ...]:
+    """Surnames are unique across the whole league so commentary is unambiguous."""
     rng = random.Random(f"roster:{team_id}:{seed}")
-    names: set[str] = set()
     numbers = [1, 2, 3, 4, 5, 6, 8, 10, 7, 9, 11, 13, 15, 16, 18, 19]
     players = []
     for i, role in enumerate(ROLES_433 + BENCH_ROLES):
         while True:
-            name = f"{rng.choice(_FIRST)} {rng.choice(_LAST)}"
-            if name not in names:
-                names.add(name)
+            last = rng.choice(_LAST)
+            if last not in _USED_SURNAMES:
+                _USED_SURNAMES.add(last)
                 break
+        name = f"{rng.choice(_FIRST)} {last}"
         players.append(Player(id=f"{team_id}-{numbers[i]}", name=name, number=numbers[i], role=role))
     return tuple(players)
 

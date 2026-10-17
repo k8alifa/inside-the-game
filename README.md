@@ -10,7 +10,8 @@ Explainable, multi-agent match intelligence on synthetic football data. Built fo
 |---|---|
 | Synthetic match generator | Done |
 | Analyst + fact-checker (Agent Framework workflow) | Done, offline. Live model not wired yet |
-| Narrator, recap, translator agents | Not started |
+| Live narrator (fact-checked, safe fallback) | Done, offline |
+| Recap and translator agents | Not started |
 | Orchestration and hosting | Not started |
 
 ## Synthetic match generator
@@ -35,7 +36,8 @@ A sample match is in `data/samples/NBA-HCF-7/`. The event format is in [docs/eve
 Every insight cites facts computed from the events. A separate fact-checker rebuilds those facts itself and blocks any claim whose numbers or names the data does not support. See [docs/agents.md](docs/agents.md).
 
 ```bash
-itg-analyze data/samples/NBA-HCF-7
+itg-analyze data/samples/NBA-HCF-7          # post-match insights
+itg-live data/samples/NBA-HCF-7 --speed 60  # live commentary on a replayed feed
 ```
 
 ## Tests
