@@ -16,6 +16,7 @@ from ..sim.schema import Event
 from .facts import load_match
 from .models import make_chat_client
 from .narrator import LLMNarrator, TemplateNarrator, narrate
+from .translator import Translator
 
 
 async def paced(events: list[Event], speed: float) -> AsyncIterator[Event]:
@@ -32,12 +33,22 @@ async def _run(args: argparse.Namespace) -> int:
     events, ctx = load_match(args.match_dir)
     client = make_chat_client()
     narrator = LLMNarrator(client) if client else TemplateNarrator()
+    langs = [l for l in args.lang.split(",") if l] if args.lang else []
+    if langs and not client:
+        print("Translation needs a model (set ITG_MODEL_PROVIDER). Continuing in English.", flush=True)
+        langs = []
+    translator = Translator(client) if langs else None
     async for line in narrate(paced(events, args.speed), ctx, narrator):
+        translations = await translator.translate(line.text, langs, ctx) if translator else {}
         if args.jsonl:
-            print(json.dumps(line.to_dict()), flush=True)
+            print(json.dumps({**line.to_dict(), "translations": {k: v.to_dict() for k, v in translations.items()}},
+                             ensure_ascii=False), flush=True)
         else:
             flag = "  [model line blocked, safe line used]" if line.blocked else ""
             print(f"[{line.display_clock:>6}] {line.text}{flag}", flush=True)
+            for t in translations.values():
+                mark = "" if t.ok else f"  [translation blocked: {'; '.join(t.reasons)}]"
+                print(f"         {t.lang}: {t.text}{mark}", flush=True)
     return 0
 
 
@@ -46,6 +57,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("match_dir")
     p.add_argument("--speed", type=float, default=60.0)
     p.add_argument("--jsonl", action="store_true")
+    p.add_argument("--lang", default="", help="comma-separated language codes, e.g. ar,es (needs a model)")
     args = p.parse_args(argv)
     try:
         return asyncio.run(_run(args))

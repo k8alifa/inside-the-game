@@ -82,12 +82,20 @@ def parse_claims(text: str) -> list[Claim]:
     for c in data.get("claims", []):
         if isinstance(c, dict) and isinstance(c.get("text"), str):
             ids = c.get("fact_ids") or []
+            order = c.get("order")
             claims.append(Claim(text=c["text"].strip(), fact_ids=[str(i) for i in ids],
-                                kind=str(c.get("kind", "insight"))))
+                                kind=str(c.get("kind", "insight")),
+                                order=order if isinstance(order, int) else None))
     return claims
 
 
 class LLMAnalyst:
+    instructions = ANALYST_INSTRUCTIONS
+    agent_name = "analyst"
+
+    def task(self, ctx: MatchContext, n: int) -> str:
+        return f"Write the {n} most important insights about this match."
+
     def __init__(self, client):
         from agent_framework import Agent
 
@@ -97,7 +105,7 @@ class LLMAnalyst:
             """Return figures, players and evidence event ids for the given fact ids."""
             return json.dumps({i: self._facts[i].to_dict() for i in fact_ids if i in self._facts})
 
-        self.agent = Agent(client=client, name="analyst", instructions=ANALYST_INSTRUCTIONS,
+        self.agent = Agent(client=client, name=self.agent_name, instructions=self.instructions,
                            tools=[get_fact_details])
         self.session = None
 
@@ -106,19 +114,20 @@ class LLMAnalyst:
         self.session = self.agent.create_session()
         prompt = (
             f"Match: {ctx.team_names[ctx.home]} (home) vs {ctx.team_names[ctx.away]} (away).\n"
-            f"Write the {n} most important insights about this match.\n\nFacts:\n{fact_catalog(facts)}"
+            f"{self.task(ctx, n)}\n\nFacts:\n{fact_catalog(facts)}"
         )
         resp = await self.agent.run(prompt, session=self.session)
         return parse_claims(resp.text)
 
     async def revise(self, facts: dict[str, Fact], ctx: MatchContext, rejected: list[Verdict]) -> list[Claim]:
         self._facts = facts
-        lines = [f"- \"{v.claim.text}\" (cited {', '.join(v.claim.fact_ids) or 'nothing'}): "
+        lines = [f"- [kind {v.claim.kind}, order {v.claim.order}] \"{v.claim.text}\" "
+                 f"(cited {', '.join(v.claim.fact_ids) or 'nothing'}): "
                  + "; ".join(v.reasons) for v in rejected]
         prompt = (
             "The fact-checker rejected these claims:\n" + "\n".join(lines)
             + "\n\nRewrite each so it is fully supported by the facts it cites, or drop it. "
-            "Return ONLY the rewritten claims in the same JSON shape."
+            "Keep each claim's kind and order. Return ONLY the rewritten claims in the same JSON shape."
         )
         resp = await self.agent.run(prompt, session=self.session)
         return parse_claims(resp.text)

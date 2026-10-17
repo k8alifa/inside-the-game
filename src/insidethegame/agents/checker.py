@@ -36,9 +36,10 @@ class Claim:
     text: str
     fact_ids: list[str]
     kind: str = "insight"
+    order: int | None = None  # position in a longer piece, e.g. a recap
 
     def to_dict(self) -> dict:
-        return {"text": self.text, "fact_ids": list(self.fact_ids), "kind": self.kind}
+        return {"text": self.text, "fact_ids": list(self.fact_ids), "kind": self.kind, "order": self.order}
 
 
 @dataclass

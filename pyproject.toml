@@ -20,6 +20,7 @@ openai = ["agent-framework-openai>=1.17"]
 itg-sim = "insidethegame.sim.cli:main"
 itg-analyze = "insidethegame.agents.cli:main"
 itg-live = "insidethegame.agents.live:main"
+itg-recap = "insidethegame.agents.recap_cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
