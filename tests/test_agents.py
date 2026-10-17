@@ -59,18 +59,18 @@ def test_goal_facts_match_events(match):
 
 # -------------------------------------------------------------- checker
 @pytest.mark.parametrize("text, ids", [
-    ("Finn Galbraith's 14th-minute opener came from a chance worth just 0.01 xG.", ["goal-1"]),
+    ("Finn Holloway's 14th-minute opener came from a chance worth just 0.01 xG.", ["goal-1"]),
     ("Northbridge won 3-1.", ["final-score"]),
-    ("Haldane settled it at 90+2' with a 0.35 xG chance.", ["goal-4"]),
+    ("Underhill settled it at 90+2' with a 0.35 xG chance.", ["goal-4"]),
 ])
 def test_checker_accepts_supported_claims(checker, text, ids):
     assert checker.check(Claim(text, ids)).ok
 
 
 @pytest.mark.parametrize("text, ids, reason", [
-    ("Galbraith scored twice.", ["goal-1"], "number 'twice'"),
+    ("Holloway scored twice.", ["goal-1"], "number 'twice'"),
     ("Northbridge had 70% possession.", ["stats-NBA"], "number '70'"),
-    ("Kai Haldane won it late.", ["goal-1"], "player 'Kai Haldane'"),
+    ("Kai Underhill won it late.", ["goal-1"], "player 'Kai Underhill'"),
     ("Elmstead Rovers were watching.", ["final-score"], "team 'Elmstead Rovers'"),
     ("A made-up fact.", ["goal-99"], "unknown fact ids"),
     ("No citation at all.", [], "cites no facts"),
@@ -94,17 +94,17 @@ def test_llm_workflow_revises_rejected_claims(match):
     events, ctx = match
     round1 = {"claims": [
         {"text": "Northbridge won 3-1.", "fact_ids": ["final-score"]},
-        {"text": "Galbraith scored twice from 0.01 xG.", "fact_ids": ["goal-1"]},
+        {"text": "Holloway scored twice from 0.01 xG.", "fact_ids": ["goal-1"]},
     ]}
     round2 = {"claims": [
-        {"text": "Galbraith's opener came from just 0.01 xG.", "fact_ids": ["goal-1"]},
+        {"text": "Holloway's opener came from just 0.01 xG.", "fact_ids": ["goal-1"]},
     ]}
     client = ScriptedChatClient([json.dumps(round1), "```json\n" + json.dumps(round2) + "\n```"])
     report = asyncio.run(analyze(events, ctx, LLMAnalyst(client), max_rounds=2))
     assert report.rounds == 2
     assert [v.claim.text for v in report.verified] == [
-        "Northbridge won 3-1.", "Galbraith's opener came from just 0.01 xG."]
-    assert [v.claim.text for v in report.rejected] == ["Galbraith scored twice from 0.01 xG."]
+        "Northbridge won 3-1.", "Holloway's opener came from just 0.01 xG."]
+    assert [v.claim.text for v in report.rejected] == ["Holloway scored twice from 0.01 xG."]
     assert "goal-1" in client.prompts[0] and "rejected" in client.prompts[1]
 
 

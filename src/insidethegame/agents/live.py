@@ -1,0 +1,57 @@
+"""Live commentary from a replayed match feed.
+
+    itg-live data/samples/NBA-HCF-7 --speed 60     # 90 minutes in about 90 seconds
+    itg-live data/samples/NBA-HCF-7 --speed 0      # instant
+    itg-live data/samples/NBA-HCF-7 --jsonl        # one JSON line per comment, for a UI
+"""
+
+from __future__ import annotations
+
+import argparse
+import asyncio
+import json
+from typing import AsyncIterator
+
+from ..sim.schema import Event
+from .facts import load_match
+from .models import make_chat_client
+from .narrator import LLMNarrator, TemplateNarrator, narrate
+
+
+async def paced(events: list[Event], speed: float) -> AsyncIterator[Event]:
+    """Release events on the match clock, scaled by speed (0 = no waiting)."""
+    prev = None
+    for e in events:
+        if speed > 0 and prev is not None and e.period == prev.period:
+            await asyncio.sleep(max(0.0, e.clock - prev.clock) / speed)
+        prev = e
+        yield e
+
+
+async def _run(args: argparse.Namespace) -> int:
+    events, ctx = load_match(args.match_dir)
+    client = make_chat_client()
+    narrator = LLMNarrator(client) if client else TemplateNarrator()
+    async for line in narrate(paced(events, args.speed), ctx, narrator):
+        if args.jsonl:
+            print(json.dumps(line.to_dict()), flush=True)
+        else:
+            flag = "  [model line blocked, safe line used]" if line.blocked else ""
+            print(f"[{line.display_clock:>6}] {line.text}{flag}", flush=True)
+    return 0
+
+
+def main(argv: list[str] | None = None) -> int:
+    p = argparse.ArgumentParser(prog="itg-live", description="Fact-checked live commentary")
+    p.add_argument("match_dir")
+    p.add_argument("--speed", type=float, default=60.0)
+    p.add_argument("--jsonl", action="store_true")
+    args = p.parse_args(argv)
+    try:
+        return asyncio.run(_run(args))
+    except (KeyboardInterrupt, BrokenPipeError):
+        return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

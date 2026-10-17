@@ -19,10 +19,11 @@ openai = ["agent-framework-openai>=1.17"]
 [project.scripts]
 itg-sim = "insidethegame.sim.cli:main"
 itg-analyze = "insidethegame.agents.cli:main"
+itg-live = "insidethegame.agents.live:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["src"]
+pythonpath = ["src", "tests"]
