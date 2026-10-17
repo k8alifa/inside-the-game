@@ -9,7 +9,8 @@ Explainable, multi-agent match intelligence on synthetic football data. Built fo
 | Part | State |
 |---|---|
 | Synthetic match generator | Done |
-| Agents (analyst, narrator, fact-checker, recap, translator) | Not started |
+| Analyst + fact-checker (Agent Framework workflow) | Done, offline. Live model not wired yet |
+| Narrator, recap, translator agents | Not started |
 | Orchestration and hosting | Not started |
 
 ## Synthetic match generator
@@ -28,6 +29,14 @@ itg-sim replay data/matches/NBA-HCF-7/events.jsonl --speed 60   # live feed, 90 
 Without installing: `PYTHONPATH=src python -m insidethegame.sim ...`
 
 A sample match is in `data/samples/NBA-HCF-7/`. The event format is in [docs/event-schema.md](docs/event-schema.md).
+
+## Analyst and fact-checker
+
+Every insight cites facts computed from the events. A separate fact-checker rebuilds those facts itself and blocks any claim whose numbers or names the data does not support. See [docs/agents.md](docs/agents.md).
+
+```bash
+itg-analyze data/samples/NBA-HCF-7
+```
 
 ## Tests
 
