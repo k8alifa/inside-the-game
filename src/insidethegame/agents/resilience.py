@@ -5,7 +5,14 @@ Framework's tool loop), by mixing ResilienceMixin into a chat client class:
 
     class ResilientOpenAIChatClient(ResilienceMixin, OpenAIChatCompletionClient): ...
 
+GitHub Models free tier, Low tier (gpt-4.1-mini): 15 requests/min, 150/day,
+8k input and 4k output tokens per request, 5 concurrent. Defaults stay under
+those: 12/min, a daily cap of 140, and a prompt budget of about 7k tokens.
+
 Policy per call:
+  0. Refuse prompts estimated above the token budget (callers split or trim
+     first; this is the last line of defense) and stop once the daily cap is
+     reached. Neither counts as a request.
   1. Wait for the client-side rate limiter (default 12 requests per minute).
   2. Run the call with a timeout (default 15 s). A timeout is not retried,
      because live commentary cannot wait 45 s for one line.
@@ -22,12 +29,16 @@ Policy per call:
 from __future__ import annotations
 
 import asyncio
+import json
 import logging
+import math
 import os
 import random
 import time
 from collections import deque
 from dataclasses import dataclass
+from datetime import datetime, timezone
+from pathlib import Path
 
 log = logging.getLogger("insidethegame.models")
 
@@ -45,6 +56,8 @@ class ModelPolicy:
     max_retry_after_s: float = 20.0
     requests_per_minute: int = 12
     breaker_threshold: int = 3
+    daily_cap: int = 140
+    max_prompt_tokens: int = 7000
 
     @classmethod
     def from_env(cls) -> "ModelPolicy":
@@ -52,7 +65,59 @@ class ModelPolicy:
             timeout_s=float(os.getenv("ITG_MODEL_TIMEOUT", cls.timeout_s)),
             retries=int(os.getenv("ITG_MODEL_RETRIES", cls.retries)),
             requests_per_minute=int(os.getenv("ITG_MODEL_RPM", cls.requests_per_minute)),
+            daily_cap=int(os.getenv("ITG_MODEL_DAILY_CAP", cls.daily_cap)),
+            max_prompt_tokens=int(os.getenv("ITG_MODEL_MAX_PROMPT_TOKENS", cls.max_prompt_tokens)),
         )
+
+
+def estimate_tokens(text: str) -> int:
+    """Conservative token estimate (about 3.5 characters per token for English)."""
+    return math.ceil(len(text) / 3.5)
+
+
+def messages_tokens(messages) -> int:
+    total = 0
+    for m in messages or []:
+        total += 4 + estimate_tokens(getattr(m, "text", "") or "")
+    return total
+
+
+class DailyUsage:
+    """Requests sent today (UTC), persisted so the cap holds across CLI runs."""
+
+    def __init__(self, path: str | Path | None = None, today=None):
+        self.path = Path(path) if path else None
+        self._today = today or (lambda: datetime.now(timezone.utc).date().isoformat())
+        self._mem = {"date": self._today(), "count": 0}
+
+    def _load(self) -> dict:
+        if self.path and self.path.exists():
+            try:
+                data = json.loads(self.path.read_text())
+            except (OSError, ValueError):
+                data = {}
+        else:
+            data = dict(self._mem)
+        if data.get("date") != self._today():
+            data = {"date": self._today(), "count": 0}
+        return data
+
+    def count(self) -> int:
+        return int(self._load().get("count", 0))
+
+    def add(self, n: int = 1) -> int:
+        data = self._load()
+        data["count"] = int(data.get("count", 0)) + n
+        self._mem = data
+        if self.path:
+            self.path.parent.mkdir(parents=True, exist_ok=True)
+            self.path.write_text(json.dumps(data))
+        return data["count"]
+
+    @classmethod
+    def from_env(cls) -> "DailyUsage":
+        default = Path.home() / ".cache" / "insidethegame" / "model-usage.json"
+        return cls(os.getenv("ITG_USAGE_FILE") or default)
 
 
 class RateLimiter:
@@ -115,22 +180,35 @@ class ModelGuard:
     """Shared state for one process: limiter, breaker, and call statistics."""
 
     def __init__(self, policy: ModelPolicy | None = None, limiter: RateLimiter | None = None,
-                 sleep=asyncio.sleep):
+                 sleep=asyncio.sleep, usage: DailyUsage | None = None):
         self.policy = policy or ModelPolicy.from_env()
         self.limiter = limiter or RateLimiter(self.policy.requests_per_minute)
+        self.usage = usage or DailyUsage()  # in memory unless a path is given
         self._sleep = sleep
         self.consecutive_failures = 0
         self.circuit_open = False
-        self.stats = {"calls": 0, "ok": 0, "retries": 0, "timeouts": 0, "failed": 0, "rate_wait_s": 0.0}
+        self.stats = {"calls": 0, "ok": 0, "retries": 0, "timeouts": 0, "failed": 0, "rate_wait_s": 0.0,
+                      "too_large": 0, "capped": 0}
 
-    async def call(self, make_call):
+    def check_prompt(self, tokens: int) -> None:
+        if tokens > self.policy.max_prompt_tokens:
+            self.stats["too_large"] += 1
+            raise ModelUnavailable(f"prompt too large: about {tokens} tokens (budget {self.policy.max_prompt_tokens})")
+
+    async def call(self, make_call, prompt_tokens: int = 0):
         """Run make_call() (returns a fresh awaitable each time) under the policy."""
         p = self.policy
         if self.circuit_open:
             raise ModelUnavailable("circuit open after repeated model failures")
+        self.check_prompt(prompt_tokens)
         attempt = 0
         while True:
+            if self.usage.count() >= p.daily_cap:
+                self.stats["capped"] += 1
+                self.circuit_open = True
+                raise ModelUnavailable(f"daily cap of {p.daily_cap} model requests reached")
             self.stats["rate_wait_s"] += await self.limiter.acquire()
+            self.usage.add()
             self.stats["calls"] += 1
             try:
                 result = await asyncio.wait_for(make_call(), timeout=p.timeout_s)
@@ -179,4 +257,5 @@ class ResilienceMixin:
         inner = super()._inner_get_response  # type: ignore[misc]
         if stream:
             return inner(messages=messages, options=options, stream=True, **kwargs)
-        return self.guard.call(lambda: inner(messages=messages, options=options, stream=False, **kwargs))
+        return self.guard.call(lambda: inner(messages=messages, options=options, stream=False, **kwargs),
+                               prompt_tokens=messages_tokens(messages))

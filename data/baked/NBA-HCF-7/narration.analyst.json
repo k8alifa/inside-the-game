@@ -20,14 +20,6 @@
    "clock": 0.0,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Kickoff: Northbridge Athletic against Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Kickoff: Northbridge Athletic against Harbor City FC.",
@@ -55,14 +47,6 @@
    "clock": 102.4,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "He has to score there. Big chance for Milo Galbraith of Harbor City FC at 2': 0.40 xG, off target.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "He has to score there. Big chance for Milo Galbraith of Harbor City FC at 2': 0.40 xG, off target.",
@@ -92,14 +76,6 @@
    "clock": 804.1,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "What a moment! Finn Holloway scored for Northbridge Athletic at 14', set up by Pavel Ivers. The chance was worth 0.01 xG. Northbridge Athletic 1-0 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "What a moment! Finn Holloway scored for Northbridge Athletic at 14', set up by Pavel Ivers. The chance was worth 0.01 xG. Northbridge Athletic 1-0 Harbor City FC.",
@@ -128,14 +104,6 @@
    "clock": 1433.1,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "What a stop! Pavel Selbourne saved from Cal Fairbank at 24', a chance worth 0.33 xG.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "What a stop! Pavel Selbourne saved from Cal Fairbank at 24', a chance worth 0.33 xG.",
@@ -164,14 +132,6 @@
    "clock": 1623.3,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "What a stop! Pavel Selbourne saved from Dario Langstone at 28', a chance worth 0.17 xG.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "What a stop! Pavel Selbourne saved from Dario Langstone at 28', a chance worth 0.17 xG.",
@@ -199,14 +159,6 @@
    "clock": 1977.2,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "He has to score there. Big chance for Kai Underhill of Northbridge Athletic at 33': 0.38 xG, off target.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "He has to score there. Big chance for Kai Underhill of Northbridge Athletic at 33': 0.38 xG, off target.",
@@ -235,14 +187,6 @@
    "clock": 2292.4,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Yellow card for Milo Upworth of Northbridge Athletic at 39'.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Yellow card for Milo Upworth of Northbridge Athletic at 39'.",
@@ -271,14 +215,6 @@
    "clock": 2678.5,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "It's in! Jonah Haldane scored for Northbridge Athletic at 45'. The chance was worth 0.08 xG. Northbridge Athletic 2-0 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "It's in! Jonah Haldane scored for Northbridge Athletic at 45'. The chance was worth 0.08 xG. Northbridge Athletic 2-0 Harbor City FC.",
@@ -308,14 +244,6 @@
    "clock": 2767.2,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Half-time: Northbridge Athletic 2-0 Harbor City FC. Shots 9-6, xG 0.76-1.16, possession 57.3%-42.7%.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Half-time: Northbridge Athletic 2-0 Harbor City FC. Shots 9-6, xG 0.76-1.16, possession 57.3%-42.7%.",
@@ -345,14 +273,6 @@
    "clock": 0.0,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Momentum check: between minutes 30 and 45, Northbridge Athletic had 86% of the attacking threat, up from 29%.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Momentum check: between minutes 30 and 45, Northbridge Athletic had 86% of the attacking threat, up from 29%.",
@@ -381,14 +301,6 @@
    "clock": 355.5,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "What a stop! Pavel Selbourne saved from Cal Fairbank at 51', a chance worth 0.25 xG.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "What a stop! Pavel Selbourne saved from Cal Fairbank at 51', a chance worth 0.25 xG.",
@@ -417,14 +329,6 @@
    "clock": 651.1,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Yellow card for Jonah Haldane of Northbridge Athletic at 56'.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Yellow card for Jonah Haldane of Northbridge Athletic at 56'.",
@@ -452,14 +356,6 @@
    "clock": 740.4,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Substitution for Harbor City FC at 58': Theo Gorsuch on, Ivo Dunmore off.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Substitution for Harbor City FC at 58': Theo Gorsuch on, Ivo Dunmore off.",
@@ -487,14 +383,6 @@
    "clock": 894.6,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Substitution for Northbridge Athletic at 60': Mateo Ingram on, Luca Brennick off.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Substitution for Northbridge Athletic at 60': Mateo Ingram on, Luca Brennick off.",
@@ -524,14 +412,6 @@
    "clock": 928.8,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Momentum check: between minutes 45 and 60, Harbor City FC had 71% of the attacking threat, up from 14%.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Momentum check: between minutes 45 and 60, Harbor City FC had 71% of the attacking threat, up from 14%.",
@@ -560,14 +440,6 @@
    "clock": 1044.7,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "What a moment! Cal Fairbank scored for Harbor City FC at 63'. The chance was worth 0.14 xG. Northbridge Athletic 2-1 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "What a moment! Cal Fairbank scored for Harbor City FC at 63'. The chance was worth 0.14 xG. Northbridge Athletic 2-1 Harbor City FC.",
@@ -595,14 +467,6 @@
    "clock": 1207.0,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Substitution for Northbridge Athletic at 66': Finn Abara on, Jonah Moorcroft off.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Substitution for Northbridge Athletic at 66': Finn Abara on, Jonah Moorcroft off.",
@@ -630,14 +494,6 @@
    "clock": 1296.9,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Substitution for Harbor City FC at 67': Rafi Radley on, Dario Langstone off.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Substitution for Harbor City FC at 67': Rafi Radley on, Dario Langstone off.",
@@ -666,14 +522,6 @@
    "clock": 1460.6,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "What a stop! Tariq Blackmore saved from Finn Abara at 70', a chance worth 0.13 xG.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "What a stop! Tariq Blackmore saved from Finn Abara at 70', a chance worth 0.13 xG.",
@@ -701,14 +549,6 @@
    "clock": 1604.0,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Substitution for Harbor City FC at 72': Alex Merrow on, Milo Galbraith off.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Substitution for Harbor City FC at 72': Alex Merrow on, Milo Galbraith off.",
@@ -742,14 +582,6 @@
    "clock": 1802.6,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Momentum check: between minutes 60 and 75, Northbridge Athletic had 74% of the attacking threat, up from 29%.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Momentum check: between minutes 60 and 75, Northbridge Athletic had 74% of the attacking threat, up from 29%.",
@@ -777,14 +609,6 @@
    "clock": 1820.3,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Substitution for Northbridge Athletic at 76': Yusuf Dellacourt on, Pavel Ivers off.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Substitution for Northbridge Athletic at 76': Yusuf Dellacourt on, Pavel Ivers off.",
@@ -814,14 +638,6 @@
    "clock": 2796.1,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "What a moment! Kai Underhill scored for Northbridge Athletic at 90+2', set up by Leon Okonjo. The chance was worth 0.35 xG. Northbridge Athletic 3-1 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "What a moment! Kai Underhill scored for Northbridge Athletic at 90+2', set up by Leon Okonjo. The chance was worth 0.35 xG. Northbridge Athletic 3-1 Harbor City FC.",
@@ -853,14 +669,6 @@
    "clock": 2968.2,
    "profile": "analyst",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Full time: Northbridge Athletic 3-1 Harbor City FC. Shots 19-12, xG 1.99-2.02, possession 62.1%-37.9%.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Full time: Northbridge Athletic 3-1 Harbor City FC. Shots 19-12, xG 1.99-2.02, possession 62.1%-37.9%.",

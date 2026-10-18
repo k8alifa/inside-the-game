@@ -76,9 +76,22 @@ class TemplateAnalyst:
         return []  # template claims are built from facts; nothing to fix
 
 
-def fact_catalog(facts: dict[str, Fact]) -> str:
-    rows = sorted(facts.values(), key=lambda f: (-f.importance, f.id))
-    return "\n".join(f"- {f.id} [{f.kind}]: {f.summary}" for f in rows)
+CATALOG_TOKEN_BUDGET = 4500  # leaves room in a ~7k prompt for instructions and tool schemas
+
+
+def fact_catalog(facts: dict[str, Fact], budget: int = CATALOG_TOKEN_BUDGET) -> str:
+    """Facts by importance, trimmed from the bottom to fit the token budget."""
+    from .resilience import estimate_tokens
+
+    rows, used = [], 0
+    for f in sorted(facts.values(), key=lambda f: (-f.importance, f.id)):
+        row = f"- {f.id} [{f.kind}]: {f.summary}"
+        cost = estimate_tokens(row) + 1
+        if rows and used + cost > budget:
+            break
+        rows.append(row)
+        used += cost
+    return "\n".join(rows)
 
 
 def parse_claims(text: str) -> list[Claim]:

@@ -12,7 +12,7 @@ from agent_framework import BaseChatClient, ChatResponse, Message
 from insidethegame.agents.bake import SCHEMA_VERSION, bake
 from insidethegame.agents.checker import Claim, FactChecker
 from insidethegame.agents.facts import build_facts, load_match
-from insidethegame.agents.names import LEAGUE, TRANSLITERATIONS
+from insidethegame.agents.names import LEAGUE
 from insidethegame.agents.translator import check_translation
 from insidethegame.sim import TEAMS, MatchSimulator
 
@@ -59,31 +59,36 @@ def test_checker_allows_supported_short_forms(checker, text, ids):
     assert v.ok, v.reasons
 
 
-def test_league_surnames_are_unique_and_mapped():
+def test_league_surnames_are_unique():
     lasts = [p.last for p in LEAGUE.players]
     assert len(lasts) == len(set(lasts))
-    assert all(p.first in TRANSLITERATIONS["ar"] and p.last in TRANSLITERATIONS["ar"] for p in LEAGUE.players)
-    assert all(a in TRANSLITERATIONS["ar"] for aliases in LEAGUE.clubs.values() for a in aliases)
 
 
 SRC = "Kai Underhill scored for Northbridge Athletic at 90+2', set up by Leon Okonjo."
 
 
 @pytest.mark.parametrize("lang, text, reason", [
-    ("ar", "سجل كاي أندرهيل لنورثبريدج أثلتيك في الدقيقة 90+2، بتمريرة من ليون أوكونجو.", None),
-    ("ar", "سجل كاي اندرهيل لنورثبريدج اثلتيك في الدقيقة ٩٠+٢، بتمريرة من ليون اوكونجو.", None),  # hamza folded
-    ("ar", "سجل كاي أندرهيل لنورثبريدج أثلتيك في الدقيقة 90+2، بتمريرة من ليون هولواي.", "'Holloway' added"),
-    ("ar", "سجل كاي في الدقيقة 90+2 لنورثبريدج أثلتيك، بتمريرة من ليون أوكونجو.", "'Underhill' missing"),
     ("es", "Kai Underhill marcó para Northbridge Athletic en el 90+2', asistido por Leon Okonjo.", None),
     ("es", "Kai Underhill marcó para Northbridge Athletic en el 90+2', asistido por Leon Holloway.", "'Holloway' added"),
+    ("es", "Kai marcó para Northbridge Athletic en el 90+2', asistido por Leon Okonjo.", "'Underhill' missing"),
+    ("es", "Kai Underhill marcó para Northbridge Athletic en el 90+3', asistido por Leon Okonjo.", "numbers changed"),
+    ("ar", "anything", "unsupported language 'ar'"),
 ])
-def test_translation_name_checks(match, lang, text, reason):
+def test_translation_checks(match, lang, text, reason):
     _, ctx = match
     reasons = check_translation(SRC, text, lang, ctx)
     if reason is None:
         assert reasons == []
     else:
         assert any(reason in r for r in reasons), reasons
+
+
+def test_only_english_and_spanish_are_accepted():
+    from insidethegame.agents.translator import parse_langs
+    assert parse_langs("en,es") == ["es"] and parse_langs("") == []
+    for bad in ("ar", "en,ja", "hi", "fr"):
+        with pytest.raises(ValueError, match="supported: en, es"):
+            parse_langs(bad)
 
 
 # --------------------------------------------------- tag timing (sim)
@@ -141,8 +146,8 @@ def validate_bundle(out: Path, profiles, langs):
 
 
 def test_bake_template_schema(tmp_path):
-    m = asyncio.run(bake(SAMPLE, tmp_path, ["analyst", "casual"], ["en", "ar", "es"]))
-    validate_bundle(tmp_path, ["analyst", "casual"], ["en", "ar", "es"])
+    m = asyncio.run(bake(SAMPLE, tmp_path, ["analyst", "casual"], ["en", "es"]))
+    validate_bundle(tmp_path, ["analyst", "casual"], ["en", "es"])
     assert m["provider"] == "template" and set(m["counts"]["sources"]) == {"template"}
     assert set(m["counts"]["translations"]) == {"unavailable"}
 
@@ -159,15 +164,7 @@ class FakeModel(BaseChatClient):
             reply = {"lines": lines}
         elif prompt.startswith("Languages:"):
             texts = re.findall(r"^(\d+)\. (.*)$", prompt.split("Texts:")[1], re.M)
-            gloss = json.loads(re.search(r"Name glossary for ar: (\{.*\})", prompt).group(1)) \
-                if "Name glossary for ar" in prompt else {}
-            rows = []
-            for idx, t in texts:
-                ar = t
-                for en, a in sorted(gloss.items(), key=lambda kv: -len(kv[0])):
-                    ar = ar.replace(en, a)
-                rows.append({"index": int(idx), "ar": ar, "es": t})
-            reply = {"translations": rows}
+            reply = {"translations": [{"index": int(i), "es": t} for i, t in texts]}
         else:  # recap writer
             reply = {"claims": [
                 {"text": "Northbridge beat Harbor City", "fact_ids": ["final-score"], "kind": "headline", "order": 0},
@@ -177,8 +174,8 @@ class FakeModel(BaseChatClient):
 
 
 def test_bake_with_model_schema_and_counts(tmp_path):
-    m = asyncio.run(bake(SAMPLE, tmp_path, ["analyst"], ["en", "ar", "es"], client=FakeModel()))
-    validate_bundle(tmp_path, ["analyst"], ["en", "ar", "es"])
+    m = asyncio.run(bake(SAMPLE, tmp_path, ["analyst"], ["en", "es"], client=FakeModel()))
+    validate_bundle(tmp_path, ["analyst"], ["en", "es"])
     n = json.loads((tmp_path / "narration.analyst.json").read_text())["lines"]
     batches = (len(n) + 11) // 12
     assert sum(l["source"] == "template-fallback" for l in n) == batches  # the 99th-goal lines
@@ -186,4 +183,49 @@ def test_bake_with_model_schema_and_counts(tmp_path):
     assert all("number '99'" in l["blocked"][0] for l in n if l["source"] == "template-fallback")
     assert m["counts"]["translations"].get("ok", 0) > 0
     first_model = next(l for l in n if l["source"] == "model")
-    assert first_model["translations"]["es"]["ok"] and first_model["translations"]["ar"]["ok"]
+    assert first_model["translations"]["es"]["ok"] and set(first_model["translations"]) == {"es"}
+
+
+# ---------------------------------------------------- result direction
+@pytest.mark.parametrize("text, ids", [
+    ("Harbor City FC won 3-1.", ["final-score"]),
+    ("Harbor City beat Northbridge.", ["final-score"]),
+    ("Northbridge lost 3-1 at home.", ["final-score"]),
+    ("Northbridge were beaten.", ["final-score"]),
+    ("Northbridge and Harbor City drew.", ["final-score"]),
+    ("A win for Harbor City.", ["final-score"]),
+    ("Harbor City lead 1-0.", ["goal-1"]),       # current score from the cited goal fact
+    ("Harbor City are winning.", ["goal-1"]),
+    ("Harbor City drew level.", ["goal-3"]),     # it was 2-1 after that goal
+])
+def test_result_direction_blocks_contradictions(checker, text, ids):
+    v = checker.check(Claim(text, ids))
+    assert not v.ok and any("result direction" in r for r in v.reasons), v.reasons
+
+
+@pytest.mark.parametrize("text, ids", [
+    ("Northbridge won 3-1.", ["final-score"]),
+    ("Northbridge beat Harbor City 3-1.", ["final-score"]),
+    ("Harbor City were beaten.", ["final-score"]),
+    ("Harbor City fell to Northbridge.", ["final-score"]),
+    ("Northbridge's win was deserved.", ["final-score"]),
+    ("Northbridge lead 1-0.", ["goal-1"]),
+    ("Harbor City won the ball back high.", ["final-score"]),   # not a result
+    ("Harbor City won a corner.", ["final-score"]),
+    ("Northbridge lost possession.", ["final-score"]),
+])
+def test_result_direction_allows_true_or_unrelated_claims(checker, text, ids):
+    v = checker.check(Claim(text, ids))
+    assert not any("result direction" in r for r in v.reasons), v.reasons
+
+
+def test_result_direction_uses_current_score_live(match):
+    """Without a cited score, a live checker uses the latest score it has seen."""
+    from insidethegame.agents.narrator import MomentDetector
+    events, ctx = match
+    det = MomentDetector(ctx)
+    for e in events[:300]:  # just after the first goal (1-0 home)
+        det.feed(e)
+    live = FactChecker(det.facts, ctx)
+    assert not live.check(Claim("Harbor City are ahead.", ["kickoff"])).ok
+    assert not any("result direction" in r for r in live.check(Claim("Northbridge are ahead.", ["kickoff"])).reasons)

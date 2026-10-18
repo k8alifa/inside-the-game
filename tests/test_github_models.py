@@ -246,3 +246,61 @@ def test_analyst_falls_back_to_template_claims(match):
     report = asyncio.run(analyze(events, ctx, LLMAnalyst(client), n_claims=5))
     assert len(report.verified) == 5 and not report.rejected
     assert {v.claim.source for v in report.verified} == {"template-fallback"}
+
+
+# ------------------------------------------- token guard and daily cap
+from insidethegame.agents.resilience import DailyUsage, estimate_tokens  # noqa: E402
+
+
+def test_oversized_prompt_is_refused_without_a_request():
+    g, _ = guard(max_prompt_tokens=7000)
+    make, calls = outcomes("never")
+    with pytest.raises(ModelUnavailable, match="prompt too large"):
+        asyncio.run(g.call(make, prompt_tokens=7500))
+    assert calls == [] and g.usage.count() == 0 and g.stats["too_large"] == 1
+
+
+def test_translation_batches_split_to_fit_the_budget():
+    from insidethegame.agents.translator import TEXT_TOKEN_BUDGET, chunk_by_tokens
+    long = "x" * 7000  # about 2000 tokens each
+    batches = chunk_by_tokens([long] * 10, max_items=12)
+    assert len(batches) > 1 and sorted(i for b in batches for i in b) == list(range(10))
+    for b in batches:
+        assert sum(estimate_tokens(long) + 8 for _ in b) <= TEXT_TOKEN_BUDGET or len(b) == 1
+    assert [len(b) for b in chunk_by_tokens(["short"] * 30, max_items=12)] == [12, 12, 6]
+
+
+def test_fact_catalog_is_trimmed_to_budget(match):
+    from insidethegame.agents.analyst import fact_catalog
+    from insidethegame.agents.facts import build_facts
+    events, ctx = match
+    facts = build_facts(events, ctx)
+    full, small = fact_catalog(facts), fact_catalog(facts, budget=200)
+    assert full.count("\n") + 1 == len(facts)
+    assert 0 < small.count("\n") + 1 < len(facts) and estimate_tokens(small) <= 260
+    assert small.splitlines()[0] == full.splitlines()[0]  # most important facts kept
+
+
+def test_daily_cap_stops_calls_and_persists(tmp_path):
+    path = tmp_path / "usage.json"
+    day = ["2026-10-18"]
+    usage = DailyUsage(path, today=lambda: day[0])
+    g = ModelGuard(ModelPolicy(requests_per_minute=1000, daily_cap=3, retries=0), sleep=Recorder(), usage=usage)
+    for _ in range(3):
+        make, _ = outcomes("ok")
+        assert asyncio.run(g.call(make)) == "ok"
+    make, calls = outcomes("never")
+    with pytest.raises(ModelUnavailable, match="daily cap of 3"):
+        asyncio.run(g.call(make))
+    assert calls == [] and g.circuit_open
+    assert DailyUsage(path, today=lambda: day[0]).count() == 3  # survives a new process
+    day[0] = "2026-10-19"
+    assert DailyUsage(path, today=lambda: day[0]).count() == 0  # resets the next UTC day
+
+
+def test_retries_count_toward_the_daily_cap():
+    g, _ = guard(daily_cap=2)
+    make, calls = outcomes(HTTPError(429), HTTPError(429), "never")
+    with pytest.raises(ModelUnavailable, match="daily cap"):
+        asyncio.run(g.call(make))
+    assert len(calls) == 2 and g.usage.count() == 2

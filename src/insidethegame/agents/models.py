@@ -12,7 +12,8 @@ ITG_MODEL_PROVIDER:
            auth: DefaultAzureCredential, or ITG_AZURE_AUTH=devicecode
 
 Every client is wrapped with the resilience policy in resilience.py
-(ITG_MODEL_TIMEOUT, ITG_MODEL_RETRIES, ITG_MODEL_RPM).
+(ITG_MODEL_TIMEOUT, ITG_MODEL_RETRIES, ITG_MODEL_RPM, ITG_MODEL_DAILY_CAP,
+ITG_MODEL_MAX_PROMPT_TOKENS; usage is counted in ITG_USAGE_FILE).
 """
 
 from __future__ import annotations
@@ -20,7 +21,7 @@ from __future__ import annotations
 import os
 from dataclasses import dataclass
 
-from .resilience import ModelGuard, ModelPolicy, ResilienceMixin
+from .resilience import DailyUsage, ModelGuard, ModelPolicy, ResilienceMixin
 
 GITHUB_MODELS_URL = "https://models.github.ai/inference"
 GITHUB_DEFAULT_MODEL = "openai/gpt-4.1-mini"
@@ -56,7 +57,7 @@ def model_guard() -> ModelGuard:
     """One guard per process, so the rate limit and breaker cover every agent."""
     global _GUARD
     if _GUARD is None:
-        _GUARD = ModelGuard(ModelPolicy.from_env())
+        _GUARD = ModelGuard(ModelPolicy.from_env(), usage=DailyUsage.from_env())
     return _GUARD
 
 

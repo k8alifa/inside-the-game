@@ -5,7 +5,7 @@
   "NBA": "Northbridge Athletic",
   "HCF": "Harbor City FC"
  },
- "generated_at": "2026-10-18T09:35:35+00:00",
+ "generated_at": "2026-10-18T13:36:02+00:00",
  "provider": "template",
  "model": null,
  "profiles": [
@@ -14,7 +14,6 @@
  ],
  "langs": [
   "en",
-  "ar",
   "es"
  ],
  "files": {
@@ -28,7 +27,7 @@
    "template": 64
   },
   "translations": {
-   "unavailable": 128
+   "unavailable": 64
   }
  },
  "model_calls": {},

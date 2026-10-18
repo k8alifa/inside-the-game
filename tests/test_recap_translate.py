@@ -55,8 +55,8 @@ def test_llm_recap_revision_keeps_paragraph_order(match):
     ("es", "Kai Underhill marcó para Northbridge Athletic en el 90+2' con una ocasión de 0,35 xG.", True),
     ("es", "Kai Underhill marcó en el 90+3' con una ocasión de 0,35 xG.", False),
     ("es", "El delantero marcó en el 90+2' con una ocasión de 0,35 xG.", False),
-    ("ar", "سجل كاي أندرهيل لنورثبريدج أثلتيك في الدقيقة ٩٠+٢ من فرصة قيمتها ٠٫٣٥ xG.", True),
-    ("ar", "سجل كاي أندرهيل في الدقيقة 90+2 من فرصة قيمتها 0.53 xG.", False),
+    ("es", "Kai Underhill marcó para Northbridge Athletic en el 90+2' con una ocasión de 0,53 xG.", False),
+    ("ar", "Kai Underhill Northbridge Athletic 90+2' 0.35 xG.", False),
 ])
 def test_translation_check(match, lang, text, ok):
     _, ctx = match
@@ -65,10 +65,9 @@ def test_translation_check(match, lang, text, ok):
 
 def test_translator_falls_back_to_english_when_blocked(match):
     _, ctx = match
-    reply = json.dumps({"translations": {
-        "es": "Kai Underhill marcó para Northbridge Athletic en el 90+2' con una ocasión de 0,35 xG.",
-        "ar": "سجل كاي أندرهيل في الدقيقة 90+2 من فرصة قيمتها 0.53 xG.",
-    }}, ensure_ascii=False)
-    out = asyncio.run(Translator(ScriptedChatClient([reply])).translate(GOAL4, ["es", "ar"], ctx))
-    assert out["es"].ok and out["es"].text.startswith("Kai Underhill marcó")
-    assert not out["ar"].ok and out["ar"].text == GOAL4 and "0.53" in out["ar"].reasons[0]
+    good = "Kai Underhill marcó para Northbridge Athletic en el 90+2' con una ocasión de 0,35 xG."
+    bad = "Kai Underhill marcó para Northbridge Athletic en el 90+2' con una ocasión de 0,53 xG."
+    reply = json.dumps({"translations": [{"index": 0, "es": good}, {"index": 1, "es": bad}]}, ensure_ascii=False)
+    out = asyncio.run(Translator(ScriptedChatClient([reply])).translate_many([GOAL4, GOAL4], ["es"], ctx))
+    assert out[0]["es"].ok and out[0]["es"].text.startswith("Kai Underhill marcó")
+    assert not out[1]["es"].ok and out[1]["es"].text == GOAL4 and "0.53" in out[1]["es"].reasons[0]

@@ -369,8 +369,10 @@ async def narrate_all(events: list[Event], ctx: MatchContext, narrator=None, bat
     checker = FactChecker(detector.facts, ctx)
     lines: list[Line] = []
     recent: list[str] = []
-    for i in range(0, len(found), batch_size):
-        chunk = found[i: i + batch_size]
+    from .translator import chunk_by_tokens  # same size-aware batching as translation
+
+    for idx in chunk_by_tokens([_moment_block(m) for m, _ in found], batch_size):
+        chunk = [found[i] for i in idx]
         error = None
         try:
             claims = await narrator.say_batch([m for m, _ in chunk], ctx, recent)

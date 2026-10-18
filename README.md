@@ -12,7 +12,7 @@ Explainable, multi-agent match intelligence on synthetic football data. Built fo
 | Analyst + fact-checker (Agent Framework workflow) | Done, offline. Live model not wired yet |
 | Live narrator (fact-checked, safe fallback) | Done, offline |
 | Recap writer (fact-checked) | Done, offline |
-| Translator (numbers and names re-checked, Arabic name map) | Done; needs a model to run |
+| Translator, English to Spanish (numbers and names re-checked) | Done; needs a model to run |
 | GitHub Models provider + resilience | Done; mocked tests only, no live run yet |
 | Pre-generated demo bundle (`itg-bake`) | Done; current bundle is template mode |
 | Orchestration and hosting | Not started |
@@ -42,7 +42,7 @@ Every insight cites facts computed from the events. A separate fact-checker rebu
 itg-analyze data/samples/NBA-HCF-7          # post-match insights
 itg-live data/samples/NBA-HCF-7 --speed 60  # live commentary on a replayed feed
 itg-recap data/samples/NBA-HCF-7            # match report
-itg-live data/samples/NBA-HCF-7 --lang ar,es  # with translations (needs a model)
+itg-recap data/samples/NBA-HCF-7 --lang es   # with a Spanish version (needs a model)
 ```
 
 ## Connect a model ($0)
@@ -65,17 +65,21 @@ itg-live data/samples/NBA-HCF-7 --lang ar,es  # with translations (needs a model
 3. Run it:
    ```bash
    itg-live data/samples/NBA-HCF-7 --speed 0
-   itg-recap data/samples/NBA-HCF-7 --lang ar
+   itg-recap data/samples/NBA-HCF-7 --lang es
    ```
 
-**Resilience:** every model request is rate limited (`ITG_MODEL_RPM`, default 12/min), has a timeout (`ITG_MODEL_TIMEOUT`, default 15 s), and is retried twice with backoff on HTTP 429 or 5xx. If it still fails, the template line is used and marked `template-fallback`. After 3 failed calls in a row the model is skipped for the rest of the run.
+**Resilience:** every model request is rate limited (`ITG_MODEL_RPM`, default 12/min), has a timeout (`ITG_MODEL_TIMEOUT`, default 15 s), and is retried twice with backoff on HTTP 429 or 5xx. Prompts are kept under about 7k tokens (`ITG_MODEL_MAX_PROMPT_TOKENS`) by splitting batches and trimming the fact list. A daily counter stops model calls at 140 (`ITG_MODEL_DAILY_CAP`, counted in `ITG_USAGE_FILE`, default `~/.cache/insidethegame/model-usage.json`, reset at midnight UTC). If anything fails, the template line is used and marked `template-fallback`. After 3 failed calls in a row the model is skipped for the rest of the run.
+
+GitHub Models free tier for `gpt-4.1-mini` (Low tier): 15 requests/min, 150/day, 8k input and 4k output tokens per request, 5 concurrent.
+
+**Languages:** English (primary) and Spanish (`--lang es`). Names are never translated.
 
 ## Pre-generated demo
 
 The public demo makes no live model calls. `itg-bake` runs the full pipeline once and saves verified outputs:
 
 ```bash
-itg-bake --match data/samples/NBA-HCF-7 --profiles analyst,casual --langs en,ar,es --out data/baked/NBA-HCF-7/
+itg-bake --match data/samples/NBA-HCF-7 --profiles analyst,casual --langs en,es --out data/baked/NBA-HCF-7/
 ```
 
 | File | Contents |
@@ -85,7 +89,7 @@ itg-bake --match data/samples/NBA-HCF-7 --profiles analyst,casual --langs en,ar,
 | `narration.<profile>.json` | Live lines with replay timing (`period`, `clock`, `at_event`), source, evidence, translations |
 | `recap.<profile>.json` | Headline and paragraphs with evidence and translations, plus blocked drafts |
 
-Narration and translation are batched, so a two-profile, three-language bake takes about 12 model calls with no revisions (more if the model calls tools or the checker sends drafts back). The copy in `data/baked/NBA-HCF-7/` was baked in template mode; rebake with a model before recording the demo.
+Narration and translation are batched, so a two-profile, two-language bake takes about 12 model calls with no revisions (more if the model calls tools or the checker sends drafts back). The copy in `data/baked/NBA-HCF-7/` was baked in template mode; rebake with a model before recording the demo.
 
 ## Tests
 

@@ -17,7 +17,7 @@ from ..sim.schema import Event
 from .facts import load_match
 from .models import make_chat_client
 from .narrator import LLMNarrator, TemplateNarrator, narrate
-from .translator import Translator
+from .translator import Translator, parse_langs
 
 
 async def paced(events: list[Event], speed: float) -> AsyncIterator[Event]:
@@ -34,7 +34,7 @@ async def _run(args: argparse.Namespace) -> int:
     events, ctx = load_match(args.match_dir)
     client = make_chat_client()
     narrator = LLMNarrator(client, args.profile) if client else TemplateNarrator(args.profile)
-    langs = [l for l in args.lang.split(",") if l and l != "en"] if args.lang else []
+    langs = parse_langs(args.lang)
     if langs and not client:
         print("Translation needs a model (set ITG_MODEL_PROVIDER). Continuing in English.", flush=True)
         langs = []
@@ -65,9 +65,13 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("match_dir")
     p.add_argument("--speed", type=float, default=60.0)
     p.add_argument("--jsonl", action="store_true")
-    p.add_argument("--lang", default="", help="comma-separated language codes, e.g. ar,es (needs a model)")
+    p.add_argument("--lang", default="", help="output languages: en (default) and/or es (Spanish needs a model)")
     p.add_argument("--profile", default="analyst", choices=["analyst", "casual"])
     args = p.parse_args(argv)
+    try:
+        parse_langs(args.lang)
+    except ValueError as e:
+        p.error(str(e))
     try:
         return asyncio.run(_run(args))
     except (KeyboardInterrupt, BrokenPipeError):

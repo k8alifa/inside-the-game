@@ -19,14 +19,6 @@
    1608
   ],
   "translations": {
-   "ar": {
-    "lang": "ar",
-    "text": "Northbridge Athletic beat Harbor City FC 3-1",
-    "ok": false,
-    "reasons": [
-     "no model configured"
-    ]
-   },
    "es": {
     "lang": "es",
     "text": "Northbridge Athletic beat Harbor City FC 3-1",
@@ -88,14 +80,6 @@
     1628
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Final score: Northbridge Athletic 3-1 Harbor City FC. Northbridge Athletic scored 3 from 1.99 xG, above expectation by 1.01. Harbor City FC scored 1 from 2.02 xG, below expectation by 1.02.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Final score: Northbridge Athletic 3-1 Harbor City FC. Northbridge Athletic scored 3 from 1.99 xG, above expectation by 1.01. Harbor City FC scored 1 from 2.02 xG, below expectation by 1.02.",
@@ -122,14 +106,6 @@
     254
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Finn Holloway scored for Northbridge Athletic at 14' from a chance worth 0.01 xG, assisted by Pavel Ivers. Score: Northbridge Athletic 1-0 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Finn Holloway scored for Northbridge Athletic at 14' from a chance worth 0.01 xG, assisted by Pavel Ivers. Score: Northbridge Athletic 1-0 Harbor City FC.",
@@ -156,14 +132,6 @@
     793
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Momentum swung to Northbridge Athletic from minute 30: their share of the attacking threat rose from 29% to 86%.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Momentum swung to Northbridge Athletic from minute 30: their share of the attacking threat rose from 29% to 86%.",
@@ -189,14 +157,6 @@
     794
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Jonah Haldane scored for Northbridge Athletic at 45' from a chance worth 0.08 xG. Score: Northbridge Athletic 2-0 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Jonah Haldane scored for Northbridge Athletic at 45' from a chance worth 0.08 xG. Score: Northbridge Athletic 2-0 Harbor City FC.",
@@ -223,14 +183,6 @@
     971
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Momentum swung to Harbor City FC from minute 45: their share of the attacking threat rose from 14% to 71%.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Momentum swung to Harbor City FC from minute 45: their share of the attacking threat rose from 14% to 71%.",
@@ -261,14 +213,6 @@
     1251
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Momentum swung to Northbridge Athletic from minute 60: their share of the attacking threat rose from 29% to 74%.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Momentum swung to Northbridge Athletic from minute 60: their share of the attacking threat rose from 29% to 74%.",
@@ -294,14 +238,6 @@
     1120
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Cal Fairbank scored for Harbor City FC at 63' from a chance worth 0.14 xG. Score: Northbridge Athletic 2-1 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Cal Fairbank scored for Harbor City FC at 63' from a chance worth 0.14 xG. Score: Northbridge Athletic 2-1 Harbor City FC.",
@@ -328,14 +264,6 @@
     1608
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Kai Underhill scored for Northbridge Athletic at 90+2' from a chance worth 0.35 xG, assisted by Leon Okonjo. Score: Northbridge Athletic 3-1 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Kai Underhill scored for Northbridge Athletic at 90+2' from a chance worth 0.35 xG, assisted by Leon Okonjo. Score: Northbridge Athletic 3-1 Harbor City FC.",

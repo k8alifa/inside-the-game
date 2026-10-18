@@ -19,14 +19,6 @@
    1608
   ],
   "translations": {
-   "ar": {
-    "lang": "ar",
-    "text": "Northbridge Athletic beat Harbor City FC 3-1",
-    "ok": false,
-    "reasons": [
-     "no model configured"
-    ]
-   },
    "es": {
     "lang": "es",
     "text": "Northbridge Athletic beat Harbor City FC 3-1",
@@ -55,14 +47,6 @@
     1608
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "It finished Northbridge Athletic 3-1 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "It finished Northbridge Athletic 3-1 Harbor City FC.",
@@ -89,14 +73,6 @@
     254
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Finn Holloway scored for Northbridge Athletic at 14'.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Finn Holloway scored for Northbridge Athletic at 14'.",
@@ -122,14 +98,6 @@
     794
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Jonah Haldane scored for Northbridge Athletic at 45'.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Jonah Haldane scored for Northbridge Athletic at 45'.",
@@ -155,14 +123,6 @@
     1120
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Cal Fairbank scored for Harbor City FC at 63'.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Cal Fairbank scored for Harbor City FC at 63'.",
@@ -189,14 +149,6 @@
     1608
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Kai Underhill scored for Northbridge Athletic at 90+2'.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Kai Underhill scored for Northbridge Athletic at 90+2'.",
@@ -222,14 +174,6 @@
     1607
    ],
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Kai Underhill was the most dangerous player on the pitch.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Kai Underhill was the most dangerous player on the pitch.",

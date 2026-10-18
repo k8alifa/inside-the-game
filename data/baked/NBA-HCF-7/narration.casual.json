@@ -20,14 +20,6 @@
    "clock": 0.0,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Kickoff: Northbridge Athletic against Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Kickoff: Northbridge Athletic against Harbor City FC.",
@@ -55,14 +47,6 @@
    "clock": 102.4,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "So close! Milo Galbraith should have scored for Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "So close! Milo Galbraith should have scored for Harbor City FC.",
@@ -92,14 +76,6 @@
    "clock": 804.1,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "What a moment! Finn Holloway scores for Northbridge Athletic! Northbridge Athletic 1-0 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "What a moment! Finn Holloway scores for Northbridge Athletic! Northbridge Athletic 1-0 Harbor City FC.",
@@ -128,14 +104,6 @@
    "clock": 1433.1,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Great save by Pavel Selbourne! Cal Fairbank is denied.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Great save by Pavel Selbourne! Cal Fairbank is denied.",
@@ -164,14 +132,6 @@
    "clock": 1623.3,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Great save by Pavel Selbourne! Dario Langstone is denied.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Great save by Pavel Selbourne! Dario Langstone is denied.",
@@ -199,14 +159,6 @@
    "clock": 1977.2,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "So close! Kai Underhill should have scored for Northbridge Athletic.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "So close! Kai Underhill should have scored for Northbridge Athletic.",
@@ -235,14 +187,6 @@
    "clock": 2292.4,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Yellow card for Milo Upworth of Northbridge Athletic at 39'.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Yellow card for Milo Upworth of Northbridge Athletic at 39'.",
@@ -271,14 +215,6 @@
    "clock": 2678.5,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "It's in! Jonah Haldane scores for Northbridge Athletic! Northbridge Athletic 2-0 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "It's in! Jonah Haldane scores for Northbridge Athletic! Northbridge Athletic 2-0 Harbor City FC.",
@@ -308,14 +244,6 @@
    "clock": 2767.2,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Half-time: Northbridge Athletic 2-0 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Half-time: Northbridge Athletic 2-0 Harbor City FC.",
@@ -345,14 +273,6 @@
    "clock": 0.0,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Northbridge Athletic are on top now and pushing forward.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Northbridge Athletic are on top now and pushing forward.",
@@ -381,14 +301,6 @@
    "clock": 355.5,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Great save by Pavel Selbourne! Cal Fairbank is denied.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Great save by Pavel Selbourne! Cal Fairbank is denied.",
@@ -417,14 +329,6 @@
    "clock": 651.1,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Yellow card for Jonah Haldane of Northbridge Athletic at 56'.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Yellow card for Jonah Haldane of Northbridge Athletic at 56'.",
@@ -452,14 +356,6 @@
    "clock": 740.4,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Substitution for Harbor City FC at 58': Theo Gorsuch on, Ivo Dunmore off.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Substitution for Harbor City FC at 58': Theo Gorsuch on, Ivo Dunmore off.",
@@ -487,14 +383,6 @@
    "clock": 894.6,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Substitution for Northbridge Athletic at 60': Mateo Ingram on, Luca Brennick off.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Substitution for Northbridge Athletic at 60': Mateo Ingram on, Luca Brennick off.",
@@ -524,14 +412,6 @@
    "clock": 928.8,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Harbor City FC are on top now and pushing forward.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Harbor City FC are on top now and pushing forward.",
@@ -560,14 +440,6 @@
    "clock": 1044.7,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "What a moment! Cal Fairbank scores for Harbor City FC! Northbridge Athletic 2-1 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "What a moment! Cal Fairbank scores for Harbor City FC! Northbridge Athletic 2-1 Harbor City FC.",
@@ -595,14 +467,6 @@
    "clock": 1207.0,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Substitution for Northbridge Athletic at 66': Finn Abara on, Jonah Moorcroft off.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Substitution for Northbridge Athletic at 66': Finn Abara on, Jonah Moorcroft off.",
@@ -630,14 +494,6 @@
    "clock": 1296.9,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Substitution for Harbor City FC at 67': Rafi Radley on, Dario Langstone off.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Substitution for Harbor City FC at 67': Rafi Radley on, Dario Langstone off.",
@@ -666,14 +522,6 @@
    "clock": 1460.6,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Great save by Tariq Blackmore! Finn Abara is denied.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Great save by Tariq Blackmore! Finn Abara is denied.",
@@ -701,14 +549,6 @@
    "clock": 1604.0,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Substitution for Harbor City FC at 72': Alex Merrow on, Milo Galbraith off.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Substitution for Harbor City FC at 72': Alex Merrow on, Milo Galbraith off.",
@@ -742,14 +582,6 @@
    "clock": 1802.6,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Northbridge Athletic are on top now and pushing forward.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Northbridge Athletic are on top now and pushing forward.",
@@ -777,14 +609,6 @@
    "clock": 1820.3,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Substitution for Northbridge Athletic at 76': Yusuf Dellacourt on, Pavel Ivers off.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Substitution for Northbridge Athletic at 76': Yusuf Dellacourt on, Pavel Ivers off.",
@@ -814,14 +638,6 @@
    "clock": 2796.1,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "What a moment! Kai Underhill scores for Northbridge Athletic! Northbridge Athletic 3-1 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "What a moment! Kai Underhill scores for Northbridge Athletic! Northbridge Athletic 3-1 Harbor City FC.",
@@ -853,14 +669,6 @@
    "clock": 2968.2,
    "profile": "casual",
    "translations": {
-    "ar": {
-     "lang": "ar",
-     "text": "Full time: Northbridge Athletic 3-1 Harbor City FC.",
-     "ok": false,
-     "reasons": [
-      "no model configured"
-     ]
-    },
     "es": {
      "lang": "es",
      "text": "Full time: Northbridge Athletic 3-1 Harbor City FC.",

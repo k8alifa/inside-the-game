@@ -91,19 +91,17 @@ itg-recap data/samples/NBA-HCF-7
 
 # Translator
 
-Translates verified English lines and reports (`agents/translator.py`), then checks the translation against its source, because translating can add errors:
+Translates verified English lines and reports into Spanish (`agents/translator.py`), then checks each translation against its source, because translating can add errors:
 
-- **Numbers:** the set of numbers must be identical, counting repeats. Arabic-Indic digits and decimal commas are normalized first.
-- **Names, Latin scripts:** every player and club name in the source must appear, and no other squad name may be added.
-- **Names, Arabic:** the translator gets a glossary from the name registry (`agents/names.py`) and must use those spellings. The check finds each one after folding hamza variants, and blocks any squad name the source did not contain. Japanese and Hindi have no map yet, so only numbers are checked there.
+- **Numbers:** the set of numbers must be identical, counting repeats. A decimal comma (0,35) is read as 0.35.
+- **Names:** every player and club name in the source must appear exactly as written, and no other squad name may be added. Names are never translated.
 
-A blocked translation is not shown; the English line is used instead. The translator needs a model.
+Only English and Spanish are supported; any other code is rejected. A blocked translation is not shown; the English line is used instead. The translator needs a model.
 
 ```bash
-itg-live  data/samples/NBA-HCF-7 --lang ar,es
-itg-recap data/samples/NBA-HCF-7 --lang ar,es
+itg-recap data/samples/NBA-HCF-7 --lang es
 ```
 
 # Model calls: resilience and fallback
 
-Every request to the model goes through `agents/resilience.py`: a rate limiter (12/min by default), a 15 s timeout (not retried), two retries with backoff on HTTP 429 or 5xx (a short Retry-After is honored; a long one, such as a daily quota, is not waited out), and a circuit breaker that skips the model after 3 failed calls in a row. Any failure falls back to the template output, which is marked `template-fallback` with the reason.
+Every request to the model goes through `agents/resilience.py`: a prompt-size guard (about 7k tokens; batches are split and the fact list trimmed before this is ever hit), a daily cap (140 requests, persisted across runs), a rate limiter (12/min by default), a 15 s timeout (not retried), two retries with backoff on HTTP 429 or 5xx (a short Retry-After is honored; a long one, such as a daily quota, is not waited out), and a circuit breaker that skips the model after 3 failed calls in a row. Any failure falls back to the template output, which is marked `template-fallback` with the reason.

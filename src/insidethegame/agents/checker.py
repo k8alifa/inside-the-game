@@ -13,6 +13,9 @@ raw events, then for each claim:
    the league are blocked as not in this match.
 4. Every club named in the text, by full or short name, must play in this
    match.
+5. A claim that a club won, lost, drew, leads or trails must agree with the
+   score: the latest score in a cited fact, else the final score, else the
+   current score known so far (live).
 
 A claim that fails any check is rejected with reasons, so a retry can fix it.
 """
@@ -148,8 +151,53 @@ class FactChecker:
                     reasons.append(f"player '{name}' ({kind}) is not in this match")
             text = re.sub(pattern, " ", text)
 
+        reasons += self._result_direction(claim.text, cited)
+
         evidence = sorted({e for f in cited for e in f.evidence})
         return Verdict(claim=claim, ok=not reasons, reasons=_dedupe(reasons), evidence=evidence)
+
+    # --------------------------------------------------- result direction
+    def _reference_score(self, cited: list[Fact]) -> tuple[int, int] | None:
+        """Latest score in the cited facts, else the final score, else the latest known (live)."""
+        def has_score(f: Fact) -> bool:
+            return "home_goals" in f.figures and "away_goals" in f.figures
+
+        def order(f: Fact) -> tuple:
+            final = f.kind in ("result", "full_time")
+            return (final, f.minute if f.minute is not None else -1)
+
+        pool = [f for f in cited if has_score(f)]
+        if not pool:
+            final = self.facts.get("final-score")
+            pool = [final] if final is not None else [f for f in self.facts.values() if has_score(f)]
+        if not pool:
+            return None
+        f = max(pool, key=order)
+        return int(f.figures["home_goals"]), int(f.figures["away_goals"])
+
+    def _result_direction(self, text: str, cited: list[Fact]) -> list[str]:
+        claims = _result_claims(text, self._match_aliases())
+        if not claims:
+            return []
+        score = self._reference_score(cited)
+        if score is None:
+            return []
+        goals = {self.ctx.home: score[0], self.ctx.away: score[1]}
+        scoreline = (f"{self.ctx.team_names[self.ctx.home]} {score[0]}-{score[1]} "
+                     f"{self.ctx.team_names[self.ctx.away]}")
+        reasons = []
+        for tid, outcome, phrase in claims:
+            diff = goals[tid] - goals[self.ctx.other(tid)]
+            if (outcome == "win" and diff <= 0) or (outcome == "loss" and diff >= 0) or (outcome == "draw" and diff != 0):
+                reasons.append(f"result direction: '{phrase}' contradicts the score {scoreline}")
+        return reasons
+
+    def _match_aliases(self) -> dict[str, str]:
+        aliases = {}
+        for tid in (self.ctx.home, self.ctx.away):
+            for a in (*self.registry.club_aliases(tid), self.ctx.team_names[tid]):
+                aliases[a] = tid
+        return aliases
 
     def check_all(self, claims: list[Claim]) -> list[Verdict]:
         return [self.check(c) for c in claims]
@@ -162,3 +210,53 @@ def _dedupe(xs: list[str]) -> list[str]:
             seen.add(x)
             out.append(x)
     return out
+
+
+# ------------------------------------------------------------ result claims
+# A "won"/"lost" only counts as a result when what follows is a result, not
+# "won the ball", "won a corner" or "lost possession".
+_END = r"(?=\s*(?:[.,;:!?)]|$|\d+\s*[-\u2013]\s*\d+|(?:the\s+(?:match|game|tie|derby)|it\b(?!\s+back)|"
+_END += r"comfortably|narrowly|convincingly|easily|deservedly|at\s+home|away|on\s+the\s+day|in\s+the\s+end|"
+_END += r"by\b|against\b|to\b|with\b|here\b|again\b|overall\b)))"
+
+
+def _result_claims(text: str, aliases: dict[str, str]) -> list[tuple[str, str, str]]:
+    """(team id, 'win'|'loss'|'draw', phrase) for each result the text asserts about a club."""
+    if not aliases:
+        return []
+    alt = "|".join(re.escape(a) for a in sorted(aliases, key=len, reverse=True))
+    T, U = rf"(?P<t>{alt})", rf"(?P<u>{alt})"
+    aux = r"(?:\s+(?:have|has|had|will|would|could|did|are|were|is|was))?"
+    rules = [
+        (rf"\b{T}\b(?:'s)?\s+(?:win|victory)\b", "win"),
+        (rf"\b{T}\b{aux}\s+(?:beat|beats|defeated|defeat|edged(?:\s+past)?|overcame|saw\s+off|thrashed|"
+         rf"crushed|stunned|outplayed)\s+{U}\b", "beat"),
+        (rf"\b{T}\b{aux}\s+(?:won|win|wins|triumphed|prevailed)\b{_END}", "win"),
+        (rf"\b{T}\b{aux}\s+(?:lead|leads|leading|winning|ahead|in\s+front|go\s+ahead|went\s+ahead)\b", "win"),
+        (rf"\b{T}\b{aux}\s+(?:lost|lose|loses|beaten|defeated)\b{_END}", "loss"),
+        (rf"\b{T}\b{aux}\s+(?:fell\s+to|trail|trails|trailing|behind)\b", "loss"),
+        (rf"\b{T}\b(?:'s)?\s+(?:defeat|loss)\b", "loss"),
+        (rf"\b(?:win|victory)\s+for\s+{T}\b", "win"),
+        (rf"\b(?:defeat|loss)\s+for\s+{T}\b", "loss"),
+        (rf"\b{T}\b{aux}\s+(?:drew|draw|drawn|held|level)\b", "draw"),
+        (rf"\b{T}\s+and\s+{U}\s+(?:drew|draw|shared\s+the\s+points|finished\s+level|ended\s+level|"
+         rf"are\s+level|were\s+level)\b", "draw2"),
+    ]
+    out = []
+    for pattern, kind in rules:
+        for m in re.finditer(pattern, text, re.IGNORECASE):
+            t = aliases[_canon(m.group("t"), aliases)]
+            phrase = m.group(0)
+            if kind == "beat":
+                u = aliases[_canon(m.group("u"), aliases)]
+                if u != t:
+                    out += [(t, "win", phrase), (u, "loss", phrase)]
+            elif kind == "draw2":
+                out.append((t, "draw", phrase))
+            else:
+                out.append((t, kind, phrase))
+    return out
+
+
+def _canon(found: str, aliases: dict[str, str]) -> str:
+    return next(a for a in aliases if a.lower() == found.lower())

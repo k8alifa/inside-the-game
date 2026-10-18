@@ -1,6 +1,6 @@
 """Pre-generate every demo output once, so the public demo makes zero model calls.
 
-    itg-bake --match data/samples/NBA-HCF-7 --profiles analyst,casual --langs en,ar,es \\
+    itg-bake --match data/samples/NBA-HCF-7 --profiles analyst,casual --langs en,es \\
              --out data/baked/NBA-HCF-7/
 
 Writes, under --out:
@@ -28,10 +28,9 @@ from .facts import build_facts, load_match
 from .models import make_chat_client, model_guard, provider_config
 from .narrator import LLMNarrator, TemplateNarrator, narrate_all
 from .recap import LLMRecapWriter, TemplateRecapWriter, write_recap
-from .translator import Translator
+from .translator import Translator, parse_langs
 
 SCHEMA_VERSION = 1
-TRANSLATE_BATCH = 12
 
 
 def _status(t: dict) -> str:
@@ -50,11 +49,8 @@ async def _translate(translator, texts: list[str], langs: list[str], ctx) -> lis
         return [{} for _ in texts]
     if translator is None:
         return _no_model(texts, langs)
-    out = []
-    for i in range(0, len(texts), TRANSLATE_BATCH):
-        rows = await translator.translate_many(texts[i: i + TRANSLATE_BATCH], langs, ctx)
-        out += [{l: t.to_dict() for l, t in row.items()} for row in rows]
-    return out
+    rows = await translator.translate_many(texts, langs, ctx)  # batched by size inside
+    return [{l: t.to_dict() for l, t in row.items()} for row in rows]
 
 
 async def bake(match_dir: str | Path, out_dir: str | Path, profiles: list[str], langs: list[str],
@@ -62,7 +58,7 @@ async def bake(match_dir: str | Path, out_dir: str | Path, profiles: list[str], 
     events, ctx = load_match(match_dir)
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
-    targets = [l for l in langs if l != "en"]
+    targets = parse_langs(",".join(langs))
     translator = Translator(client) if client else None
     sources: Counter = Counter()
     translations: Counter = Counter()
@@ -126,10 +122,14 @@ def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="itg-bake", description="Pre-generate verified demo outputs")
     p.add_argument("--match", required=True, help="match folder with events.jsonl and match.json")
     p.add_argument("--profiles", default="analyst,casual")
-    p.add_argument("--langs", default="en")
+    p.add_argument("--langs", default="en", help="en and/or es")
     p.add_argument("--out", required=True)
     p.add_argument("--paragraphs", type=int, default=8)
     args = p.parse_args(argv)
+    try:
+        parse_langs(args.langs)
+    except ValueError as e:
+        p.error(str(e))
     client = make_chat_client()
     m = asyncio.run(bake(args.match, args.out, [x for x in args.profiles.split(",") if x],
                          [x for x in args.langs.split(",") if x], client, args.paragraphs))
