@@ -29,7 +29,7 @@ def match_summary(result: MatchResult) -> dict:
         for e in result.events
         if e.type == "goal"
     ]
-    return {
+    summary = {
         "match_id": result.match_id,
         "seed": result.seed,
         "generator_version": GENERATOR_VERSION,
@@ -42,6 +42,11 @@ def match_summary(result: MatchResult) -> dict:
         "stats": team_stats(result.events, ids),
         "event_count": len(result.events),
     }
+    cfg = result.config
+    if cfg is not None and not cfg.is_default():  # default matches stay byte-identical
+        summary["sim_config"] = cfg.to_dict()
+        summary["sim_config_hash"] = cfg.config_hash()
+    return summary
 
 
 def write_match(result: MatchResult, out_dir: str | Path) -> Path:

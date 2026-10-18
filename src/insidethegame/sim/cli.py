@@ -11,6 +11,7 @@ import json
 import sys
 import time
 
+from .config import SimConfig
 from .engine import MatchSimulator
 from .io import load_events, write_match
 from .teams import TEAMS
@@ -21,9 +22,12 @@ def _generate(args: argparse.Namespace) -> int:
         if t not in TEAMS:
             print(f"Unknown team {t!r}. Choose from: {', '.join(TEAMS)}", file=sys.stderr)
             return 2
+    config = SimConfig.load(args.calibration) if args.calibration else None
+    if config is not None:
+        print(f"calibration: {args.calibration} (config {config.config_hash()})")
     for i in range(args.count):
         seed = args.seed + i
-        result = MatchSimulator(TEAMS[args.home], TEAMS[args.away], seed).run()
+        result = MatchSimulator(TEAMS[args.home], TEAMS[args.away], seed, config=config).run()
         path = write_match(result, args.out)
         score = result.score
         print(f"{result.match_id}: {args.home} {score[args.home]}-{score[args.away]} {args.away} "
@@ -60,6 +64,8 @@ def main(argv: list[str] | None = None) -> int:
     g.add_argument("--seed", type=int, default=7)
     g.add_argument("--count", type=int, default=1, help="number of matches (seeds seed..seed+count-1)")
     g.add_argument("--out", default="data/matches")
+    g.add_argument("--calibration", default=None,
+                   help="SimConfig JSON from tools/calibrate (default: none, the original engine constants)")
     g.set_defaults(func=_generate)
 
     r = sub.add_parser("replay", help="stream a match's events as a live feed")

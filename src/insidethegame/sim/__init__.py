@@ -1,5 +1,6 @@
 """Synthetic, football-realistic match data generator."""
 
+from .config import SimConfig
 from .engine import GENERATOR_VERSION, MatchResult, MatchSimulator, xg_model
 from .io import load_events, write_match
 from .schema import Event
@@ -12,6 +13,7 @@ __all__ = [
     "MatchResult",
     "MatchSimulator",
     "Player",
+    "SimConfig",
     "TEAMS",
     "TeamProfile",
     "load_events",

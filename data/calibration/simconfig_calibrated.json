@@ -1,0 +1,73 @@
+{
+  "config": {
+    "shot_base": 0.029,
+    "shot_slope": 0.145,
+    "finish_scale": 1.06,
+    "foul_base": 0.0145,
+    "card_base": 0.19,
+    "corner_clearance": 0.12,
+    "corner_after_shot": 0.4,
+    "pass_loss_base": 0.065,
+    "home_advantage": 0.09
+  },
+  "config_hash": "96621e5d5264",
+  "fit": {
+    "method": "coordinate descent",
+    "matches_per_evaluation": 200,
+    "seeds": [
+      1000,
+      1199
+    ],
+    "evaluations": 40,
+    "loss": 0.000888,
+    "within_tolerance": {
+      "goals_per_team_match": true,
+      "home_goals_per_match": true,
+      "away_goals_per_match": true,
+      "home_win_rate": true,
+      "draw_rate": true,
+      "away_win_rate": true
+    }
+  },
+  "simulated": {
+    "goals_per_team_match": {
+      "mean": 1.4925,
+      "sd": 1.2923
+    },
+    "home_goals_per_match": {
+      "mean": 1.6,
+      "sd": 1.3601
+    },
+    "away_goals_per_match": {
+      "mean": 1.385,
+      "sd": 1.2111
+    },
+    "total_goals_per_match": {
+      "mean": 2.985,
+      "sd": 1.7705
+    },
+    "home_win_rate": {
+      "mean": 0.43,
+      "sd": 0.4951
+    },
+    "draw_rate": {
+      "mean": 0.24,
+      "sd": 0.4271
+    },
+    "away_win_rate": {
+      "mean": 0.33,
+      "sd": 0.4702
+    }
+  },
+  "targets_from": {
+    "source": "openfootball/england (top division result lists)",
+    "licence": "CC0 1.0 Universal (public domain dedication). Only aggregates are stored here.",
+    "seasons": [
+      "2023-24",
+      "2024-25",
+      "2025-26"
+    ],
+    "n_matches": 1140
+  },
+  "generated_at": "2026-10-18T13:44:17+00:00"
+}

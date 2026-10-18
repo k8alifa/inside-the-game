@@ -16,6 +16,7 @@ import math
 import random
 from dataclasses import dataclass, field
 
+from .config import SimConfig
 from .schema import GOAL_WIDTH, HALF_LENGTH_S, PITCH_LENGTH, PITCH_WIDTH, Event
 from .teams import Player, TeamProfile
 
@@ -65,6 +66,7 @@ class MatchResult:
     away: TeamProfile
     events: list[Event]
     lineup_changes: list[dict]
+    config: SimConfig | None = None
 
     @property
     def score(self) -> dict[str, int]:
@@ -76,7 +78,8 @@ class MatchResult:
 
 
 class MatchSimulator:
-    def __init__(self, home: TeamProfile, away: TeamProfile, seed: int, match_id: str | None = None):
+    def __init__(self, home: TeamProfile, away: TeamProfile, seed: int, match_id: str | None = None,
+                 config: SimConfig | None = None):
         if home.id == away.id:
             raise ValueError("home and away must be different teams")
         self.rng = random.Random(seed)
@@ -84,6 +87,7 @@ class MatchSimulator:
         self.match_id = match_id or f"{home.id}-{away.id}-{seed}"
         self.sides = {t.id: self._side(t) for t in (home, away)}
         self.home, self.away = home, away
+        self.cfg = config or SimConfig()
         self.events: list[Event] = []
         self.lineup_changes: list[dict] = []
         self.period = 1
@@ -136,6 +140,9 @@ class MatchSimulator:
             pool = [p for p in side.on_pitch if p is not exclude]
         return self.rng.choices(pool, weights=[w[p.role] or 0.1 for p in pool])[0]
 
+    def _home_factor(self, side: _Side) -> float:
+        return 1.0 + self.cfg.home_advantage if side.id == self.home.id else 1.0
+
     def _gk(self, side: _Side) -> Player:
         return next((p for p in side.on_pitch if p.role == "GK"), side.on_pitch[0])
 
@@ -153,7 +160,8 @@ class MatchSimulator:
                 self._maybe_substitute()
                 state = self._possession(*state)
             self._emit(self.home.id, None, "half_end")
-        return MatchResult(self.match_id, self.seed, self.home, self.away, self.events, self.lineup_changes)
+        return MatchResult(self.match_id, self.seed, self.home, self.away, self.events, self.lineup_changes,
+                           self.cfg)
 
     def _maybe_substitute(self) -> None:
         if self.period != 2:
@@ -212,14 +220,16 @@ class MatchSimulator:
             # Shot decision in the final third, more likely closer and central.
             if x >= 78:
                 centrality = 1 - abs(y - GOAL_Y) / GOAL_Y
-                p_shot = (0.026 + 0.145 * ((x - 78) / 27) ** 1.5) * (0.2 + 1.3 * centrality) * (0.7 + 0.6 * att.strength("attack"))
+                c = self.cfg
+                p_shot = (c.shot_base + c.shot_slope * ((x - 78) / 27) ** 1.5) * (0.2 + 1.3 * centrality) * (0.7 + 0.6 * att.strength("attack"))
+                p_shot *= self._home_factor(att)
                 if self.rng.random() < p_shot:
                     result = self._shot(att, dfn, carrier, x, y, poss_tags)
                     self._tag(start_idx, poss_tags)
                     return result
 
             # Defensive foul.
-            if self.rng.random() < 0.0145 * (1.45 - dfn.strength("discipline")) * (1 + 0.6 * dfn.strength("press")):
+            if self.rng.random() < self.cfg.foul_base * (1.45 - dfn.strength("discipline")) * (1 + 0.6 * dfn.strength("press")):
                 result = self._foul(att, dfn, carrier, x, y)
                 self._tag(start_idx, poss_tags)
                 return result
@@ -236,7 +246,7 @@ class MatchSimulator:
             ny = _clamp(y + self.rng.gauss(0, 11 if not carry else 4), 2, 66)
             depth = nx / PITCH_LENGTH
             press_here = dfn.strength("press") * (1.4 if x < 40 else 0.7)  # pressing bites in the build-up zone
-            p_loss = (0.065 + 0.20 * depth ** 2 + 0.08 * directness) * (0.55 + 0.75 * press_here) / (0.7 + 0.6 * att.strength("technique"))
+            p_loss = (self.cfg.pass_loss_base + 0.20 * depth ** 2 + 0.08 * directness) * (0.55 + 0.75 * press_here) / (0.7 + 0.6 * att.strength("technique"))
             if carry:
                 p_loss *= 0.6
             p_loss *= 0.85 + 0.3 * dfn.strength("defense")
@@ -250,7 +260,7 @@ class MatchSimulator:
                     win_type = "tackle"
                 else:
                     self._emit(att.id, carrier, "pass", outcome="incomplete", x=x, y=y, end_x=nx, end_y=ny)
-                    if nx >= 88 and self.rng.random() < 0.12:
+                    if nx >= 88 and self.rng.random() < self.cfg.corner_clearance:
                         # Defender clears it behind for a corner.
                         cleaner = self._pick(dfn, gx)
                         self._emit(dfn.id, cleaner, "clearance", outcome="out_for_corner", x=gx, y=gy)
@@ -292,6 +302,7 @@ class MatchSimulator:
         tags = (["header"] if header else []) + (["big_chance"] if xg >= 0.30 else [])
         shot = self._emit(att.id, shooter, "shot", x=x, y=y, end_x=GOAL_X, end_y=GOAL_Y, xg=xg, tags=tags)
         finish = xg * (0.85 + 0.3 * att.strength("attack")) * (1.15 - 0.3 * dfn.strength("defense"))
+        finish *= self.cfg.finish_scale * self._home_factor(att)
         r = self.rng.random()
         if r < finish:
             shot.outcome = "goal"
@@ -311,7 +322,7 @@ class MatchSimulator:
             self._tick(20, 35)
             return (dfn.id, 6.0, PITCH_WIDTH / 2, "goal_kick")
         self._tick(8, 20)
-        if self.rng.random() < 0.40:
+        if self.rng.random() < self.cfg.corner_after_shot:
             return (att.id, PITCH_LENGTH, 0.5 if y < GOAL_Y else PITCH_WIDTH - 0.5, "corner")
         return (dfn.id, self.rng.uniform(8, 25), self.rng.uniform(10, 58), "turnover")
 
@@ -332,7 +343,7 @@ class MatchSimulator:
         fx, fy = PITCH_LENGTH - x, PITCH_WIDTH - y
         offender = self._pick(dfn, fx)
         foul = self._emit(dfn.id, offender, "foul", x=fx, y=fy, secondary_player=victim.id)
-        p_card = 0.19 * (1.4 - dfn.strength("discipline")) * (1.3 if x > 70 else 1.0)
+        p_card = self.cfg.card_base * (1.4 - dfn.strength("discipline")) * (1.3 if x > 70 else 1.0)
         if dfn.yellows.get(offender.id):
             p_card *= 0.3  # booked players pull out of challenges
         if self.rng.random() < p_card:
