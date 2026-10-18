@@ -1,0 +1,777 @@
+{
+ "goal-1": {
+  "id": "goal-1",
+  "kind": "goal",
+  "summary": "Finn Holloway scored for Northbridge Athletic at 14' from a chance worth 0.01 xG, assisted by Pavel Ivers. Score: Northbridge Athletic 1-0 Harbor City FC.",
+  "figures": {
+   "xg": 0.01,
+   "home_goals": 1,
+   "away_goals": 0,
+   "display_clock": "14'"
+  },
+  "players": [
+   "NBA-6",
+   "NBA-7"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   252,
+   253,
+   254
+  ],
+  "minute": 13,
+  "importance": 13
+ },
+ "goal-2": {
+  "id": "goal-2",
+  "kind": "goal",
+  "summary": "Jonah Haldane scored for Northbridge Athletic at 45' from a chance worth 0.08 xG. Score: Northbridge Athletic 2-0 Harbor City FC.",
+  "figures": {
+   "xg": 0.08,
+   "home_goals": 2,
+   "away_goals": 0,
+   "display_clock": "45'"
+  },
+  "players": [
+   "NBA-11"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   793,
+   794
+  ],
+  "minute": 44,
+  "importance": 10
+ },
+ "goal-3": {
+  "id": "goal-3",
+  "kind": "goal",
+  "summary": "Cal Fairbank scored for Harbor City FC at 63' from a chance worth 0.14 xG. Score: Northbridge Athletic 2-1 Harbor City FC.",
+  "figures": {
+   "xg": 0.14,
+   "home_goals": 2,
+   "away_goals": 1,
+   "display_clock": "63'"
+  },
+  "players": [
+   "HCF-11"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   1119,
+   1120
+  ],
+  "minute": 62,
+  "importance": 10
+ },
+ "goal-4": {
+  "id": "goal-4",
+  "kind": "goal",
+  "summary": "Kai Underhill scored for Northbridge Athletic at 90+2' from a chance worth 0.35 xG, assisted by Leon Okonjo. Score: Northbridge Athletic 3-1 Harbor City FC.",
+  "figures": {
+   "xg": 0.35,
+   "home_goals": 3,
+   "away_goals": 1,
+   "display_clock": "90+2'"
+  },
+  "players": [
+   "NBA-10",
+   "NBA-5"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1606,
+   1607,
+   1608
+  ],
+  "minute": 91,
+  "importance": 13
+ },
+ "final-score": {
+  "id": "final-score",
+  "kind": "result",
+  "summary": "Final score: Northbridge Athletic 3-1 Harbor City FC.",
+  "figures": {
+   "home_goals": 3,
+   "away_goals": 1
+  },
+  "players": [],
+  "teams": [
+   "NBA",
+   "HCF"
+  ],
+  "evidence": [
+   254,
+   794,
+   1120,
+   1608
+  ],
+  "minute": null,
+  "importance": 20
+ },
+ "stats-NBA": {
+  "id": "stats-NBA",
+  "kind": "team_stats",
+  "summary": "Northbridge Athletic: 62.1% possession, 19 shots (7 on target), 1.99 xG, 88.4% pass accuracy.",
+  "figures": {
+   "goals": 3,
+   "possession_pct": 62.1,
+   "passes": 658,
+   "pass_accuracy_pct": 88.4,
+   "shots": 19,
+   "shots_on_target": 7,
+   "xg": 1.99,
+   "big_chances": 2,
+   "corners": 9,
+   "fouls": 14,
+   "yellow_cards": 2,
+   "red_cards": 0,
+   "ball_wins": 99,
+   "high_press_wins": 15,
+   "counter_attacks": 2
+  },
+  "players": [],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [],
+  "minute": null,
+  "importance": 6
+ },
+ "xg-story-NBA": {
+  "id": "xg-story-NBA",
+  "kind": "xg_vs_goals",
+  "summary": "Northbridge Athletic scored 3 from 1.99 xG, above expectation by 1.01.",
+  "figures": {
+   "goals": 3,
+   "xg": 1.99,
+   "difference": 1.01
+  },
+  "players": [],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   79,
+   117,
+   221,
+   253,
+   310,
+   495,
+   580,
+   684,
+   793,
+   971,
+   1145,
+   1150,
+   1191,
+   1202,
+   1251,
+   1413,
+   1441,
+   1607,
+   1628
+  ],
+  "minute": null,
+  "importance": 8.030000000000001
+ },
+ "stats-HCF": {
+  "id": "stats-HCF",
+  "kind": "team_stats",
+  "summary": "Harbor City FC: 37.9% possession, 12 shots (5 on target), 2.02 xG, 78.2% pass accuracy.",
+  "figures": {
+   "goals": 1,
+   "possession_pct": 37.9,
+   "passes": 394,
+   "pass_accuracy_pct": 78.2,
+   "shots": 12,
+   "shots_on_target": 5,
+   "xg": 2.02,
+   "big_chances": 2,
+   "corners": 5,
+   "fouls": 3,
+   "yellow_cards": 0,
+   "red_cards": 0,
+   "ball_wins": 91,
+   "high_press_wins": 10,
+   "counter_attacks": 3
+  },
+  "players": [],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [],
+  "minute": null,
+  "importance": 6
+ },
+ "xg-story-HCF": {
+  "id": "xg-story-HCF",
+  "kind": "xg_vs_goals",
+  "summary": "Harbor City FC scored 1 from 2.02 xG, below expectation by 1.02.",
+  "figures": {
+   "goals": 1,
+   "xg": 2.02,
+   "difference": 1.02
+  },
+  "players": [],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   24,
+   34,
+   395,
+   422,
+   472,
+   474,
+   886,
+   909,
+   1116,
+   1119,
+   1429,
+   1480
+  ],
+  "minute": null,
+  "importance": 8.06
+ },
+ "momentum-0-15": {
+  "id": "momentum-0-15",
+  "kind": "momentum_window",
+  "summary": "Minutes 0-15: Harbor City FC had 68% of the attacking threat (2 shots, 0.43 xG, 8 final-third entries).",
+  "figures": {
+   "start_minute": 0,
+   "end_minute": 15,
+   "share_pct": 68,
+   "shots": 2,
+   "xg": 0.43,
+   "final_third_entries": 8,
+   "other_shots": 4,
+   "other_xg": 0.1
+  },
+  "players": [],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   24,
+   34,
+   79,
+   117,
+   221,
+   253
+  ],
+  "minute": 0,
+  "importance": 2
+ },
+ "momentum-15-30": {
+  "id": "momentum-15-30",
+  "kind": "momentum_window",
+  "summary": "Minutes 15-30: Harbor City FC had 71% of the attacking threat (4 shots, 0.73 xG, 7 final-third entries).",
+  "figures": {
+   "start_minute": 15,
+   "end_minute": 30,
+   "share_pct": 71,
+   "shots": 4,
+   "xg": 0.73,
+   "final_third_entries": 7,
+   "other_shots": 2,
+   "other_xg": 0.16
+  },
+  "players": [],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   310,
+   395,
+   422,
+   472,
+   474,
+   495
+  ],
+  "minute": 15,
+  "importance": 2
+ },
+ "momentum-30-45": {
+  "id": "momentum-30-45",
+  "kind": "momentum_window",
+  "summary": "Minutes 30-45: Northbridge Athletic had 86% of the attacking threat (3 shots, 0.5 xG, 13 final-third entries).",
+  "figures": {
+   "start_minute": 30,
+   "end_minute": 45,
+   "share_pct": 86,
+   "shots": 3,
+   "xg": 0.5,
+   "final_third_entries": 13,
+   "other_shots": 0,
+   "other_xg": 0
+  },
+  "players": [],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   580,
+   684,
+   793
+  ],
+  "minute": 30,
+  "importance": 2
+ },
+ "swing-30": {
+  "id": "swing-30",
+  "kind": "momentum_swing",
+  "summary": "Momentum swung to Northbridge Athletic from minute 30: their share of the attacking threat rose from 29% to 86%.",
+  "figures": {
+   "minute": 30,
+   "share_before_pct": 29,
+   "share_after_pct": 86,
+   "change_points": 57
+  },
+  "players": [],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   580,
+   684,
+   793
+  ],
+  "minute": 30,
+  "importance": 6.85
+ },
+ "momentum-45-60": {
+  "id": "momentum-45-60",
+  "kind": "momentum_window",
+  "summary": "Minutes 45-60: Harbor City FC had 71% of the attacking threat (2 shots, 0.4 xG, 9 final-third entries).",
+  "figures": {
+   "start_minute": 45,
+   "end_minute": 60,
+   "share_pct": 71,
+   "shots": 2,
+   "xg": 0.4,
+   "final_third_entries": 9,
+   "other_shots": 1,
+   "other_xg": 0.04
+  },
+  "players": [],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   886,
+   909,
+   971
+  ],
+  "minute": 45,
+  "importance": 2
+ },
+ "swing-45": {
+  "id": "swing-45",
+  "kind": "momentum_swing",
+  "summary": "Momentum swung to Harbor City FC from minute 45: their share of the attacking threat rose from 14% to 71%.",
+  "figures": {
+   "minute": 45,
+   "share_before_pct": 14,
+   "share_after_pct": 71,
+   "change_points": 57
+  },
+  "players": [],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   886,
+   909,
+   971
+  ],
+  "minute": 45,
+  "importance": 6.85
+ },
+ "momentum-60-75": {
+  "id": "momentum-60-75",
+  "kind": "momentum_window",
+  "summary": "Minutes 60-75: Northbridge Athletic had 74% of the attacking threat (5 shots, 0.66 xG, 6 final-third entries).",
+  "figures": {
+   "start_minute": 60,
+   "end_minute": 75,
+   "share_pct": 74,
+   "shots": 5,
+   "xg": 0.66,
+   "final_third_entries": 6,
+   "other_shots": 2,
+   "other_xg": 0.15
+  },
+  "players": [],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1116,
+   1119,
+   1145,
+   1150,
+   1191,
+   1202,
+   1251
+  ],
+  "minute": 60,
+  "importance": 2
+ },
+ "swing-60": {
+  "id": "swing-60",
+  "kind": "momentum_swing",
+  "summary": "Momentum swung to Northbridge Athletic from minute 60: their share of the attacking threat rose from 29% to 74%.",
+  "figures": {
+   "minute": 60,
+   "share_before_pct": 29,
+   "share_after_pct": 74,
+   "change_points": 45
+  },
+  "players": [],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1116,
+   1119,
+   1145,
+   1150,
+   1191,
+   1202,
+   1251
+  ],
+  "minute": 60,
+  "importance": 6.25
+ },
+ "momentum-75-95": {
+  "id": "momentum-75-95",
+  "kind": "momentum_window",
+  "summary": "Minutes 75-95: Northbridge Athletic had 69% of the attacking threat (4 shots, 0.53 xG, 22 final-third entries).",
+  "figures": {
+   "start_minute": 75,
+   "end_minute": 95,
+   "share_pct": 69,
+   "shots": 4,
+   "xg": 0.53,
+   "final_third_entries": 22,
+   "other_shots": 2,
+   "other_xg": 0.32
+  },
+  "players": [],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1413,
+   1429,
+   1441,
+   1480,
+   1607,
+   1628
+  ],
+  "minute": 75,
+  "importance": 2
+ },
+ "counter-1": {
+  "id": "counter-1",
+  "kind": "counter_attack",
+  "summary": "Harbor City FC countered at 24': from winning the ball to Cal Fairbank's shot took 16 seconds and 4 passes (xG 0.33, saved).",
+  "figures": {
+   "seconds": 16,
+   "passes": 4,
+   "xg": 0.33,
+   "outcome": "saved",
+   "display_clock": "24'"
+  },
+  "players": [
+   "HCF-11"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   416,
+   417,
+   418,
+   419,
+   420,
+   421,
+   422,
+   423
+  ],
+  "minute": 23,
+  "importance": 5
+ },
+ "counter-2": {
+  "id": "counter-2",
+  "kind": "counter_attack",
+  "summary": "Harbor City FC countered at 62': from winning the ball to Milo Galbraith's shot took 13 seconds and 3 passes (xG 0.02, saved).",
+  "figures": {
+   "seconds": 13,
+   "passes": 3,
+   "xg": 0.02,
+   "outcome": "saved",
+   "display_clock": "62'"
+  },
+  "players": [
+   "HCF-10"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   1111,
+   1112,
+   1113,
+   1114,
+   1115,
+   1116,
+   1117
+  ],
+  "minute": 61,
+  "importance": 5
+ },
+ "counter-3": {
+  "id": "counter-3",
+  "kind": "counter_attack",
+  "summary": "Harbor City FC countered at 83': from winning the ball to Rafi Radley's shot took 16 seconds and 5 passes (xG 0.16, blocked).",
+  "figures": {
+   "seconds": 16,
+   "passes": 5,
+   "xg": 0.16,
+   "outcome": "blocked",
+   "display_clock": "83'"
+  },
+  "players": [
+   "HCF-16"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   1424,
+   1425,
+   1426,
+   1427,
+   1428,
+   1429
+  ],
+  "minute": 82,
+  "importance": 5
+ },
+ "press-NBA": {
+  "id": "press-NBA",
+  "kind": "pressing",
+  "summary": "Northbridge Athletic won the ball back high up the pitch 15 times; 6 of those led straight to a shot.",
+  "figures": {
+   "high_press_wins": 15,
+   "led_to_shot": 6
+  },
+  "players": [],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   72,
+   243,
+   251,
+   411,
+   493,
+   566,
+   691,
+   716,
+   839,
+   1148,
+   1193,
+   1278,
+   1385,
+   1445,
+   1452
+  ],
+  "minute": null,
+  "importance": 9
+ },
+ "press-HCF": {
+  "id": "press-HCF",
+  "kind": "pressing",
+  "summary": "Harbor City FC won the ball back high up the pitch 10 times; 2 of those led straight to a shot.",
+  "figures": {
+   "high_press_wins": 10,
+   "led_to_shot": 2
+  },
+  "players": [],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   28,
+   469,
+   480,
+   518,
+   624,
+   656,
+   660,
+   777,
+   1097,
+   1549
+  ],
+  "minute": null,
+  "importance": 5
+ },
+ "big-miss-1": {
+  "id": "big-miss-1",
+  "kind": "big_chance_missed",
+  "summary": "Milo Galbraith (Harbor City FC) missed a big chance at 2': 0.40 xG, off target.",
+  "figures": {
+   "xg": 0.4,
+   "outcome": "off_target",
+   "display_clock": "2'"
+  },
+  "players": [
+   "HCF-10"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   34
+  ],
+  "minute": 1,
+  "importance": 5.596
+ },
+ "big-miss-2": {
+  "id": "big-miss-2",
+  "kind": "big_chance_missed",
+  "summary": "Cal Fairbank (Harbor City FC) missed a big chance at 24': 0.33 xG, saved.",
+  "figures": {
+   "xg": 0.33,
+   "outcome": "saved",
+   "display_clock": "24'"
+  },
+  "players": [
+   "HCF-11"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   422
+  ],
+  "minute": 23,
+  "importance": 5.312
+ },
+ "big-miss-3": {
+  "id": "big-miss-3",
+  "kind": "big_chance_missed",
+  "summary": "Kai Underhill (Northbridge Athletic) missed a big chance at 33': 0.38 xG, off target.",
+  "figures": {
+   "xg": 0.38,
+   "outcome": "off_target",
+   "display_clock": "33'"
+  },
+  "players": [
+   "NBA-10"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   580
+  ],
+  "minute": 32,
+  "importance": 5.5280000000000005
+ },
+ "keeper-NBA": {
+  "id": "keeper-NBA",
+  "kind": "goalkeeping",
+  "summary": "Northbridge Athletic's goalkeeper Pavel Selbourne made 4 saves, facing 0.9 xG on target and conceding 1.",
+  "figures": {
+   "saves": 4,
+   "xg_on_target_faced": 0.9,
+   "conceded": 1,
+   "goals_prevented": -0.1
+  },
+  "players": [
+   "NBA-1"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   423,
+   475,
+   910,
+   1117,
+   422,
+   474,
+   909,
+   1116,
+   1119
+  ],
+  "minute": null,
+  "importance": 3
+ },
+ "keeper-HCF": {
+  "id": "keeper-HCF",
+  "kind": "goalkeeping",
+  "summary": "Harbor City FC's goalkeeper Tariq Blackmore made 4 saves, facing 0.65 xG on target and conceding 3.",
+  "figures": {
+   "saves": 4,
+   "xg_on_target_faced": 0.65,
+   "conceded": 3,
+   "goals_prevented": -2.35
+  },
+  "players": [
+   "HCF-1"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   80,
+   972,
+   1203,
+   1414,
+   79,
+   253,
+   793,
+   971,
+   1202,
+   1413,
+   1607
+  ],
+  "minute": null,
+  "importance": 3
+ },
+ "top-threat": {
+  "id": "top-threat",
+  "kind": "player_threat",
+  "summary": "Kai Underhill (Northbridge Athletic) was the biggest threat: 2 shots worth 0.73 xG, 1 scored.",
+  "figures": {
+   "shots": 2,
+   "xg": 0.73,
+   "goals": 1
+  },
+  "players": [
+   "NBA-10"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   580,
+   1607
+  ],
+  "minute": null,
+  "importance": 5
+ }
+}

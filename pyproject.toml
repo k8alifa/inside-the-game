@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "insidethegame"
+version = "0.1.0"
+description = "Explainable multi-agent match intelligence on synthetic football data"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = ["agent-framework-core>=1.22,<2"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+foundry = ["agent-framework-foundry>=1.15", "azure-identity"]
+openai = ["agent-framework-openai>=1.17"]
+
+[project.scripts]
+itg-sim = "insidethegame.sim.cli:main"
+itg-analyze = "insidethegame.agents.cli:main"
+itg-live = "insidethegame.agents.live:main"
+itg-recap = "insidethegame.agents.recap_cli:main"
+itg-bake = "insidethegame.agents.bake:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
