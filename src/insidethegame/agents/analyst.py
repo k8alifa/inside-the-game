@@ -14,11 +14,20 @@ Two backends share one interface:
 from __future__ import annotations
 
 import json
+import logging
 import re
 from typing import Protocol
 
 from .checker import Claim, Verdict
 from .facts import Fact, MatchContext
+
+log = logging.getLogger("insidethegame.agents")
+
+PROFILES = {
+    "analyst": "Audience: studio analysts and engaged fans. Tactical and precise; use the key numbers.",
+    "casual": ("Audience: casual fans. Warm, simple words, short sentences. Use at most one number per "
+               "sentence and avoid jargon such as xG."),
+}
 
 ANALYST_INSTRUCTIONS = """\
 You are the match analyst for a football broadcast. You explain what happened
@@ -47,6 +56,9 @@ class AnalystBackend(Protocol):
 class TemplateAnalyst:
     """Deterministic stand-in: the top-n facts by importance, as written."""
 
+    def __init__(self, profile: str = "analyst"):
+        self.profile = profile
+
     async def draft(self, facts: dict[str, Fact], ctx: MatchContext, n: int = 8) -> list[Claim]:
         ranked = sorted(facts.values(), key=lambda f: (-f.importance, f.id))
         # Variety: goals and the result always qualify; other kinds once each, then fill.
@@ -58,7 +70,7 @@ class TemplateAnalyst:
                 seen.add(f.kind)
         picked += [f for f in ranked if f not in picked]
         picked = sorted(picked[:n], key=lambda f: (-f.importance, f.id))
-        return [Claim(text=f.summary, fact_ids=[f.id], kind=f.kind) for f in picked]
+        return [Claim(text=f.summary, fact_ids=[f.id], kind=f.kind, source="template") for f in picked]
 
     async def revise(self, facts, ctx, rejected):
         return []  # template claims are built from facts; nothing to fix
@@ -92,20 +104,25 @@ def parse_claims(text: str) -> list[Claim]:
 class LLMAnalyst:
     instructions = ANALYST_INSTRUCTIONS
     agent_name = "analyst"
+    fallback_cls = TemplateAnalyst
 
     def task(self, ctx: MatchContext, n: int) -> str:
         return f"Write the {n} most important insights about this match."
 
-    def __init__(self, client):
+    def __init__(self, client, profile: str = "analyst"):
         from agent_framework import Agent
 
         self._facts: dict[str, Fact] = {}
+        self.profile = profile
+        self.fallback = self.fallback_cls(profile)
+        self.fallback_reason: str | None = None
 
         def get_fact_details(fact_ids: list[str]) -> str:
             """Return figures, players and evidence event ids for the given fact ids."""
             return json.dumps({i: self._facts[i].to_dict() for i in fact_ids if i in self._facts})
 
-        self.agent = Agent(client=client, name=self.agent_name, instructions=self.instructions,
+        instructions = self.instructions + "\n" + PROFILES.get(profile, PROFILES["analyst"])
+        self.agent = Agent(client=client, name=self.agent_name, instructions=instructions,
                            tools=[get_fact_details])
         self.session = None
 
@@ -116,10 +133,23 @@ class LLMAnalyst:
             f"Match: {ctx.team_names[ctx.home]} (home) vs {ctx.team_names[ctx.away]} (away).\n"
             f"{self.task(ctx, n)}\n\nFacts:\n{fact_catalog(facts)}"
         )
-        resp = await self.agent.run(prompt, session=self.session)
-        return parse_claims(resp.text)
+        try:
+            resp = await self.agent.run(prompt, session=self.session)
+            claims = parse_claims(resp.text)
+            if not claims:
+                raise ValueError("model reply had no parseable claims")
+            return claims
+        except Exception as e:  # noqa: BLE001 - any model failure falls back to the template
+            self.fallback_reason = str(e)
+            log.warning("%s: model unavailable (%s); source=template-fallback", self.agent_name, e)
+            claims = await self.fallback.draft(facts, ctx, n)
+            for c in claims:
+                c.source = "template-fallback"
+            return claims
 
     async def revise(self, facts: dict[str, Fact], ctx: MatchContext, rejected: list[Verdict]) -> list[Claim]:
+        if self.fallback_reason:
+            return []
         self._facts = facts
         lines = [f"- [kind {v.claim.kind}, order {v.claim.order}] \"{v.claim.text}\" "
                  f"(cited {', '.join(v.claim.fact_ids) or 'nothing'}): "
@@ -129,5 +159,9 @@ class LLMAnalyst:
             + "\n\nRewrite each so it is fully supported by the facts it cites, or drop it. "
             "Keep each claim's kind and order. Return ONLY the rewritten claims in the same JSON shape."
         )
-        resp = await self.agent.run(prompt, session=self.session)
+        try:
+            resp = await self.agent.run(prompt, session=self.session)
+        except Exception as e:  # noqa: BLE001
+            log.warning("%s: revision skipped, model unavailable (%s)", self.agent_name, e)
+            return []
         return parse_claims(resp.text)

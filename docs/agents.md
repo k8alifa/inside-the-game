@@ -41,16 +41,15 @@ Writes insights that cite fact ids. Two backends with one interface:
 Rebuilds the fact registry itself from the raw events, so it never trusts the analyst. A claim is rejected if:
 
 - it cites no facts, or a fact id that does not exist
-- any number in the text (digits, "two" to "twenty", "twice", "brace", "hat-trick") does not match a cited figure at the precision written ("1.4" matches 1.38; "2" does not match 2.6)
-- it names a squad player who is not in the cited facts
-- it names a club that did not play
+- any number in the text (digits, "one" to "twenty", "twice", "brace", "hat-trick"; idioms like "one of" and "no one" are skipped) does not match a cited figure at the precision written ("1.4" matches 1.38; "2" does not match 2.6)
+- it names a player, by full name, surname alone or first name alone, who is not in the cited facts (players from other clubs are blocked as not in this match)
+- it names a club that did not play, by full or short name ("Elmstead", "Kingsford")
 
 Rejected claims go back to the analyst with reasons for one revision round. Anything still wrong is kept out of the output and listed in the report as blocked.
 
 ### Known limits
 
 - The checker verifies numbers and names, not meaning. "Northbridge scored 1" passes if a cited fact contains the figure 1 for another reason. A semantic check is a candidate next step.
-- Number words for "one" are not checked, because "one" is too often not a count.
 
 ## Run it
 
@@ -95,7 +94,8 @@ itg-recap data/samples/NBA-HCF-7
 Translates verified English lines and reports (`agents/translator.py`), then checks the translation against its source, because translating can add errors:
 
 - **Numbers:** the set of numbers must be identical, counting repeats. Arabic-Indic digits and decimal commas are normalized first.
-- **Names:** in Latin-script languages, every squad surname in the source must appear. Arabic, Japanese and Hindi transliterate names, so only the number check applies there.
+- **Names, Latin scripts:** every player and club name in the source must appear, and no other squad name may be added.
+- **Names, Arabic:** the translator gets a glossary from the name registry (`agents/names.py`) and must use those spellings. The check finds each one after folding hamza variants, and blocks any squad name the source did not contain. Japanese and Hindi have no map yet, so only numbers are checked there.
 
 A blocked translation is not shown; the English line is used instead. The translator needs a model.
 
@@ -103,3 +103,7 @@ A blocked translation is not shown; the English line is used instead. The transl
 itg-live  data/samples/NBA-HCF-7 --lang ar,es
 itg-recap data/samples/NBA-HCF-7 --lang ar,es
 ```
+
+# Model calls: resilience and fallback
+
+Every request to the model goes through `agents/resilience.py`: a rate limiter (12/min by default), a 15 s timeout (not retried), two retries with backoff on HTTP 429 or 5xx (a short Retry-After is honored; a long one, such as a daily quota, is not waited out), and a circuit breaker that skips the model after 3 failed calls in a row. Any failure falls back to the template output, which is marked `template-fallback` with the reason.

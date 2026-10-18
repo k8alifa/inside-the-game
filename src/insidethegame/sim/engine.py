@@ -177,6 +177,7 @@ class MatchSimulator:
         att, dfn = self.sides[team_id], self._other(team_id)
         start_idx, start_clock, start_x = len(self.events), self.clock, x
         poss_tags: list[str] = []
+        self._tag_from: dict[str, int] = {}  # tag -> first event index it may appear on
         if kind in ("corner", "free_kick"):
             poss_tags.append("set_piece")
 
@@ -200,11 +201,13 @@ class MatchSimulator:
                 return (dfn.id, PITCH_LENGTH / 2, PITCH_WIDTH / 2, "kickoff")
             actions += 1
 
-            # Counterattack: won in own half, final third within 15 s and 6 actions.
+            # Counterattack: won within 40 m of own goal, final 30 m within 12 s and 5 actions.
+            # The tag starts at the action that completed the counter, never earlier.
             if (kind == "turnover" and start_x < 40 and x >= 75
                     and self.clock - start_clock <= 12 and actions <= 5
                     and "counter_attack" not in poss_tags):
                 poss_tags.append("counter_attack")
+                self._tag_from["counter_attack"] = len(self.events) - 1
 
             # Shot decision in the final third, more likely closer and central.
             if x >= 78:
@@ -272,10 +275,12 @@ class MatchSimulator:
     def _tag(self, start_idx: int, tags: list[str]) -> None:
         if not tags:
             return
-        for ev in self.events[start_idx:]:
+        tag_from = getattr(self, "_tag_from", {})
+        for i in range(start_idx, len(self.events)):
+            ev = self.events[i]
             if ev.possession_id == self.poss_id:
                 for t in tags:
-                    if t not in ev.tags:
+                    if i >= tag_from.get(t, start_idx) and t not in ev.tags:
                         ev.tags.append(t)
 
     # ------------------------------------------------------------ set plays

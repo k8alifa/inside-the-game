@@ -32,27 +32,47 @@ Return ONLY JSON:
 """
 
 
-class LLMRecapWriter(LLMAnalyst):
-    instructions = RECAP_INSTRUCTIONS
-    agent_name = "recap_writer"
-
-    def task(self, ctx: MatchContext, n: int) -> str:
-        return f"Write the match report: one headline and up to {n - 1} paragraphs."
-
-
 class TemplateRecapWriter:
     """Offline stand-in: a recap assembled from fact summaries, in match order."""
 
+    def __init__(self, profile: str = "analyst"):
+        self.profile = profile
+
     async def draft(self, facts: dict[str, Fact], ctx: MatchContext, n: int = 8) -> list[Claim]:
+        items = self._casual(facts, ctx) if self.profile == "casual" else self._analyst(facts, ctx, n)
+        for c in items:
+            c.source = "template"
+        return items[: max(n, 2)]
+
+    def _casual(self, facts: dict[str, Fact], ctx: MatchContext) -> list[Claim]:
         home, away = ctx.team_names[ctx.home], ctx.team_names[ctx.away]
         final = facts["final-score"]
         h, a = final.figures["home_goals"], final.figures["away_goals"]
+        items = [Claim(self._headline(home, away, h, a), ["final-score"], "headline", 0),
+                 Claim(f"It finished {home} {h}-{a} {away}.", ["final-score"], "paragraph", 1)]
+        for f in sorted((f for f in facts.values() if f.kind == "goal"), key=lambda f: f.minute or 0):
+            scorer = ctx.player_names.get(f.players[0], f.players[0])
+            team = ctx.team_names[f.teams[0]]
+            items.append(Claim(f"{scorer} scored for {team} at {f.figures['display_clock']}.", [f.id],
+                               "paragraph", len(items)))
+        if "top-threat" in facts:
+            t = facts["top-threat"]
+            items.append(Claim(f"{ctx.player_names.get(t.players[0])} was the most dangerous player on the pitch.",
+                               ["top-threat"], "paragraph", len(items)))
+        return items
+
+    @staticmethod
+    def _headline(home: str, away: str, h: int, a: int) -> str:
         if h == a:
-            headline = f"{home} and {away} draw {h}-{a}"
-        else:
-            winner, loser = (home, away) if h > a else (away, home)
-            headline = f"{winner} beat {loser} {max(h, a)}-{min(h, a)}"
-        items = [Claim(headline, ["final-score"], "headline", 0)]
+            return f"{home} and {away} draw {h}-{a}"
+        winner, loser = (home, away) if h > a else (away, home)
+        return f"{winner} beat {loser} {max(h, a)}-{min(h, a)}"
+
+    def _analyst(self, facts: dict[str, Fact], ctx: MatchContext, n: int) -> list[Claim]:
+        home, away = ctx.team_names[ctx.home], ctx.team_names[ctx.away]
+        final = facts["final-score"]
+        h, a = final.figures["home_goals"], final.figures["away_goals"]
+        items = [Claim(self._headline(home, away, h, a), ["final-score"], "headline", 0)]
 
         xg_ids = [f"xg-story-{ctx.home}", f"xg-story-{ctx.away}"]
         lede = " ".join([final.summary] + [facts[i].summary for i in xg_ids])
@@ -68,10 +88,19 @@ class TemplateRecapWriter:
         for fid in ("top-threat", f"keeper-{ctx.home}", f"keeper-{ctx.away}", f"press-{ctx.home}", f"press-{ctx.away}"):
             if fid in facts and len(items) < n:
                 items.append(Claim(facts[fid].summary, [fid], "paragraph", len(items)))
-        return items[: max(n, 2)]
+        return items
 
     async def revise(self, facts, ctx, rejected: list[Verdict]):
         return []
+
+
+class LLMRecapWriter(LLMAnalyst):
+    instructions = RECAP_INSTRUCTIONS
+    agent_name = "recap_writer"
+    fallback_cls = TemplateRecapWriter
+
+    def task(self, ctx: MatchContext, n: int) -> str:
+        return f"Write the match report: one headline and up to {n - 1} paragraphs."
 
 
 def render_markdown(report: Report, ctx: MatchContext) -> str:

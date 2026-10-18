@@ -21,6 +21,7 @@ feed carries them a few seconds early. A real feed would add them at the shot.
 from __future__ import annotations
 
 import json
+import logging
 import random
 from dataclasses import dataclass, field
 from typing import AsyncIterator, Iterable
@@ -30,6 +31,8 @@ from ..sim.stats import team_stats
 from .analyst import parse_claims
 from .checker import Claim, FactChecker
 from .facts import SWING_SHARE_POINTS, Fact, MatchContext, _assist, _momentum
+
+log = logging.getLogger("insidethegame.agents")
 
 SAVE_XG_MIN = 0.12      # saves worth mentioning
 MISS_XG_MIN = 0.30      # misses worth mentioning (a big chance)
@@ -43,7 +46,11 @@ class Line:
     evidence: list[int]
     source: str               # "model", "template", or "template-fallback"
     kind: str
-    blocked: list[str] = field(default_factory=list)  # checker reasons if the model line was blocked
+    blocked: list[str] = field(default_factory=list)  # why the model line was not used
+    at_event: int | None = None   # event id that triggered the line (for replay timing)
+    period: int | None = None
+    clock: float | None = None    # seconds into the period
+    profile: str = "analyst"
 
     def to_dict(self) -> dict:
         return self.__dict__.copy()
@@ -199,9 +206,29 @@ class MomentDetector:
 _GOAL_OPENERS = ("GOAL!", "It's in!", "What a moment!")
 
 
-def template_line(f: Fact, ctx: MatchContext) -> str:
+def _scoreline(f: Fact, ctx: MatchContext) -> str:
+    h, a = f.figures.get("home_goals"), f.figures.get("away_goals")
+    return f"{ctx.team_names[ctx.home]} {h}-{a} {ctx.team_names[ctx.away]}"
+
+
+def template_line(f: Fact, ctx: MatchContext, profile: str = "analyst") -> str:
     """Broadcast phrasing built only from the fact's own words and figures."""
     rng = random.Random(f.id)
+    name = lambda i: ctx.player_names.get(f.players[i], f.players[i]) if len(f.players) > i else ""
+    team = ctx.team_names.get(f.teams[0], f.teams[0]) if f.teams else ""
+    if profile == "casual":
+        if f.kind == "goal":
+            return f"{rng.choice(_GOAL_OPENERS)} {name(0)} scores for {team}! {_scoreline(f, ctx)}."
+        if f.kind == "save":
+            return f"Great save by {name(0)}! {name(1)} is denied."
+        if f.kind == "big_chance_missed":
+            return f"So close! {name(0)} should have scored for {team}."
+        if f.kind in ("half_time", "full_time"):
+            label = "Full time" if f.kind == "full_time" else "Half-time"
+            return f"{label}: {_scoreline(f, ctx)}."
+        if f.kind == "momentum_swing":
+            return f"{team} are on top now and pushing forward."
+        return f.summary
     if f.kind == "goal":
         return f"{rng.choice(_GOAL_OPENERS)} {f.summary}"
     if f.kind == "save":
@@ -213,44 +240,97 @@ def template_line(f: Fact, ctx: MatchContext) -> str:
 
 NARRATOR_INSTRUCTIONS = """\
 You are a live football commentator. Write ONE line of commentary, at most 30
-words, for the moment described. Energetic but accurate.
+words, for each moment described. Energetic but accurate.
 
 Rules:
-- Use only the facts given. Every number must appear in those facts.
+- Use only the facts given for that moment. Every number must appear in them.
 - Only name players and teams that appear in those facts.
-- Do not repeat the previous lines.
-
-Return ONLY JSON: {"text": "...", "fact_ids": ["..."]}
+- Do not repeat earlier lines.
 """
+_ONE = 'Return ONLY JSON: {"text": "...", "fact_ids": ["<the moment fact id>"]}'
+_MANY = ('Return ONLY JSON: {"lines": [{"moment": "<fact id>", "text": "...", '
+         '"fact_ids": ["<fact id>"]}]}, one entry per moment, same order.')
 
 
 class TemplateNarrator:
+    def __init__(self, profile: str = "analyst"):
+        self.profile = profile
+
     async def say(self, moment: Fact, ctx: MatchContext, recent: list[str]) -> Claim:
-        return Claim(text=template_line(moment, ctx), fact_ids=[moment.id], kind=moment.kind)
+        return Claim(text=template_line(moment, ctx, self.profile), fact_ids=[moment.id], kind=moment.kind,
+                     source="template")
+
+    async def say_batch(self, moments: list[Fact], ctx: MatchContext, recent: list[str]) -> dict[str, Claim]:
+        return {m.id: await self.say(m, ctx, recent) for m in moments}
+
+
+def _moment_block(m: Fact) -> str:
+    return f"- {m.id} [{m.kind}]: {m.summary} Figures: {json.dumps(m.figures)}"
 
 
 class LLMNarrator:
-    def __init__(self, client):
+    def __init__(self, client, profile: str = "analyst"):
         from agent_framework import Agent
 
-        self.agent = Agent(client=client, name="narrator", instructions=NARRATOR_INSTRUCTIONS)
+        from .analyst import PROFILES
+
+        self.profile = profile
+        self.agent = Agent(client=client, name="narrator",
+                           instructions=NARRATOR_INSTRUCTIONS + PROFILES.get(profile, PROFILES["analyst"]))
 
     async def say(self, moment: Fact, ctx: MatchContext, recent: list[str]) -> Claim:
-        prompt = (
-            f"Moment fact {moment.id} [{moment.kind}]: {moment.summary}\n"
-            f"Figures: {json.dumps(moment.figures)}\n"
-            f"Previous lines: {json.dumps(recent[-3:])}"
-        )
-        resp = await self.agent.run(prompt)
-        text = resp.text
+        """One moment, one call. Raises if the model is unavailable."""
+        prompt = f"Moment:\n{_moment_block(moment)}\nPrevious lines: {json.dumps(recent[-3:])}\n{_ONE}"
+        text = (await self.agent.run(prompt)).text
         claims = parse_claims('{"claims": [' + text[text.find("{"): text.rfind("}") + 1] + "]}") if "{" in text else []
         return claims[0] if claims else Claim(text="", fact_ids=[], kind=moment.kind)
+
+    async def say_batch(self, moments: list[Fact], ctx: MatchContext, recent: list[str]) -> dict[str, Claim]:
+        """Many moments, one call (used for pre-generation to save quota)."""
+        prompt = ("Moments, in match order:\n" + "\n".join(_moment_block(m) for m in moments)
+                  + f"\nPrevious lines: {json.dumps(recent[-3:])}\n{_MANY}")
+        text = (await self.agent.run(prompt)).text
+        try:
+            data = json.loads(text[text.find("{"): text.rfind("}") + 1])
+        except (json.JSONDecodeError, ValueError):
+            return {}
+        out = {}
+        for item in data.get("lines", []):
+            if isinstance(item, dict) and isinstance(item.get("text"), str):
+                mid = str(item.get("moment", ""))
+                out[mid] = Claim(text=item["text"].strip(), fact_ids=[str(i) for i in item.get("fact_ids") or [mid]])
+        return out
+
+
+def _line(moment: Fact, e: Event, claim: Claim, verdict, source: str, blocked: list[str], profile: str) -> Line:
+    clock = moment.figures.get("display_clock") or e.display_clock
+    return Line(display_clock=str(clock), text=claim.text, fact_ids=claim.fact_ids, evidence=verdict.evidence,
+                source=source, kind=moment.kind, blocked=blocked, at_event=e.event_id, period=e.period,
+                clock=round(e.clock, 1), profile=profile)
+
+
+def _finalize(moment: Fact, claim: Claim | None, error: str | None, checker: FactChecker, ctx: MatchContext,
+              profile: str, model_mode: bool) -> tuple[Claim, object, str, list[str]]:
+    """Check a narrator line; on failure or model error, use the safe template line."""
+    if claim is not None:
+        verdict = checker.check(claim)
+        if verdict.ok:
+            claim.source = "model" if model_mode else "template"
+            return claim, verdict, claim.source, []
+        blocked = verdict.reasons
+    else:
+        blocked = [f"model unavailable: {error}"]
+    safe = Claim(text=template_line(moment, ctx, profile), fact_ids=[moment.id], kind=moment.kind,
+                 source="template-fallback")
+    return safe, checker.check(safe), "template-fallback", blocked
 
 
 async def narrate(events: Iterable[Event] | AsyncIterator[Event], ctx: MatchContext,
                   narrator=None) -> AsyncIterator[Line]:
-    """Yield checked commentary lines as events arrive."""
+    """Yield checked commentary lines as events arrive (one model call per moment)."""
     narrator = narrator or TemplateNarrator()
+    profile = getattr(narrator, "profile", "analyst")
+    model_mode = isinstance(narrator, LLMNarrator)
     detector = MomentDetector(ctx)
     recent: list[str] = []
 
@@ -265,16 +345,41 @@ async def narrate(events: Iterable[Event] | AsyncIterator[Event], ctx: MatchCont
     async for e in _aiter():
         for moment in detector.feed(e):
             checker = FactChecker(detector.facts, ctx)
-            claim = await narrator.say(moment, ctx, recent)
-            verdict = checker.check(claim)
-            source = "model" if isinstance(narrator, LLMNarrator) else "template"
-            blocked: list[str] = []
-            if not verdict.ok:
-                blocked = verdict.reasons
-                claim = Claim(text=template_line(moment, ctx), fact_ids=[moment.id], kind=moment.kind)
-                verdict = checker.check(claim)
-                source = "template-fallback"
-            clock = moment.figures.get("display_clock") or e.display_clock
+            claim, error = None, None
+            try:
+                claim = await narrator.say(moment, ctx, recent)
+            except Exception as exc:  # noqa: BLE001 - model failure -> safe line
+                error = str(exc)
+            claim, verdict, source, blocked = _finalize(moment, claim, error, checker, ctx, profile, model_mode)
+            if source == "template-fallback":
+                log.info("line %s source=template-fallback (%s)", moment.id, "; ".join(blocked))
             recent.append(claim.text)
-            yield Line(display_clock=str(clock), text=claim.text, fact_ids=claim.fact_ids,
-                       evidence=verdict.evidence, source=source, kind=moment.kind, blocked=blocked)
+            yield _line(moment, e, claim, verdict, source, blocked, profile)
+
+
+async def narrate_all(events: list[Event], ctx: MatchContext, narrator=None, batch_size: int = 12) -> list[Line]:
+    """Pre-generation: detect every moment first, then narrate in batches."""
+    narrator = narrator or TemplateNarrator()
+    profile = getattr(narrator, "profile", "analyst")
+    model_mode = isinstance(narrator, LLMNarrator)
+    detector = MomentDetector(ctx)
+    found: list[tuple[Fact, Event]] = []
+    for e in events:
+        found += [(m, e) for m in detector.feed(e)]
+    checker = FactChecker(detector.facts, ctx)
+    lines: list[Line] = []
+    recent: list[str] = []
+    for i in range(0, len(found), batch_size):
+        chunk = found[i: i + batch_size]
+        error = None
+        try:
+            claims = await narrator.say_batch([m for m, _ in chunk], ctx, recent)
+        except Exception as exc:  # noqa: BLE001
+            claims, error = {}, str(exc)
+        for moment, e in chunk:
+            claim = claims.get(moment.id)
+            err = error or (None if claim else "no line returned for this moment")
+            claim, verdict, source, blocked = _finalize(moment, claim, err, checker, ctx, profile, model_mode)
+            recent.append(claim.text)
+            lines.append(_line(moment, e, claim, verdict, source, blocked, profile))
+    return lines

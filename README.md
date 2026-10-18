@@ -12,7 +12,9 @@ Explainable, multi-agent match intelligence on synthetic football data. Built fo
 | Analyst + fact-checker (Agent Framework workflow) | Done, offline. Live model not wired yet |
 | Live narrator (fact-checked, safe fallback) | Done, offline |
 | Recap writer (fact-checked) | Done, offline |
-| Translator (numbers and names re-checked) | Done; needs a model to run |
+| Translator (numbers and names re-checked, Arabic name map) | Done; needs a model to run |
+| GitHub Models provider + resilience | Done; mocked tests only, no live run yet |
+| Pre-generated demo bundle (`itg-bake`) | Done; current bundle is template mode |
 | Orchestration and hosting | Not started |
 
 ## Synthetic match generator
@@ -43,15 +45,47 @@ itg-recap data/samples/NBA-HCF-7            # match report
 itg-live data/samples/NBA-HCF-7 --lang ar,es  # with translations (needs a model)
 ```
 
-## Connect a model (Microsoft Foundry)
+## Connect a model ($0)
 
-Run `scripts/azure-setup.sh` in Azure Cloud Shell, then:
+| `ITG_MODEL_PROVIDER` | What it uses | Cost | Needs | Status |
+|---|---|---|---|---|
+| *(unset)* | Offline templates | $0 | nothing | Tested |
+| `github` | GitHub Models, `openai/gpt-4.1-mini` by default (`ITG_MODEL` to change) | $0, free tier with rate limits | `GITHUB_TOKEN` with Models: read | Tested with a mocked model; no live run yet |
+| `openai` | Any OpenAI-compatible endpoint | depends | `OPENAI_API_KEY`, `ITG_MODEL`, optional `OPENAI_BASE_URL` | Untested live |
+| `foundry` | Microsoft Foundry project | Azure billing | `FOUNDRY_PROJECT_ENDPOINT`, `FOUNDRY_MODEL` | Untested live |
+
+**$0 setup with GitHub Models**
+
+1. On GitHub: Settings › Developer settings › Fine-grained tokens › Generate new token. Under Account permissions, set **Models** to **Read**. No repository access is needed.
+2. Set the environment (see `.env.example`; never commit the token):
+   ```bash
+   pip install -e ".[openai]"
+   export ITG_MODEL_PROVIDER=github GITHUB_TOKEN=<your token>
+   ```
+3. Run it:
+   ```bash
+   itg-live data/samples/NBA-HCF-7 --speed 0
+   itg-recap data/samples/NBA-HCF-7 --lang ar
+   ```
+
+**Resilience:** every model request is rate limited (`ITG_MODEL_RPM`, default 12/min), has a timeout (`ITG_MODEL_TIMEOUT`, default 15 s), and is retried twice with backoff on HTTP 429 or 5xx. If it still fails, the template line is used and marked `template-fallback`. After 3 failed calls in a row the model is skipped for the rest of the run.
+
+## Pre-generated demo
+
+The public demo makes no live model calls. `itg-bake` runs the full pipeline once and saves verified outputs:
 
 ```bash
-pip install -e ".[foundry]"
-export ITG_MODEL_PROVIDER=foundry FOUNDRY_PROJECT_ENDPOINT=... FOUNDRY_MODEL=gpt-5-mini
-itg-live data/samples/NBA-HCF-7
+itg-bake --match data/samples/NBA-HCF-7 --profiles analyst,casual --langs en,ar,es --out data/baked/NBA-HCF-7/
 ```
+
+| File | Contents |
+|---|---|
+| `manifest.json` | Provider, model, profiles, languages, counts by source, model-call stats |
+| `facts.json` | The fact registry: evidence behind every line |
+| `narration.<profile>.json` | Live lines with replay timing (`period`, `clock`, `at_event`), source, evidence, translations |
+| `recap.<profile>.json` | Headline and paragraphs with evidence and translations, plus blocked drafts |
+
+Narration and translation are batched, so a two-profile, three-language bake takes about 12 model calls with no revisions (more if the model calls tools or the checker sends drafts back). The copy in `data/baked/NBA-HCF-7/` was baked in template mode; rebake with a model before recording the demo.
 
 ## Tests
 

@@ -4,12 +4,15 @@ The checker never trusts the analyst. It rebuilds the fact registry from the
 raw events, then for each claim:
 
 1. Every cited fact id must exist.
-2. Every number in the text (digits, number words two to twenty, and count
+2. Every number in the text (digits, number words one to twenty, and count
    words like "twice", "brace", "hat-trick") must
    match a figure in a cited fact, at the precision written. "1.4" matches
    1.38; "2" does not match 2.6.
-3. Every squad player named in the text must be involved in a cited fact.
-4. Every team named in the text must play in this match.
+3. Every player named in the text, by full name, surname alone, or first
+   name alone, must be involved in a cited fact. Players from other clubs in
+   the league are blocked as not in this match.
+4. Every club named in the text, by full or short name, must play in this
+   match.
 
 A claim that fails any check is rejected with reasons, so a retry can fix it.
 """
@@ -20,9 +23,10 @@ import re
 from dataclasses import dataclass, field
 
 from .facts import Fact, MatchContext
+from .names import LEAGUE, NameRegistry
 
 _NUMBER_WORDS = {
-    "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9,
+    "one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9,
     "ten": 10, "eleven": 11, "twelve": 12, "thirteen": 13, "fourteen": 14, "fifteen": 15,
     "sixteen": 16, "seventeen": 17, "eighteen": 18, "nineteen": 19, "twenty": 20,
     "twice": 2, "thrice": 3, "brace": 2, "hat-trick": 3, "hat trick": 3,
@@ -37,9 +41,11 @@ class Claim:
     fact_ids: list[str]
     kind: str = "insight"
     order: int | None = None  # position in a longer piece, e.g. a recap
+    source: str = "model"     # "model", "template", or "template-fallback"
 
     def to_dict(self) -> dict:
-        return {"text": self.text, "fact_ids": list(self.fact_ids), "kind": self.kind, "order": self.order}
+        return {"text": self.text, "fact_ids": list(self.fact_ids), "kind": self.kind, "order": self.order,
+                "source": self.source}
 
 
 @dataclass
@@ -53,7 +59,12 @@ class Verdict:
         return {**self.claim.to_dict(), "verified": self.ok, "reasons": self.reasons, "evidence": self.evidence}
 
 
+# Phrases where "one" is not a count.
+_ONE_IDIOMS = re.compile(r"\b(no one|one of|one-two|one-on-one|one another|the one)\b", re.IGNORECASE)
+
+
 def _numbers_in(text: str) -> list[tuple[str, float]]:
+    text = _ONE_IDIOMS.sub(" ", text)
     out = [(m.group(1), float(m.group(1))) for m in _NUM_RE.finditer(text)]
     out += [(m.group(1), float(_NUMBER_WORDS[m.group(1).lower()])) for m in _WORD_RE.finditer(text)]
     return out
@@ -78,20 +89,29 @@ def _matches(token: str, value: float, allowed: list[float]) -> bool:
 
 
 class FactChecker:
-    def __init__(self, facts: dict[str, Fact], ctx: MatchContext):
+    def __init__(self, facts: dict[str, Fact], ctx: MatchContext, registry: NameRegistry | None = None):
         self.facts = facts
         self.ctx = ctx
-        # Match the longest names first so "Finn Galbraith" wins over "Galbraith".
-        names = []
-        for pid, full in ctx.player_names.items():
-            names.append((full, pid))
-            names.append((full.split()[-1], pid))
-        self._names = sorted(names, key=lambda x: -len(x[0]))
-        from ..sim.teams import TEAMS
-        self._all_teams = {t.id: t.name for t in TEAMS.values()} | dict(ctx.team_names)
-        self._surname_owners: dict[str, set[str]] = {}
-        for pid, full in ctx.player_names.items():
-            self._surname_owners.setdefault(full.split()[-1], set()).add(pid)
+        self.registry = registry or LEAGUE
+        in_match = set(ctx.player_names)
+        # (text, kind, candidate player ids), longest first so full names win over parts.
+        by_text: dict[tuple[str, str], set[str]] = {}
+        for p in self.registry.players:
+            for text, kind in ((p.full, "name"), (p.last, "surname"), (p.first, "first name")):
+                by_text.setdefault((text, kind), set()).add(p.id)
+        for pid, full in ctx.player_names.items():  # squads not in the league registry
+            if not any(pid in ids for ids in by_text.values()):
+                first, _, last = full.partition(" ")
+                for text, kind in ((full, "name"), (last or full, "surname"), (first, "first name")):
+                    by_text.setdefault((text, kind), set()).add(pid)
+        self._names = sorted(((t, k, ids) for (t, k), ids in by_text.items()), key=lambda x: -len(x[0]))
+        self._in_match = in_match
+        clubs = []
+        for tid, aliases in self.registry.clubs.items():
+            clubs += [(a, tid) for a in aliases]
+        for tid, name in ctx.team_names.items():
+            clubs.append((name, tid))
+        self._clubs = sorted(set(clubs), key=lambda x: -len(x[0]))
 
     def check(self, claim: Claim) -> Verdict:
         reasons: list[str] = []
@@ -107,18 +127,26 @@ class FactChecker:
             if not _matches(token, value, allowed):
                 reasons.append(f"number '{token}' is not supported by the cited facts")
 
-        involved = {p for f in cited for p in f.players}
+        # Clubs first, so club names are not misread as player names.
         text = claim.text
-        for name, pid in self._names:
-            if re.search(rf"\b{re.escape(name)}\b", text):
-                owners = self._surname_owners.get(name, {pid})
-                if not (owners & involved) and pid not in involved:
-                    reasons.append(f"player '{name}' is not involved in the cited facts")
-                text = re.sub(rf"\b{re.escape(name)}\b", " ", text)
+        for alias, tid in self._clubs:
+            pattern = rf"\b{re.escape(alias)}\b"
+            if re.search(pattern, text, re.IGNORECASE):
+                if tid not in self.ctx.team_names:
+                    reasons.append(f"team '{alias}' did not play in this match")
+                text = re.sub(pattern, " ", text, flags=re.IGNORECASE)
 
-        for tid, tname in self._all_teams.items():
-            if tid not in self.ctx.team_names and (tname.lower() in claim.text.lower()):
-                reasons.append(f"team '{tname}' did not play in this match")
+        involved = {p for f in cited for p in f.players}
+        for name, kind, ids in self._names:
+            pattern = rf"\b{re.escape(name)}\b"
+            if not re.search(pattern, text):
+                continue
+            if not ids & involved:
+                if ids & self._in_match:
+                    reasons.append(f"player '{name}' ({kind}) is not involved in the cited facts")
+                else:
+                    reasons.append(f"player '{name}' ({kind}) is not in this match")
+            text = re.sub(pattern, " ", text)
 
         evidence = sorted({e for f in cited for e in f.evidence})
         return Verdict(claim=claim, ok=not reasons, reasons=_dedupe(reasons), evidence=evidence)

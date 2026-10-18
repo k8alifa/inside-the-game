@@ -36,7 +36,7 @@ EVENT_TYPES = (
 # Tags carried on events. Possession-level tags are applied to every event
 # in the possession once it ends.
 TAGS = (
-    "counter_attack",   # won in own half, reached final third fast
+    "counter_attack",   # from the action that completed a fast break, onward
     "high_press_win",   # ball won within ~35 m of the opponent's goal
     "set_piece",        # corner or free kick and the play straight after
     "header",
