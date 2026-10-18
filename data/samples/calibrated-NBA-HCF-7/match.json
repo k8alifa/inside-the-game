@@ -1,0 +1,362 @@
+{
+  "match_id": "NBA-HCF-7",
+  "seed": 7,
+  "generator_version": "0.1.0",
+  "disclaimer": "Synthetic data. All clubs, players and events are invented by a simulator and do not describe any real match.",
+  "home": {
+    "id": "NBA",
+    "name": "Northbridge Athletic",
+    "short": "Northbridge",
+    "style": {
+      "attack": 0.75,
+      "defense": 0.6,
+      "press": 0.85,
+      "tempo": 0.8,
+      "directness": 0.35,
+      "technique": 0.75,
+      "discipline": 0.55
+    },
+    "starters": [
+      {
+        "id": "NBA-1",
+        "name": "Pavel Selbourne",
+        "number": 1,
+        "role": "GK"
+      },
+      {
+        "id": "NBA-2",
+        "name": "Luca Brennick",
+        "number": 2,
+        "role": "DF"
+      },
+      {
+        "id": "NBA-3",
+        "name": "Jonah Moorcroft",
+        "number": 3,
+        "role": "DF"
+      },
+      {
+        "id": "NBA-4",
+        "name": "Alex Dovecote",
+        "number": 4,
+        "role": "DF"
+      },
+      {
+        "id": "NBA-5",
+        "name": "Leon Okonjo",
+        "number": 5,
+        "role": "DF"
+      },
+      {
+        "id": "NBA-6",
+        "name": "Finn Holloway",
+        "number": 6,
+        "role": "MF"
+      },
+      {
+        "id": "NBA-8",
+        "name": "Rafi Marlow",
+        "number": 8,
+        "role": "MF"
+      },
+      {
+        "id": "NBA-10",
+        "name": "Kai Underhill",
+        "number": 10,
+        "role": "MF"
+      },
+      {
+        "id": "NBA-7",
+        "name": "Pavel Ivers",
+        "number": 7,
+        "role": "FW"
+      },
+      {
+        "id": "NBA-9",
+        "name": "Milo Upworth",
+        "number": 9,
+        "role": "FW"
+      },
+      {
+        "id": "NBA-11",
+        "name": "Jonah Haldane",
+        "number": 11,
+        "role": "FW"
+      }
+    ],
+    "bench": [
+      {
+        "id": "NBA-13",
+        "name": "Emre Benhali",
+        "number": 13,
+        "role": "GK"
+      },
+      {
+        "id": "NBA-15",
+        "name": "Mateo Ingram",
+        "number": 15,
+        "role": "DF"
+      },
+      {
+        "id": "NBA-16",
+        "name": "Finn Abara",
+        "number": 16,
+        "role": "MF"
+      },
+      {
+        "id": "NBA-18",
+        "name": "Kai Jessop",
+        "number": 18,
+        "role": "MF"
+      },
+      {
+        "id": "NBA-19",
+        "name": "Yusuf Dellacourt",
+        "number": 19,
+        "role": "FW"
+      }
+    ]
+  },
+  "away": {
+    "id": "HCF",
+    "name": "Harbor City FC",
+    "short": "Harbor City",
+    "style": {
+      "attack": 0.6,
+      "defense": 0.8,
+      "press": 0.3,
+      "tempo": 0.4,
+      "directness": 0.7,
+      "technique": 0.55,
+      "discipline": 0.75
+    },
+    "starters": [
+      {
+        "id": "HCF-1",
+        "name": "Tariq Blackmore",
+        "number": 1,
+        "role": "GK"
+      },
+      {
+        "id": "HCF-2",
+        "name": "Dario Castellan",
+        "number": 2,
+        "role": "DF"
+      },
+      {
+        "id": "HCF-3",
+        "name": "Ivo Dunmore",
+        "number": 3,
+        "role": "DF"
+      },
+      {
+        "id": "HCF-4",
+        "name": "Ivo Sutcombe",
+        "number": 4,
+        "role": "DF"
+      },
+      {
+        "id": "HCF-5",
+        "name": "Joel Hartwell",
+        "number": 5,
+        "role": "DF"
+      },
+      {
+        "id": "HCF-6",
+        "name": "Dario Langstone",
+        "number": 6,
+        "role": "MF"
+      },
+      {
+        "id": "HCF-8",
+        "name": "Yusuf Stavros",
+        "number": 8,
+        "role": "MF"
+      },
+      {
+        "id": "HCF-10",
+        "name": "Milo Galbraith",
+        "number": 10,
+        "role": "MF"
+      },
+      {
+        "id": "HCF-7",
+        "name": "Adam Eskdale",
+        "number": 7,
+        "role": "FW"
+      },
+      {
+        "id": "HCF-9",
+        "name": "Adam Ebbsworth",
+        "number": 9,
+        "role": "FW"
+      },
+      {
+        "id": "HCF-11",
+        "name": "Cal Fairbank",
+        "number": 11,
+        "role": "FW"
+      }
+    ],
+    "bench": [
+      {
+        "id": "HCF-13",
+        "name": "Omar Yardley",
+        "number": 13,
+        "role": "GK"
+      },
+      {
+        "id": "HCF-15",
+        "name": "Theo Gorsuch",
+        "number": 15,
+        "role": "DF"
+      },
+      {
+        "id": "HCF-16",
+        "name": "Rafi Radley",
+        "number": 16,
+        "role": "MF"
+      },
+      {
+        "id": "HCF-18",
+        "name": "Alex Merrow",
+        "number": 18,
+        "role": "MF"
+      },
+      {
+        "id": "HCF-19",
+        "name": "Nico Pemberton",
+        "number": 19,
+        "role": "FW"
+      }
+    ]
+  },
+  "score": {
+    "NBA": 4,
+    "HCF": 1
+  },
+  "goals": [
+    {
+      "event_id": 254,
+      "team": "NBA",
+      "scorer": "Finn Holloway",
+      "display_clock": "14'",
+      "xg": 0.01
+    },
+    {
+      "event_id": 423,
+      "team": "HCF",
+      "scorer": "Cal Fairbank",
+      "display_clock": "24'",
+      "xg": 0.328
+    },
+    {
+      "event_id": 908,
+      "team": "NBA",
+      "scorer": "Jonah Haldane",
+      "display_clock": "50'",
+      "xg": 0.143
+    },
+    {
+      "event_id": 1143,
+      "team": "NBA",
+      "scorer": "Finn Abara",
+      "display_clock": "65'",
+      "xg": 0.068
+    },
+    {
+      "event_id": 1363,
+      "team": "NBA",
+      "scorer": "Jonah Moorcroft",
+      "display_clock": "78'",
+      "xg": 0.127
+    }
+  ],
+  "substitutions": [
+    {
+      "team": "HCF",
+      "minute": 57,
+      "off": "HCF-8",
+      "on": "HCF-16"
+    },
+    {
+      "team": "NBA",
+      "minute": 59,
+      "off": "NBA-6",
+      "on": "NBA-16"
+    },
+    {
+      "team": "NBA",
+      "minute": 65,
+      "off": "NBA-11",
+      "on": "NBA-19"
+    },
+    {
+      "team": "HCF",
+      "minute": 66,
+      "off": "HCF-9",
+      "on": "HCF-19"
+    },
+    {
+      "team": "HCF",
+      "minute": 71,
+      "off": "HCF-16",
+      "on": "HCF-18"
+    },
+    {
+      "team": "NBA",
+      "minute": 75,
+      "off": "NBA-5",
+      "on": "NBA-15"
+    }
+  ],
+  "stats": {
+    "NBA": {
+      "goals": 4,
+      "possession_pct": 62.8,
+      "passes": 683,
+      "pass_accuracy_pct": 89.8,
+      "shots": 22,
+      "shots_on_target": 7,
+      "xg": 2.26,
+      "big_chances": 2,
+      "corners": 4,
+      "fouls": 10,
+      "yellow_cards": 2,
+      "red_cards": 0,
+      "ball_wins": 100,
+      "high_press_wins": 18,
+      "counter_attacks": 3
+    },
+    "HCF": {
+      "goals": 1,
+      "possession_pct": 37.2,
+      "passes": 410,
+      "pass_accuracy_pct": 77.8,
+      "shots": 8,
+      "shots_on_target": 2,
+      "xg": 1.48,
+      "big_chances": 3,
+      "corners": 3,
+      "fouls": 3,
+      "yellow_cards": 1,
+      "red_cards": 0,
+      "ball_wins": 87,
+      "high_press_wins": 8,
+      "counter_attacks": 4
+    }
+  },
+  "event_count": 1661,
+  "sim_config": {
+    "shot_base": 0.029,
+    "shot_slope": 0.145,
+    "finish_scale": 1.06,
+    "foul_base": 0.0145,
+    "card_base": 0.19,
+    "corner_clearance": 0.12,
+    "corner_after_shot": 0.4,
+    "pass_loss_base": 0.065,
+    "home_advantage": 0.09
+  },
+  "sim_config_hash": "96621e5d5264"
+}

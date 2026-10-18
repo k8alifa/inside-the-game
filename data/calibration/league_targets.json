@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "goals_per_team_match": {
+      "mean": 1.4939,
+      "sd": 1.2411
+    },
+    "home_goals_per_match": {
+      "mean": 1.6132,
+      "sd": 1.2788
+    },
+    "away_goals_per_match": {
+      "mean": 1.3746,
+      "sd": 1.1903
+    },
+    "total_goals_per_match": {
+      "mean": 2.9877,
+      "sd": 1.6281
+    },
+    "home_win_rate": {
+      "mean": 0.4316,
+      "sd": 0.4953
+    },
+    "draw_rate": {
+      "mean": 0.2447,
+      "sd": 0.4299
+    },
+    "away_win_rate": {
+      "mean": 0.3237,
+      "sd": 0.4679
+    }
+  },
+  "n_matches": 1140,
+  "seasons": [
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "source": "openfootball/england (top division result lists)",
+  "licence": "CC0 1.0 Universal (public domain dedication). Only aggregates are stored here.",
+  "note": "Aggregate only. No team, player or fixture data. Generated output stays fully synthetic.",
+  "generated_at": "2026-10-18T13:39:07+00:00"
+}

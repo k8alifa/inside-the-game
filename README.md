@@ -34,6 +34,8 @@ Without installing: `PYTHONPATH=src python -m insidethegame.sim ...`
 
 A sample match is in `data/samples/NBA-HCF-7/`. The event format is in [docs/event-schema.md](docs/event-schema.md).
 
+**Optional calibration.** `itg-sim generate --calibration data/calibration/simconfig_calibrated.json` uses constants fitted to real top-division result aggregates (goals, home/draw/away rates) from a CC0 source. Only aggregates are stored; clubs, players and events stay invented. Without the flag the output is unchanged. See [docs/calibration.md](docs/calibration.md); a calibrated sample is in `data/samples/calibrated-NBA-HCF-7/`.
+
 ## Analyst and fact-checker
 
 Every insight cites facts computed from the events. A separate fact-checker rebuilds those facts itself and blocks any claim whose numbers or names the data does not support. See [docs/agents.md](docs/agents.md).

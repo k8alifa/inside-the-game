@@ -221,3 +221,6 @@ __marimo__/
 
 # Generated matches (samples in data/samples are committed)
 data/matches/
+
+# Third-party raw data for calibration: never committed
+data/raw/
