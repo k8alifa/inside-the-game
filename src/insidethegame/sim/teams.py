@@ -114,3 +114,13 @@ TEAMS: dict[str, TeamProfile] = {
               attack=0.50, defense=0.65, press=0.60, tempo=0.55, directness=0.60, technique=0.55, discipline=0.45),
     )
 }
+
+
+# Broadcast colours for the demo overlay (primary, secondary). Invented, and
+# deliberately kept out of TeamProfile so match files stay byte-identical.
+CLUB_COLORS: dict[str, tuple[str, str]] = {
+    "NBA": ("#0f766e", "#f0fdfa"),
+    "HCF": ("#1e3a8a", "#f59e0b"),
+    "ELR": ("#7f1d1d", "#7dd3fc"),
+    "KST": ("#166534", "#fef3c7"),
+}

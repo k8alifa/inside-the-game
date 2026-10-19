@@ -1,0 +1,1716 @@
+{
+ "schema_version": 1,
+ "match_id": "NBA-HCF-7",
+ "player": {
+  "id": "NBA-11",
+  "name": "Jonah Haldane",
+  "team": "NBA",
+  "role": "FW"
+ },
+ "card": [
+  {
+   "at_event": 63,
+   "touches": 1,
+   "passes_completed": 1,
+   "passes_attempted": 1,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 72,
+   "touches": 2,
+   "passes_completed": 1,
+   "passes_attempted": 1,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 73,
+   "touches": 3,
+   "passes_completed": 2,
+   "passes_attempted": 2,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 78,
+   "touches": 4,
+   "passes_completed": 2,
+   "passes_attempted": 2,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 79,
+   "touches": 5,
+   "passes_completed": 2,
+   "passes_attempted": 2,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 149,
+   "touches": 6,
+   "passes_completed": 2,
+   "passes_attempted": 2,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 166,
+   "touches": 7,
+   "passes_completed": 3,
+   "passes_attempted": 3,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 185,
+   "touches": 8,
+   "passes_completed": 4,
+   "passes_attempted": 4,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 195,
+   "touches": 9,
+   "passes_completed": 5,
+   "passes_attempted": 5,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 234,
+   "touches": 10,
+   "passes_completed": 6,
+   "passes_attempted": 6,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 244,
+   "touches": 11,
+   "passes_completed": 7,
+   "passes_attempted": 7,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 319,
+   "touches": 12,
+   "passes_completed": 8,
+   "passes_attempted": 8,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 353,
+   "touches": 13,
+   "passes_completed": 9,
+   "passes_attempted": 9,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 355,
+   "touches": 14,
+   "passes_completed": 10,
+   "passes_attempted": 10,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 402,
+   "touches": 15,
+   "passes_completed": 11,
+   "passes_attempted": 11,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 411,
+   "touches": 16,
+   "passes_completed": 11,
+   "passes_attempted": 11,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 435,
+   "touches": 16,
+   "passes_completed": 11,
+   "passes_attempted": 11,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 440,
+   "touches": 17,
+   "passes_completed": 12,
+   "passes_attempted": 12,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 509,
+   "touches": 17,
+   "passes_completed": 12,
+   "passes_attempted": 12,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 537,
+   "touches": 18,
+   "passes_completed": 12,
+   "passes_attempted": 13,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 556,
+   "touches": 19,
+   "passes_completed": 13,
+   "passes_attempted": 14,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 562,
+   "touches": 20,
+   "passes_completed": 13,
+   "passes_attempted": 14,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 572,
+   "touches": 21,
+   "passes_completed": 14,
+   "passes_attempted": 15,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 577,
+   "touches": 22,
+   "passes_completed": 15,
+   "passes_attempted": 16,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 597,
+   "touches": 23,
+   "passes_completed": 16,
+   "passes_attempted": 17,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 647,
+   "touches": 24,
+   "passes_completed": 16,
+   "passes_attempted": 18,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 709,
+   "touches": 25,
+   "passes_completed": 16,
+   "passes_attempted": 18,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 710,
+   "touches": 26,
+   "passes_completed": 16,
+   "passes_attempted": 18,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 711,
+   "touches": 27,
+   "passes_completed": 17,
+   "passes_attempted": 19,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 752,
+   "touches": 28,
+   "passes_completed": 17,
+   "passes_attempted": 19,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 753,
+   "touches": 29,
+   "passes_completed": 18,
+   "passes_attempted": 20,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 762,
+   "touches": 30,
+   "passes_completed": 19,
+   "passes_attempted": 21,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 784,
+   "touches": 31,
+   "passes_completed": 20,
+   "passes_attempted": 22,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 793,
+   "touches": 32,
+   "passes_completed": 20,
+   "passes_attempted": 22,
+   "shots": 2,
+   "xg": 0.09,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 794,
+   "touches": 32,
+   "passes_completed": 20,
+   "passes_attempted": 22,
+   "shots": 2,
+   "xg": 0.09,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 842,
+   "touches": 33,
+   "passes_completed": 20,
+   "passes_attempted": 22,
+   "shots": 2,
+   "xg": 0.09,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 849,
+   "touches": 34,
+   "passes_completed": 21,
+   "passes_attempted": 23,
+   "shots": 2,
+   "xg": 0.09,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 852,
+   "touches": 35,
+   "passes_completed": 22,
+   "passes_attempted": 24,
+   "shots": 2,
+   "xg": 0.09,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 876,
+   "touches": 36,
+   "passes_completed": 22,
+   "passes_attempted": 24,
+   "shots": 2,
+   "xg": 0.09,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 877,
+   "touches": 37,
+   "passes_completed": 22,
+   "passes_attempted": 25,
+   "shots": 2,
+   "xg": 0.09,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 954,
+   "touches": 38,
+   "passes_completed": 23,
+   "passes_attempted": 26,
+   "shots": 2,
+   "xg": 0.09,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 962,
+   "touches": 39,
+   "passes_completed": 24,
+   "passes_attempted": 27,
+   "shots": 2,
+   "xg": 0.09,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 965,
+   "touches": 40,
+   "passes_completed": 25,
+   "passes_attempted": 28,
+   "shots": 2,
+   "xg": 0.09,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 971,
+   "touches": 41,
+   "passes_completed": 25,
+   "passes_attempted": 28,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 987,
+   "touches": 42,
+   "passes_completed": 25,
+   "passes_attempted": 28,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 988,
+   "touches": 43,
+   "passes_completed": 25,
+   "passes_attempted": 29,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1005,
+   "touches": 44,
+   "passes_completed": 25,
+   "passes_attempted": 30,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1009,
+   "touches": 44,
+   "passes_completed": 25,
+   "passes_attempted": 30,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1010,
+   "touches": 44,
+   "passes_completed": 25,
+   "passes_attempted": 30,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1024,
+   "touches": 45,
+   "passes_completed": 25,
+   "passes_attempted": 30,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1025,
+   "touches": 46,
+   "passes_completed": 26,
+   "passes_attempted": 31,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1051,
+   "touches": 47,
+   "passes_completed": 26,
+   "passes_attempted": 31,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1077,
+   "touches": 48,
+   "passes_completed": 27,
+   "passes_attempted": 32,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1079,
+   "touches": 49,
+   "passes_completed": 28,
+   "passes_attempted": 33,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1121,
+   "touches": 50,
+   "passes_completed": 28,
+   "passes_attempted": 33,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1135,
+   "touches": 51,
+   "passes_completed": 29,
+   "passes_attempted": 34,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1138,
+   "touches": 52,
+   "passes_completed": 30,
+   "passes_attempted": 35,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1178,
+   "touches": 53,
+   "passes_completed": 31,
+   "passes_attempted": 36,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1186,
+   "touches": 54,
+   "passes_completed": 32,
+   "passes_attempted": 37,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1188,
+   "touches": 55,
+   "passes_completed": 33,
+   "passes_attempted": 38,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1190,
+   "touches": 56,
+   "passes_completed": 34,
+   "passes_attempted": 39,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1198,
+   "touches": 57,
+   "passes_completed": 35,
+   "passes_attempted": 40,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1224,
+   "touches": 58,
+   "passes_completed": 35,
+   "passes_attempted": 40,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1225,
+   "touches": 59,
+   "passes_completed": 35,
+   "passes_attempted": 41,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1245,
+   "touches": 60,
+   "passes_completed": 36,
+   "passes_attempted": 42,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1257,
+   "touches": 61,
+   "passes_completed": 36,
+   "passes_attempted": 42,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1259,
+   "touches": 62,
+   "passes_completed": 37,
+   "passes_attempted": 43,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1273,
+   "touches": 63,
+   "passes_completed": 37,
+   "passes_attempted": 44,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1282,
+   "touches": 64,
+   "passes_completed": 38,
+   "passes_attempted": 45,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1301,
+   "touches": 65,
+   "passes_completed": 39,
+   "passes_attempted": 46,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1311,
+   "touches": 66,
+   "passes_completed": 39,
+   "passes_attempted": 46,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1317,
+   "touches": 67,
+   "passes_completed": 39,
+   "passes_attempted": 47,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1353,
+   "touches": 68,
+   "passes_completed": 40,
+   "passes_attempted": 48,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1366,
+   "touches": 69,
+   "passes_completed": 41,
+   "passes_attempted": 49,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1375,
+   "touches": 70,
+   "passes_completed": 42,
+   "passes_attempted": 50,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1399,
+   "touches": 71,
+   "passes_completed": 43,
+   "passes_attempted": 51,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1412,
+   "touches": 72,
+   "passes_completed": 44,
+   "passes_attempted": 52,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1435,
+   "touches": 73,
+   "passes_completed": 45,
+   "passes_attempted": 53,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1445,
+   "touches": 74,
+   "passes_completed": 45,
+   "passes_attempted": 53,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1493,
+   "touches": 75,
+   "passes_completed": 46,
+   "passes_attempted": 54,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1506,
+   "touches": 76,
+   "passes_completed": 47,
+   "passes_attempted": 55,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1514,
+   "touches": 77,
+   "passes_completed": 48,
+   "passes_attempted": 56,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1523,
+   "touches": 78,
+   "passes_completed": 49,
+   "passes_attempted": 57,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1562,
+   "touches": 79,
+   "passes_completed": 49,
+   "passes_attempted": 58,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1584,
+   "touches": 80,
+   "passes_completed": 50,
+   "passes_attempted": 59,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1593,
+   "touches": 81,
+   "passes_completed": 51,
+   "passes_attempted": 60,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 2
+  }
+ ],
+ "items": {
+  "analyst": [
+   {
+    "id": "NBA-HCF-7:analyst:NBA-11:card:player-NBA-11@79",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 79,
+    "period": 1,
+    "clock": 240.9,
+    "display_clock": "5'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane: 5 touches, 2/2 passes, 1 shot (0.01 xG), 0 goals, 0 key passes, 1 ball win.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane: 5 touches, 2/2 passes, 1 shot (0.01 xG), 0 goals, 0 key passes, 1 ball win.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@79"
+    ],
+    "evidence": [
+     63,
+     72,
+     73,
+     78,
+     79
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-11:card:player-NBA-11@793",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 793,
+    "period": 1,
+    "clock": 2678.5,
+    "display_clock": "45'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane: 32 touches, 20/22 passes, 2 shots (0.09 xG), 0 goals, 0 key passes, 2 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane: 32 touches, 20/22 passes, 2 shots (0.09 xG), 0 goals, 0 key passes, 2 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@793"
+    ],
+    "evidence": [
+     572,
+     577,
+     597,
+     647,
+     709,
+     710,
+     711,
+     752,
+     753,
+     762,
+     784,
+     793
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:all:alert:moment-794",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 794,
+    "period": 1,
+    "clock": 2678.5,
+    "display_clock": "45'",
+    "show_for_s": 6.0,
+    "slot": "alert",
+    "kind": "goal",
+    "text": "It's in! Jonah Haldane scored for Northbridge Athletic at 45'. The chance was worth 0.08 xG. Northbridge Athletic 2-0 Harbor City FC.",
+    "translations": {
+     "es": {
+      "text": "It's in! Jonah Haldane scored for Northbridge Athletic at 45'. The chance was worth 0.08 xG. Northbridge Athletic 2-0 Harbor City FC.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-794"
+    ],
+    "evidence": [
+     793,
+     794
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-11:card:player-NBA-11@803",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 803,
+    "period": 1,
+    "clock": 2767.2,
+    "display_clock": "45+2'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane: 32 touches, 20/22 passes, 2 shots (0.09 xG), 1 goal, 0 key passes, 2 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane: 32 touches, 20/22 passes, 2 shots (0.09 xG), 1 goal, 0 key passes, 2 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@803"
+    ],
+    "evidence": [
+     577,
+     597,
+     647,
+     709,
+     710,
+     711,
+     752,
+     753,
+     762,
+     784,
+     793,
+     794
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-11:card:player-NBA-11@971",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 971,
+    "period": 2,
+    "clock": 543.4,
+    "display_clock": "55'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane: 41 touches, 25/28 passes, 3 shots (0.13 xG), 1 goal, 0 key passes, 2 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane: 41 touches, 25/28 passes, 3 shots (0.13 xG), 1 goal, 0 key passes, 2 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@971"
+    ],
+    "evidence": [
+     784,
+     793,
+     794,
+     842,
+     849,
+     852,
+     876,
+     877,
+     954,
+     962,
+     965,
+     971
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:all:alert:moment-1010",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1010,
+    "period": 2,
+    "clock": 651.1,
+    "display_clock": "56'",
+    "show_for_s": 6.0,
+    "slot": "alert",
+    "kind": "yellow_card",
+    "text": "Yellow card for Jonah Haldane of Northbridge Athletic at 56'.",
+    "translations": {
+     "es": {
+      "text": "Yellow card for Jonah Haldane of Northbridge Athletic at 56'.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-1010"
+    ],
+    "evidence": [
+     1009,
+     1010
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-11:card:player-NBA-11@1190",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1190,
+    "period": 2,
+    "clock": 1415.5,
+    "display_clock": "69'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane: 56 touches, 34/39 passes, 3 shots (0.13 xG), 1 goal, 1 key pass, 2 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane: 56 touches, 34/39 passes, 3 shots (0.13 xG), 1 goal, 1 key pass, 2 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@1190"
+    ],
+    "evidence": [
+     1024,
+     1025,
+     1051,
+     1077,
+     1079,
+     1121,
+     1135,
+     1138,
+     1178,
+     1186,
+     1188,
+     1190
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-11:card:player-NBA-11@1412",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1412,
+    "period": 2,
+    "clock": 2203.3,
+    "display_clock": "82'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane: 72 touches, 44/52 passes, 3 shots (0.13 xG), 1 goal, 2 key passes, 3 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane: 72 touches, 44/52 passes, 3 shots (0.13 xG), 1 goal, 2 key passes, 3 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@1412"
+    ],
+    "evidence": [
+     1257,
+     1259,
+     1273,
+     1282,
+     1301,
+     1311,
+     1317,
+     1353,
+     1366,
+     1375,
+     1399,
+     1412
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-11:card:player-NBA-11@1629",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1629,
+    "period": 2,
+    "clock": 2968.2,
+    "display_clock": "90+5'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane: 81 touches, 51/60 passes, 3 shots (0.13 xG), 1 goal, 2 key passes, 4 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane: 81 touches, 51/60 passes, 3 shots (0.13 xG), 1 goal, 2 key passes, 4 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@1629"
+    ],
+    "evidence": [
+     1375,
+     1399,
+     1412,
+     1435,
+     1445,
+     1493,
+     1506,
+     1514,
+     1523,
+     1562,
+     1584,
+     1593
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   }
+  ],
+  "casual": [
+   {
+    "id": "NBA-HCF-7:casual:NBA-11:card:player-NBA-11@79",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 79,
+    "period": 1,
+    "clock": 240.9,
+    "display_clock": "5'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane has had a shot so far.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane has had a shot so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@79"
+    ],
+    "evidence": [
+     63,
+     72,
+     73,
+     78,
+     79
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-11:card:player-NBA-11@793",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 793,
+    "period": 1,
+    "clock": 2678.5,
+    "display_clock": "45'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane has had 2 shots so far.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane has had 2 shots so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@793"
+    ],
+    "evidence": [
+     572,
+     577,
+     597,
+     647,
+     709,
+     710,
+     711,
+     752,
+     753,
+     762,
+     784,
+     793
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:all:alert:moment-794",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 794,
+    "period": 1,
+    "clock": 2678.5,
+    "display_clock": "45'",
+    "show_for_s": 6.0,
+    "slot": "alert",
+    "kind": "goal",
+    "text": "It's in! Jonah Haldane scores for Northbridge Athletic! Northbridge Athletic 2-0 Harbor City FC.",
+    "translations": {
+     "es": {
+      "text": "It's in! Jonah Haldane scores for Northbridge Athletic! Northbridge Athletic 2-0 Harbor City FC.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-794"
+    ],
+    "evidence": [
+     793,
+     794
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-11:card:player-NBA-11@803",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 803,
+    "period": 1,
+    "clock": 2767.2,
+    "display_clock": "45+2'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane is on the scoresheet today.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane is on the scoresheet today.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@803"
+    ],
+    "evidence": [
+     577,
+     597,
+     647,
+     709,
+     710,
+     711,
+     752,
+     753,
+     762,
+     784,
+     793,
+     794
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-11:card:player-NBA-11@971",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 971,
+    "period": 2,
+    "clock": 543.4,
+    "display_clock": "55'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane is on the scoresheet today.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane is on the scoresheet today.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@971"
+    ],
+    "evidence": [
+     784,
+     793,
+     794,
+     842,
+     849,
+     852,
+     876,
+     877,
+     954,
+     962,
+     965,
+     971
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:all:alert:moment-1010",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1010,
+    "period": 2,
+    "clock": 651.1,
+    "display_clock": "56'",
+    "show_for_s": 6.0,
+    "slot": "alert",
+    "kind": "yellow_card",
+    "text": "Booked: Jonah Haldane of Northbridge Athletic.",
+    "translations": {
+     "es": {
+      "text": "Booked: Jonah Haldane of Northbridge Athletic.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-1010"
+    ],
+    "evidence": [
+     1009,
+     1010
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-11:card:player-NBA-11@1190",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1190,
+    "period": 2,
+    "clock": 1415.5,
+    "display_clock": "69'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane is on the scoresheet today.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane is on the scoresheet today.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@1190"
+    ],
+    "evidence": [
+     1024,
+     1025,
+     1051,
+     1077,
+     1079,
+     1121,
+     1135,
+     1138,
+     1178,
+     1186,
+     1188,
+     1190
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-11:card:player-NBA-11@1412",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1412,
+    "period": 2,
+    "clock": 2203.3,
+    "display_clock": "82'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane is on the scoresheet today.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane is on the scoresheet today.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@1412"
+    ],
+    "evidence": [
+     1257,
+     1259,
+     1273,
+     1282,
+     1301,
+     1311,
+     1317,
+     1353,
+     1366,
+     1375,
+     1399,
+     1412
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-11:card:player-NBA-11@1629",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1629,
+    "period": 2,
+    "clock": 2968.2,
+    "display_clock": "90+5'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane is on the scoresheet today.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane is on the scoresheet today.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@1629"
+    ],
+    "evidence": [
+     1375,
+     1399,
+     1412,
+     1435,
+     1445,
+     1493,
+     1506,
+     1514,
+     1523,
+     1562,
+     1584,
+     1593
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   }
+  ]
+ }
+}

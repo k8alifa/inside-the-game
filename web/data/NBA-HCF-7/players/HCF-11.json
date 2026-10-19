@@ -1,0 +1,1494 @@
+{
+ "schema_version": 1,
+ "match_id": "NBA-HCF-7",
+ "player": {
+  "id": "HCF-11",
+  "name": "Cal Fairbank",
+  "team": "HCF",
+  "role": "FW"
+ },
+ "card": [
+  {
+   "at_event": 15,
+   "touches": 1,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 16,
+   "touches": 2,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 17,
+   "touches": 3,
+   "passes_completed": 1,
+   "passes_attempted": 1,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 23,
+   "touches": 4,
+   "passes_completed": 2,
+   "passes_attempted": 2,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 85,
+   "touches": 5,
+   "passes_completed": 3,
+   "passes_attempted": 3,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 127,
+   "touches": 6,
+   "passes_completed": 3,
+   "passes_attempted": 4,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 256,
+   "touches": 7,
+   "passes_completed": 4,
+   "passes_attempted": 5,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 259,
+   "touches": 8,
+   "passes_completed": 4,
+   "passes_attempted": 5,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 260,
+   "touches": 9,
+   "passes_completed": 5,
+   "passes_attempted": 6,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 262,
+   "touches": 10,
+   "passes_completed": 6,
+   "passes_attempted": 7,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 264,
+   "touches": 11,
+   "passes_completed": 6,
+   "passes_attempted": 8,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 273,
+   "touches": 12,
+   "passes_completed": 6,
+   "passes_attempted": 8,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 277,
+   "touches": 13,
+   "passes_completed": 6,
+   "passes_attempted": 8,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 295,
+   "touches": 14,
+   "passes_completed": 6,
+   "passes_attempted": 9,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 339,
+   "touches": 15,
+   "passes_completed": 6,
+   "passes_attempted": 9,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 348,
+   "touches": 16,
+   "passes_completed": 6,
+   "passes_attempted": 9,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 389,
+   "touches": 17,
+   "passes_completed": 6,
+   "passes_attempted": 9,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 391,
+   "touches": 18,
+   "passes_completed": 6,
+   "passes_attempted": 9,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 418,
+   "touches": 19,
+   "passes_completed": 6,
+   "passes_attempted": 9,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 419,
+   "touches": 20,
+   "passes_completed": 7,
+   "passes_attempted": 10,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 422,
+   "touches": 21,
+   "passes_completed": 7,
+   "passes_attempted": 10,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 451,
+   "touches": 22,
+   "passes_completed": 7,
+   "passes_attempted": 11,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 464,
+   "touches": 23,
+   "passes_completed": 8,
+   "passes_attempted": 12,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 481,
+   "touches": 24,
+   "passes_completed": 8,
+   "passes_attempted": 13,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 492,
+   "touches": 25,
+   "passes_completed": 8,
+   "passes_attempted": 14,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 518,
+   "touches": 26,
+   "passes_completed": 8,
+   "passes_attempted": 14,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 532,
+   "touches": 27,
+   "passes_completed": 8,
+   "passes_attempted": 14,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 533,
+   "touches": 28,
+   "passes_completed": 8,
+   "passes_attempted": 15,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 586,
+   "touches": 29,
+   "passes_completed": 9,
+   "passes_attempted": 16,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 630,
+   "touches": 30,
+   "passes_completed": 9,
+   "passes_attempted": 16,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 631,
+   "touches": 31,
+   "passes_completed": 10,
+   "passes_attempted": 17,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 689,
+   "touches": 32,
+   "passes_completed": 10,
+   "passes_attempted": 17,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 696,
+   "touches": 33,
+   "passes_completed": 10,
+   "passes_attempted": 17,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 725,
+   "touches": 34,
+   "passes_completed": 10,
+   "passes_attempted": 17,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 779,
+   "touches": 35,
+   "passes_completed": 10,
+   "passes_attempted": 17,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 791,
+   "touches": 36,
+   "passes_completed": 10,
+   "passes_attempted": 17,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 807,
+   "touches": 37,
+   "passes_completed": 10,
+   "passes_attempted": 17,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 808,
+   "touches": 38,
+   "passes_completed": 10,
+   "passes_attempted": 17,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 809,
+   "touches": 39,
+   "passes_completed": 11,
+   "passes_attempted": 18,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 811,
+   "touches": 40,
+   "passes_completed": 11,
+   "passes_attempted": 18,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 812,
+   "touches": 41,
+   "passes_completed": 11,
+   "passes_attempted": 19,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 885,
+   "touches": 42,
+   "passes_completed": 12,
+   "passes_attempted": 20,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 909,
+   "touches": 43,
+   "passes_completed": 12,
+   "passes_attempted": 20,
+   "shots": 2,
+   "xg": 0.58,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 944,
+   "touches": 44,
+   "passes_completed": 12,
+   "passes_attempted": 20,
+   "shots": 2,
+   "xg": 0.58,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1019,
+   "touches": 45,
+   "passes_completed": 12,
+   "passes_attempted": 21,
+   "shots": 2,
+   "xg": 0.58,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1119,
+   "touches": 46,
+   "passes_completed": 12,
+   "passes_attempted": 21,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1120,
+   "touches": 46,
+   "passes_completed": 12,
+   "passes_attempted": 21,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1126,
+   "touches": 47,
+   "passes_completed": 12,
+   "passes_attempted": 22,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1164,
+   "touches": 48,
+   "passes_completed": 12,
+   "passes_attempted": 22,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1289,
+   "touches": 49,
+   "passes_completed": 13,
+   "passes_attempted": 23,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1383,
+   "touches": 50,
+   "passes_completed": 14,
+   "passes_attempted": 24,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1474,
+   "touches": 51,
+   "passes_completed": 15,
+   "passes_attempted": 25,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1479,
+   "touches": 52,
+   "passes_completed": 16,
+   "passes_attempted": 26,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1550,
+   "touches": 53,
+   "passes_completed": 16,
+   "passes_attempted": 26,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1611,
+   "touches": 54,
+   "passes_completed": 16,
+   "passes_attempted": 26,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1612,
+   "touches": 55,
+   "passes_completed": 16,
+   "passes_attempted": 27,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 3
+  }
+ ],
+ "items": {
+  "analyst": [
+   {
+    "id": "NBA-HCF-7:analyst:HCF-11:card:player-HCF-11@23",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 23,
+    "period": 1,
+    "clock": 58.5,
+    "display_clock": "1'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank: 4 touches, 2/2 passes, 0 shots (0.00 xG), 0 goals, 1 key pass, 0 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank: 4 touches, 2/2 passes, 0 shots (0.00 xG), 0 goals, 1 key pass, 0 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@23"
+    ],
+    "evidence": [
+     15,
+     16,
+     17,
+     23
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:HCF-11:card:player-HCF-11@422",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 422,
+    "period": 1,
+    "clock": 1433.1,
+    "display_clock": "24'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank: 21 touches, 7/10 passes, 1 shot (0.33 xG), 0 goals, 1 key pass, 1 ball win.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank: 21 touches, 7/10 passes, 1 shot (0.33 xG), 0 goals, 1 key pass, 1 ball win.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@422"
+    ],
+    "evidence": [
+     262,
+     264,
+     273,
+     277,
+     295,
+     339,
+     348,
+     389,
+     391,
+     418,
+     419,
+     422
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:all:ticker:moment-423",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 423,
+    "period": 1,
+    "clock": 1433.1,
+    "display_clock": "24'",
+    "show_for_s": 5.6,
+    "slot": "ticker",
+    "kind": "save",
+    "text": "What a stop! Pavel Selbourne saved from Cal Fairbank at 24', a chance worth 0.33 xG.",
+    "translations": {
+     "es": {
+      "text": "What a stop! Pavel Selbourne saved from Cal Fairbank at 24', a chance worth 0.33 xG.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-423"
+    ],
+    "evidence": [
+     422,
+     423
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:HCF-11:card:player-HCF-11@803",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 803,
+    "period": 1,
+    "clock": 2767.2,
+    "display_clock": "45+2'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank: 36 touches, 10/17 passes, 1 shot (0.33 xG), 0 goals, 1 key pass, 2 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank: 36 touches, 10/17 passes, 1 shot (0.33 xG), 0 goals, 1 key pass, 2 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@803"
+    ],
+    "evidence": [
+     492,
+     518,
+     532,
+     533,
+     586,
+     630,
+     631,
+     689,
+     696,
+     725,
+     779,
+     791
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:HCF-11:card:player-HCF-11@885",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 885,
+    "period": 2,
+    "clock": 253.5,
+    "display_clock": "50'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank: 42 touches, 12/20 passes, 1 shot (0.33 xG), 0 goals, 2 key passes, 2 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank: 42 touches, 12/20 passes, 1 shot (0.33 xG), 0 goals, 2 key passes, 2 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@885"
+    ],
+    "evidence": [
+     631,
+     689,
+     696,
+     725,
+     779,
+     791,
+     807,
+     808,
+     809,
+     811,
+     812,
+     885
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:HCF-11:card:player-HCF-11@909",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 909,
+    "period": 2,
+    "clock": 355.5,
+    "display_clock": "51'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank: 43 touches, 12/20 passes, 2 shots (0.58 xG), 0 goals, 2 key passes, 2 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank: 43 touches, 12/20 passes, 2 shots (0.58 xG), 0 goals, 2 key passes, 2 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@909"
+    ],
+    "evidence": [
+     689,
+     696,
+     725,
+     779,
+     791,
+     807,
+     808,
+     809,
+     811,
+     812,
+     885,
+     909
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:all:ticker:moment-910",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 910,
+    "period": 2,
+    "clock": 355.5,
+    "display_clock": "51'",
+    "show_for_s": 5.6,
+    "slot": "ticker",
+    "kind": "save",
+    "text": "What a stop! Pavel Selbourne saved from Cal Fairbank at 51', a chance worth 0.25 xG.",
+    "translations": {
+     "es": {
+      "text": "What a stop! Pavel Selbourne saved from Cal Fairbank at 51', a chance worth 0.25 xG.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-910"
+    ],
+    "evidence": [
+     909,
+     910
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:HCF-11:card:player-HCF-11@1119",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1119,
+    "period": 2,
+    "clock": 1044.7,
+    "display_clock": "63'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank: 46 touches, 12/21 passes, 3 shots (0.71 xG), 0 goals, 2 key passes, 2 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank: 46 touches, 12/21 passes, 3 shots (0.71 xG), 0 goals, 2 key passes, 2 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@1119"
+    ],
+    "evidence": [
+     779,
+     791,
+     807,
+     808,
+     809,
+     811,
+     812,
+     885,
+     909,
+     944,
+     1019,
+     1119
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:all:alert:moment-1120",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1120,
+    "period": 2,
+    "clock": 1044.7,
+    "display_clock": "63'",
+    "show_for_s": 6.0,
+    "slot": "alert",
+    "kind": "goal",
+    "text": "What a moment! Cal Fairbank scored for Harbor City FC at 63'. The chance was worth 0.14 xG. Northbridge Athletic 2-1 Harbor City FC.",
+    "translations": {
+     "es": {
+      "text": "What a moment! Cal Fairbank scored for Harbor City FC at 63'. The chance was worth 0.14 xG. Northbridge Athletic 2-1 Harbor City FC.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-1120"
+    ],
+    "evidence": [
+     1119,
+     1120
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:HCF-11:card:player-HCF-11@1479",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1479,
+    "period": 2,
+    "clock": 2424.3,
+    "display_clock": "86'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank: 52 touches, 16/26 passes, 3 shots (0.71 xG), 1 goal, 3 key passes, 3 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank: 52 touches, 16/26 passes, 3 shots (0.71 xG), 1 goal, 3 key passes, 3 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@1479"
+    ],
+    "evidence": [
+     885,
+     909,
+     944,
+     1019,
+     1119,
+     1120,
+     1126,
+     1164,
+     1289,
+     1383,
+     1474,
+     1479
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:HCF-11:card:player-HCF-11@1629",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1629,
+    "period": 2,
+    "clock": 2968.2,
+    "display_clock": "90+5'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank: 55 touches, 16/27 passes, 3 shots (0.71 xG), 1 goal, 3 key passes, 3 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank: 55 touches, 16/27 passes, 3 shots (0.71 xG), 1 goal, 3 key passes, 3 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@1629"
+    ],
+    "evidence": [
+     1019,
+     1119,
+     1120,
+     1126,
+     1164,
+     1289,
+     1383,
+     1474,
+     1479,
+     1550,
+     1611,
+     1612
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   }
+  ],
+  "casual": [
+   {
+    "id": "NBA-HCF-7:casual:HCF-11:card:player-HCF-11@23",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 23,
+    "period": 1,
+    "clock": 58.5,
+    "display_clock": "1'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank has had 4 touches so far.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank has had 4 touches so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@23"
+    ],
+    "evidence": [
+     15,
+     16,
+     17,
+     23
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:HCF-11:card:player-HCF-11@422",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 422,
+    "period": 1,
+    "clock": 1433.1,
+    "display_clock": "24'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank has had a shot so far.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank has had a shot so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@422"
+    ],
+    "evidence": [
+     262,
+     264,
+     273,
+     277,
+     295,
+     339,
+     348,
+     389,
+     391,
+     418,
+     419,
+     422
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:all:ticker:moment-423",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 423,
+    "period": 1,
+    "clock": 1433.1,
+    "display_clock": "24'",
+    "show_for_s": 4.0,
+    "slot": "ticker",
+    "kind": "save",
+    "text": "Great save by Pavel Selbourne! Cal Fairbank is denied.",
+    "translations": {
+     "es": {
+      "text": "Great save by Pavel Selbourne! Cal Fairbank is denied.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-423"
+    ],
+    "evidence": [
+     422,
+     423
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:HCF-11:card:player-HCF-11@803",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 803,
+    "period": 1,
+    "clock": 2767.2,
+    "display_clock": "45+2'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank has had a shot so far.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank has had a shot so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@803"
+    ],
+    "evidence": [
+     492,
+     518,
+     532,
+     533,
+     586,
+     630,
+     631,
+     689,
+     696,
+     725,
+     779,
+     791
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:HCF-11:card:player-HCF-11@885",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 885,
+    "period": 2,
+    "clock": 253.5,
+    "display_clock": "50'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank has had a shot so far.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank has had a shot so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@885"
+    ],
+    "evidence": [
+     631,
+     689,
+     696,
+     725,
+     779,
+     791,
+     807,
+     808,
+     809,
+     811,
+     812,
+     885
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:HCF-11:card:player-HCF-11@909",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 909,
+    "period": 2,
+    "clock": 355.5,
+    "display_clock": "51'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank has had 2 shots so far.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank has had 2 shots so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@909"
+    ],
+    "evidence": [
+     689,
+     696,
+     725,
+     779,
+     791,
+     807,
+     808,
+     809,
+     811,
+     812,
+     885,
+     909
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:all:ticker:moment-910",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 910,
+    "period": 2,
+    "clock": 355.5,
+    "display_clock": "51'",
+    "show_for_s": 4.0,
+    "slot": "ticker",
+    "kind": "save",
+    "text": "Great save by Pavel Selbourne! Cal Fairbank is denied.",
+    "translations": {
+     "es": {
+      "text": "Great save by Pavel Selbourne! Cal Fairbank is denied.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-910"
+    ],
+    "evidence": [
+     909,
+     910
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:HCF-11:card:player-HCF-11@1119",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1119,
+    "period": 2,
+    "clock": 1044.7,
+    "display_clock": "63'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank has had 3 shots so far.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank has had 3 shots so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@1119"
+    ],
+    "evidence": [
+     779,
+     791,
+     807,
+     808,
+     809,
+     811,
+     812,
+     885,
+     909,
+     944,
+     1019,
+     1119
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:all:alert:moment-1120",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1120,
+    "period": 2,
+    "clock": 1044.7,
+    "display_clock": "63'",
+    "show_for_s": 6.0,
+    "slot": "alert",
+    "kind": "goal",
+    "text": "What a moment! Cal Fairbank scores for Harbor City FC! Northbridge Athletic 2-1 Harbor City FC.",
+    "translations": {
+     "es": {
+      "text": "What a moment! Cal Fairbank scores for Harbor City FC! Northbridge Athletic 2-1 Harbor City FC.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-1120"
+    ],
+    "evidence": [
+     1119,
+     1120
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:HCF-11:card:player-HCF-11@1479",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1479,
+    "period": 2,
+    "clock": 2424.3,
+    "display_clock": "86'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank is on the scoresheet today.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank is on the scoresheet today.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@1479"
+    ],
+    "evidence": [
+     885,
+     909,
+     944,
+     1019,
+     1119,
+     1120,
+     1126,
+     1164,
+     1289,
+     1383,
+     1474,
+     1479
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:HCF-11:card:player-HCF-11@1629",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1629,
+    "period": 2,
+    "clock": 2968.2,
+    "display_clock": "90+5'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank is on the scoresheet today.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank is on the scoresheet today.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@1629"
+    ],
+    "evidence": [
+     1019,
+     1119,
+     1120,
+     1126,
+     1164,
+     1289,
+     1383,
+     1474,
+     1479,
+     1550,
+     1611,
+     1612
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   }
+  ]
+ }
+}

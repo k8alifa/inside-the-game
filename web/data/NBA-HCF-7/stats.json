@@ -1,0 +1,2624 @@
+{
+ "match_id": "NBA-HCF-7",
+ "snapshots": [
+  {
+   "at_event": 24,
+   "teams": {
+    "NBA": {
+     "possession_pct": 36.8,
+     "shots": 0,
+     "shots_on_target": 0,
+     "xg": 0.0
+    },
+    "HCF": {
+     "possession_pct": 63.2,
+     "shots": 1,
+     "shots_on_target": 0,
+     "xg": 0.03
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 22,
+     "HCF": 78
+    }
+   }
+  },
+  {
+   "at_event": 34,
+   "teams": {
+    "NBA": {
+     "possession_pct": 37.0,
+     "shots": 0,
+     "shots_on_target": 0,
+     "xg": 0.0
+    },
+    "HCF": {
+     "possession_pct": 63.0,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 4,
+     "HCF": 96
+    }
+   }
+  },
+  {
+   "at_event": 51,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.1,
+     "shots": 0,
+     "shots_on_target": 0,
+     "xg": 0.0
+    },
+    "HCF": {
+     "possession_pct": 41.9,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 11,
+     "HCF": 89
+    }
+   }
+  },
+  {
+   "at_event": 77,
+   "teams": {
+    "NBA": {
+     "possession_pct": 62.5,
+     "shots": 0,
+     "shots_on_target": 0,
+     "xg": 0.0
+    },
+    "HCF": {
+     "possession_pct": 37.5,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 15,
+     "HCF": 85
+    }
+   }
+  },
+  {
+   "at_event": 83,
+   "teams": {
+    "NBA": {
+     "possession_pct": 62.1,
+     "shots": 1,
+     "shots_on_target": 1,
+     "xg": 0.01
+    },
+    "HCF": {
+     "possession_pct": 37.9,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 16,
+     "HCF": 84
+    }
+   }
+  },
+  {
+   "at_event": 106,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.3,
+     "shots": 1,
+     "shots_on_target": 1,
+     "xg": 0.01
+    },
+    "HCF": {
+     "possession_pct": 40.7,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 19,
+     "HCF": 81
+    }
+   }
+  },
+  {
+   "at_event": 123,
+   "teams": {
+    "NBA": {
+     "possession_pct": 61.0,
+     "shots": 2,
+     "shots_on_target": 1,
+     "xg": 0.02
+    },
+    "HCF": {
+     "possession_pct": 39.0,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 25,
+     "HCF": 75
+    }
+   }
+  },
+  {
+   "at_event": 146,
+   "teams": {
+    "NBA": {
+     "possession_pct": 63.3,
+     "shots": 2,
+     "shots_on_target": 1,
+     "xg": 0.02
+    },
+    "HCF": {
+     "possession_pct": 36.7,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 25,
+     "HCF": 75
+    }
+   }
+  },
+  {
+   "at_event": 169,
+   "teams": {
+    "NBA": {
+     "possession_pct": 60.0,
+     "shots": 2,
+     "shots_on_target": 1,
+     "xg": 0.02
+    },
+    "HCF": {
+     "possession_pct": 40.0,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 23,
+     "HCF": 77
+    }
+   }
+  },
+  {
+   "at_event": 192,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.4,
+     "shots": 2,
+     "shots_on_target": 1,
+     "xg": 0.02
+    },
+    "HCF": {
+     "possession_pct": 40.6,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 22,
+     "HCF": 78
+    }
+   }
+  },
+  {
+   "at_event": 203,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.9,
+     "shots": 2,
+     "shots_on_target": 1,
+     "xg": 0.02
+    },
+    "HCF": {
+     "possession_pct": 40.1,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 22,
+     "HCF": 78
+    }
+   }
+  },
+  {
+   "at_event": 221,
+   "teams": {
+    "NBA": {
+     "possession_pct": 63.6,
+     "shots": 3,
+     "shots_on_target": 1,
+     "xg": 0.09
+    },
+    "HCF": {
+     "possession_pct": 36.4,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 30,
+     "HCF": 70
+    }
+   }
+  },
+  {
+   "at_event": 241,
+   "teams": {
+    "NBA": {
+     "possession_pct": 62.9,
+     "shots": 3,
+     "shots_on_target": 1,
+     "xg": 0.09
+    },
+    "HCF": {
+     "possession_pct": 37.1,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 32,
+     "HCF": 68
+    }
+   }
+  },
+  {
+   "at_event": 254,
+   "teams": {
+    "NBA": {
+     "possession_pct": 62.4,
+     "shots": 4,
+     "shots_on_target": 2,
+     "xg": 0.1
+    },
+    "HCF": {
+     "possession_pct": 37.6,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 33,
+     "HCF": 67
+    }
+   }
+  },
+  {
+   "at_event": 261,
+   "teams": {
+    "NBA": {
+     "possession_pct": 60.6,
+     "shots": 4,
+     "shots_on_target": 2,
+     "xg": 0.1
+    },
+    "HCF": {
+     "possession_pct": 39.4,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     0,
+     15
+    ],
+    "share": {
+     "NBA": 32,
+     "HCF": 68
+    }
+   }
+  },
+  {
+   "at_event": 283,
+   "teams": {
+    "NBA": {
+     "possession_pct": 60.3,
+     "shots": 4,
+     "shots_on_target": 2,
+     "xg": 0.1
+    },
+    "HCF": {
+     "possession_pct": 39.7,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 0,
+     "HCF": 100
+    }
+   }
+  },
+  {
+   "at_event": 307,
+   "teams": {
+    "NBA": {
+     "possession_pct": 60.5,
+     "shots": 4,
+     "shots_on_target": 2,
+     "xg": 0.1
+    },
+    "HCF": {
+     "possession_pct": 39.5,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 50,
+     "HCF": 50
+    }
+   }
+  },
+  {
+   "at_event": 324,
+   "teams": {
+    "NBA": {
+     "possession_pct": 60.1,
+     "shots": 5,
+     "shots_on_target": 2,
+     "xg": 0.11
+    },
+    "HCF": {
+     "possession_pct": 39.9,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 78,
+     "HCF": 22
+    }
+   }
+  },
+  {
+   "at_event": 338,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.6,
+     "shots": 5,
+     "shots_on_target": 2,
+     "xg": 0.11
+    },
+    "HCF": {
+     "possession_pct": 41.4,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 64,
+     "HCF": 36
+    }
+   }
+  },
+  {
+   "at_event": 358,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.9,
+     "shots": 5,
+     "shots_on_target": 2,
+     "xg": 0.11
+    },
+    "HCF": {
+     "possession_pct": 42.1,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 64,
+     "HCF": 36
+    }
+   }
+  },
+  {
+   "at_event": 382,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.4,
+     "shots": 5,
+     "shots_on_target": 2,
+     "xg": 0.11
+    },
+    "HCF": {
+     "possession_pct": 41.6,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 76,
+     "HCF": 24
+    }
+   }
+  },
+  {
+   "at_event": 393,
+   "teams": {
+    "NBA": {
+     "possession_pct": 56.7,
+     "shots": 5,
+     "shots_on_target": 2,
+     "xg": 0.11
+    },
+    "HCF": {
+     "possession_pct": 43.3,
+     "shots": 2,
+     "shots_on_target": 0,
+     "xg": 0.43
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 62,
+     "HCF": 38
+    }
+   }
+  },
+  {
+   "at_event": 404,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.7,
+     "shots": 5,
+     "shots_on_target": 2,
+     "xg": 0.11
+    },
+    "HCF": {
+     "possession_pct": 42.3,
+     "shots": 3,
+     "shots_on_target": 0,
+     "xg": 0.51
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 48,
+     "HCF": 52
+    }
+   }
+  },
+  {
+   "at_event": 423,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.2,
+     "shots": 5,
+     "shots_on_target": 2,
+     "xg": 0.11
+    },
+    "HCF": {
+     "possession_pct": 42.8,
+     "shots": 4,
+     "shots_on_target": 1,
+     "xg": 0.84
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 23,
+     "HCF": 77
+    }
+   }
+  },
+  {
+   "at_event": 435,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.1,
+     "shots": 5,
+     "shots_on_target": 2,
+     "xg": 0.11
+    },
+    "HCF": {
+     "possession_pct": 41.9,
+     "shots": 4,
+     "shots_on_target": 1,
+     "xg": 0.84
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 25,
+     "HCF": 75
+    }
+   }
+  },
+  {
+   "at_event": 457,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.9,
+     "shots": 5,
+     "shots_on_target": 2,
+     "xg": 0.11
+    },
+    "HCF": {
+     "possession_pct": 42.1,
+     "shots": 4,
+     "shots_on_target": 1,
+     "xg": 0.84
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 27,
+     "HCF": 73
+    }
+   }
+  },
+  {
+   "at_event": 473,
+   "teams": {
+    "NBA": {
+     "possession_pct": 56.6,
+     "shots": 5,
+     "shots_on_target": 2,
+     "xg": 0.11
+    },
+    "HCF": {
+     "possession_pct": 43.4,
+     "shots": 5,
+     "shots_on_target": 1,
+     "xg": 0.99
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 22,
+     "HCF": 78
+    }
+   }
+  },
+  {
+   "at_event": 484,
+   "teams": {
+    "NBA": {
+     "possession_pct": 56.9,
+     "shots": 5,
+     "shots_on_target": 2,
+     "xg": 0.11
+    },
+    "HCF": {
+     "possession_pct": 43.1,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 18,
+     "HCF": 82
+    }
+   }
+  },
+  {
+   "at_event": 498,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.1,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 0.25
+    },
+    "HCF": {
+     "possession_pct": 42.9,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 30,
+     "HCF": 70
+    }
+   }
+  },
+  {
+   "at_event": 514,
+   "teams": {
+    "NBA": {
+     "possession_pct": 55.8,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 0.25
+    },
+    "HCF": {
+     "possession_pct": 44.2,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     15,
+     30
+    ],
+    "share": {
+     "NBA": 29,
+     "HCF": 71
+    }
+   }
+  },
+  {
+   "at_event": 539,
+   "teams": {
+    "NBA": {
+     "possession_pct": 56.2,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 0.25
+    },
+    "HCF": {
+     "possession_pct": 43.8,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 0,
+     "HCF": 100
+    }
+   }
+  },
+  {
+   "at_event": 558,
+   "teams": {
+    "NBA": {
+     "possession_pct": 55.8,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 0.25
+    },
+    "HCF": {
+     "possession_pct": 44.2,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 0,
+     "HCF": 100
+    }
+   }
+  },
+  {
+   "at_event": 580,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.1,
+     "shots": 7,
+     "shots_on_target": 2,
+     "xg": 0.64
+    },
+    "HCF": {
+     "possession_pct": 42.9,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 95,
+     "HCF": 5
+    }
+   }
+  },
+  {
+   "at_event": 588,
+   "teams": {
+    "NBA": {
+     "possession_pct": 56.2,
+     "shots": 7,
+     "shots_on_target": 2,
+     "xg": 0.64
+    },
+    "HCF": {
+     "possession_pct": 43.8,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 91,
+     "HCF": 9
+    }
+   }
+  },
+  {
+   "at_event": 614,
+   "teams": {
+    "NBA": {
+     "possession_pct": 56.3,
+     "shots": 7,
+     "shots_on_target": 2,
+     "xg": 0.64
+    },
+    "HCF": {
+     "possession_pct": 43.7,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 91,
+     "HCF": 9
+    }
+   }
+  },
+  {
+   "at_event": 633,
+   "teams": {
+    "NBA": {
+     "possession_pct": 55.0,
+     "shots": 7,
+     "shots_on_target": 2,
+     "xg": 0.64
+    },
+    "HCF": {
+     "possession_pct": 45.0,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 84,
+     "HCF": 16
+    }
+   }
+  },
+  {
+   "at_event": 660,
+   "teams": {
+    "NBA": {
+     "possession_pct": 55.1,
+     "shots": 7,
+     "shots_on_target": 2,
+     "xg": 0.64
+    },
+    "HCF": {
+     "possession_pct": 44.9,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 81,
+     "HCF": 19
+    }
+   }
+  },
+  {
+   "at_event": 684,
+   "teams": {
+    "NBA": {
+     "possession_pct": 56.0,
+     "shots": 8,
+     "shots_on_target": 2,
+     "xg": 0.68
+    },
+    "HCF": {
+     "possession_pct": 44.0,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 84,
+     "HCF": 16
+    }
+   }
+  },
+  {
+   "at_event": 695,
+   "teams": {
+    "NBA": {
+     "possession_pct": 56.0,
+     "shots": 8,
+     "shots_on_target": 2,
+     "xg": 0.68
+    },
+    "HCF": {
+     "possession_pct": 44.0,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 84,
+     "HCF": 16
+    }
+   }
+  },
+  {
+   "at_event": 710,
+   "teams": {
+    "NBA": {
+     "possession_pct": 56.7,
+     "shots": 8,
+     "shots_on_target": 2,
+     "xg": 0.68
+    },
+    "HCF": {
+     "possession_pct": 43.3,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 85,
+     "HCF": 15
+    }
+   }
+  },
+  {
+   "at_event": 724,
+   "teams": {
+    "NBA": {
+     "possession_pct": 56.9,
+     "shots": 8,
+     "shots_on_target": 2,
+     "xg": 0.68
+    },
+    "HCF": {
+     "possession_pct": 43.1,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 85,
+     "HCF": 15
+    }
+   }
+  },
+  {
+   "at_event": 740,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.0,
+     "shots": 8,
+     "shots_on_target": 2,
+     "xg": 0.68
+    },
+    "HCF": {
+     "possession_pct": 43.0,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 85,
+     "HCF": 15
+    }
+   }
+  },
+  {
+   "at_event": 762,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.2,
+     "shots": 8,
+     "shots_on_target": 2,
+     "xg": 0.68
+    },
+    "HCF": {
+     "possession_pct": 42.8,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 87,
+     "HCF": 13
+    }
+   }
+  },
+  {
+   "at_event": 784,
+   "teams": {
+    "NBA": {
+     "possession_pct": 56.9,
+     "shots": 8,
+     "shots_on_target": 2,
+     "xg": 0.68
+    },
+    "HCF": {
+     "possession_pct": 43.1,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 85,
+     "HCF": 15
+    }
+   }
+  },
+  {
+   "at_event": 794,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.3,
+     "shots": 9,
+     "shots_on_target": 3,
+     "xg": 0.76
+    },
+    "HCF": {
+     "possession_pct": 42.7,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     30,
+     45
+    ],
+    "share": {
+     "NBA": 86,
+     "HCF": 14
+    }
+   }
+  },
+  {
+   "at_event": 800,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.2,
+     "shots": 9,
+     "shots_on_target": 3,
+     "xg": 0.76
+    },
+    "HCF": {
+     "possession_pct": 42.8,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 0,
+     "HCF": 100
+    }
+   }
+  },
+  {
+   "at_event": 803,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.3,
+     "shots": 9,
+     "shots_on_target": 3,
+     "xg": 0.76
+    },
+    "HCF": {
+     "possession_pct": 42.7,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 0,
+     "HCF": 100
+    }
+   }
+  },
+  {
+   "at_event": 824,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.4,
+     "shots": 9,
+     "shots_on_target": 3,
+     "xg": 0.76
+    },
+    "HCF": {
+     "possession_pct": 42.6,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 50,
+     "HCF": 50
+    }
+   }
+  },
+  {
+   "at_event": 841,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.7,
+     "shots": 9,
+     "shots_on_target": 3,
+     "xg": 0.76
+    },
+    "HCF": {
+     "possession_pct": 42.3,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 75,
+     "HCF": 25
+    }
+   }
+  },
+  {
+   "at_event": 858,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.6,
+     "shots": 9,
+     "shots_on_target": 3,
+     "xg": 0.76
+    },
+    "HCF": {
+     "possession_pct": 41.4,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 75,
+     "HCF": 25
+    }
+   }
+  },
+  {
+   "at_event": 880,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.0,
+     "shots": 9,
+     "shots_on_target": 3,
+     "xg": 0.76
+    },
+    "HCF": {
+     "possession_pct": 41.0,
+     "shots": 6,
+     "shots_on_target": 2,
+     "xg": 1.16
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 80,
+     "HCF": 20
+    }
+   }
+  },
+  {
+   "at_event": 890,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.9,
+     "shots": 9,
+     "shots_on_target": 3,
+     "xg": 0.76
+    },
+    "HCF": {
+     "possession_pct": 41.1,
+     "shots": 7,
+     "shots_on_target": 2,
+     "xg": 1.3
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 28,
+     "HCF": 72
+    }
+   }
+  },
+  {
+   "at_event": 910,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.5,
+     "shots": 9,
+     "shots_on_target": 3,
+     "xg": 0.76
+    },
+    "HCF": {
+     "possession_pct": 41.5,
+     "shots": 8,
+     "shots_on_target": 3,
+     "xg": 1.55
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 14,
+     "HCF": 86
+    }
+   }
+  },
+  {
+   "at_event": 930,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.4,
+     "shots": 9,
+     "shots_on_target": 3,
+     "xg": 0.76
+    },
+    "HCF": {
+     "possession_pct": 41.6,
+     "shots": 8,
+     "shots_on_target": 3,
+     "xg": 1.55
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 14,
+     "HCF": 86
+    }
+   }
+  },
+  {
+   "at_event": 948,
+   "teams": {
+    "NBA": {
+     "possession_pct": 57.6,
+     "shots": 9,
+     "shots_on_target": 3,
+     "xg": 0.76
+    },
+    "HCF": {
+     "possession_pct": 42.4,
+     "shots": 8,
+     "shots_on_target": 3,
+     "xg": 1.55
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 13,
+     "HCF": 87
+    }
+   }
+  },
+  {
+   "at_event": 968,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.7,
+     "shots": 9,
+     "shots_on_target": 3,
+     "xg": 0.76
+    },
+    "HCF": {
+     "possession_pct": 41.3,
+     "shots": 8,
+     "shots_on_target": 3,
+     "xg": 1.55
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 21,
+     "HCF": 79
+    }
+   }
+  },
+  {
+   "at_event": 991,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.7,
+     "shots": 10,
+     "shots_on_target": 4,
+     "xg": 0.8
+    },
+    "HCF": {
+     "possession_pct": 41.3,
+     "shots": 8,
+     "shots_on_target": 3,
+     "xg": 1.55
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 27,
+     "HCF": 73
+    }
+   }
+  },
+  {
+   "at_event": 1010,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.8,
+     "shots": 10,
+     "shots_on_target": 4,
+     "xg": 0.8
+    },
+    "HCF": {
+     "possession_pct": 41.2,
+     "shots": 8,
+     "shots_on_target": 3,
+     "xg": 1.55
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 29,
+     "HCF": 71
+    }
+   }
+  },
+  {
+   "at_event": 1024,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.4,
+     "shots": 10,
+     "shots_on_target": 4,
+     "xg": 0.8
+    },
+    "HCF": {
+     "possession_pct": 41.6,
+     "shots": 8,
+     "shots_on_target": 3,
+     "xg": 1.55
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 28,
+     "HCF": 72
+    }
+   }
+  },
+  {
+   "at_event": 1040,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.7,
+     "shots": 10,
+     "shots_on_target": 4,
+     "xg": 0.8
+    },
+    "HCF": {
+     "possession_pct": 41.3,
+     "shots": 8,
+     "shots_on_target": 3,
+     "xg": 1.55
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 28,
+     "HCF": 72
+    }
+   }
+  },
+  {
+   "at_event": 1062,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.3,
+     "shots": 10,
+     "shots_on_target": 4,
+     "xg": 0.8
+    },
+    "HCF": {
+     "possession_pct": 41.7,
+     "shots": 8,
+     "shots_on_target": 3,
+     "xg": 1.55
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 28,
+     "HCF": 72
+    }
+   }
+  },
+  {
+   "at_event": 1082,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.1,
+     "shots": 10,
+     "shots_on_target": 4,
+     "xg": 0.8
+    },
+    "HCF": {
+     "possession_pct": 40.9,
+     "shots": 8,
+     "shots_on_target": 3,
+     "xg": 1.55
+    }
+   },
+   "momentum": {
+    "window": [
+     45,
+     60
+    ],
+    "share": {
+     "NBA": 29,
+     "HCF": 71
+    }
+   }
+  },
+  {
+   "at_event": 1091,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.5,
+     "shots": 10,
+     "shots_on_target": 4,
+     "xg": 0.8
+    },
+    "HCF": {
+     "possession_pct": 41.5,
+     "shots": 8,
+     "shots_on_target": 3,
+     "xg": 1.55
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 0,
+     "HCF": 100
+    }
+   }
+  },
+  {
+   "at_event": 1112,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.4,
+     "shots": 10,
+     "shots_on_target": 4,
+     "xg": 0.8
+    },
+    "HCF": {
+     "possession_pct": 41.6,
+     "shots": 8,
+     "shots_on_target": 3,
+     "xg": 1.55
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 0,
+     "HCF": 100
+    }
+   }
+  },
+  {
+   "at_event": 1120,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.2,
+     "shots": 10,
+     "shots_on_target": 4,
+     "xg": 0.8
+    },
+    "HCF": {
+     "possession_pct": 41.8,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 0,
+     "HCF": 100
+    }
+   }
+  },
+  {
+   "at_event": 1133,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.3,
+     "shots": 10,
+     "shots_on_target": 4,
+     "xg": 0.8
+    },
+    "HCF": {
+     "possession_pct": 41.7,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 0,
+     "HCF": 100
+    }
+   }
+  },
+  {
+   "at_event": 1145,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.8,
+     "shots": 11,
+     "shots_on_target": 4,
+     "xg": 0.95
+    },
+    "HCF": {
+     "possession_pct": 41.2,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 45,
+     "HCF": 55
+    }
+   }
+  },
+  {
+   "at_event": 1150,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.7,
+     "shots": 12,
+     "shots_on_target": 4,
+     "xg": 1.03
+    },
+    "HCF": {
+     "possession_pct": 41.3,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 55,
+     "HCF": 45
+    }
+   }
+  },
+  {
+   "at_event": 1158,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.3,
+     "shots": 12,
+     "shots_on_target": 4,
+     "xg": 1.03
+    },
+    "HCF": {
+     "possession_pct": 41.7,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 55,
+     "HCF": 45
+    }
+   }
+  },
+  {
+   "at_event": 1177,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.1,
+     "shots": 12,
+     "shots_on_target": 4,
+     "xg": 1.03
+    },
+    "HCF": {
+     "possession_pct": 41.9,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 53,
+     "HCF": 47
+    }
+   }
+  },
+  {
+   "at_event": 1193,
+   "teams": {
+    "NBA": {
+     "possession_pct": 58.6,
+     "shots": 13,
+     "shots_on_target": 4,
+     "xg": 1.09
+    },
+    "HCF": {
+     "possession_pct": 41.4,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 60,
+     "HCF": 40
+    }
+   }
+  },
+  {
+   "at_event": 1215,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.1,
+     "shots": 14,
+     "shots_on_target": 5,
+     "xg": 1.22
+    },
+    "HCF": {
+     "possession_pct": 40.9,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 67,
+     "HCF": 33
+    }
+   }
+  },
+  {
+   "at_event": 1227,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.3,
+     "shots": 14,
+     "shots_on_target": 5,
+     "xg": 1.22
+    },
+    "HCF": {
+     "possession_pct": 40.7,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 68,
+     "HCF": 32
+    }
+   }
+  },
+  {
+   "at_event": 1234,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.1,
+     "shots": 14,
+     "shots_on_target": 5,
+     "xg": 1.22
+    },
+    "HCF": {
+     "possession_pct": 40.9,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 66,
+     "HCF": 34
+    }
+   }
+  },
+  {
+   "at_event": 1248,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.5,
+     "shots": 14,
+     "shots_on_target": 5,
+     "xg": 1.22
+    },
+    "HCF": {
+     "possession_pct": 40.5,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 67,
+     "HCF": 33
+    }
+   }
+  },
+  {
+   "at_event": 1258,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.4,
+     "shots": 15,
+     "shots_on_target": 5,
+     "xg": 1.46
+    },
+    "HCF": {
+     "possession_pct": 40.6,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 74,
+     "HCF": 26
+    }
+   }
+  },
+  {
+   "at_event": 1283,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.4,
+     "shots": 15,
+     "shots_on_target": 5,
+     "xg": 1.46
+    },
+    "HCF": {
+     "possession_pct": 40.6,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     60,
+     75
+    ],
+    "share": {
+     "NBA": 74,
+     "HCF": 26
+    }
+   }
+  },
+  {
+   "at_event": 1295,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.3,
+     "shots": 15,
+     "shots_on_target": 5,
+     "xg": 1.46
+    },
+    "HCF": {
+     "possession_pct": 40.7,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     76
+    ],
+    "share": {
+     "NBA": 0,
+     "HCF": 100
+    }
+   }
+  },
+  {
+   "at_event": 1310,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.3,
+     "shots": 15,
+     "shots_on_target": 5,
+     "xg": 1.46
+    },
+    "HCF": {
+     "possession_pct": 40.7,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     77
+    ],
+    "share": {
+     "NBA": 100,
+     "HCF": 0
+    }
+   }
+  },
+  {
+   "at_event": 1331,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.6,
+     "shots": 15,
+     "shots_on_target": 5,
+     "xg": 1.46
+    },
+    "HCF": {
+     "possession_pct": 40.4,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     78
+    ],
+    "share": {
+     "NBA": 100,
+     "HCF": 0
+    }
+   }
+  },
+  {
+   "at_event": 1347,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.6,
+     "shots": 15,
+     "shots_on_target": 5,
+     "xg": 1.46
+    },
+    "HCF": {
+     "possession_pct": 40.4,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     79
+    ],
+    "share": {
+     "NBA": 100,
+     "HCF": 0
+    }
+   }
+  },
+  {
+   "at_event": 1369,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.4,
+     "shots": 15,
+     "shots_on_target": 5,
+     "xg": 1.46
+    },
+    "HCF": {
+     "possession_pct": 40.6,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     80
+    ],
+    "share": {
+     "NBA": 83,
+     "HCF": 17
+    }
+   }
+  },
+  {
+   "at_event": 1396,
+   "teams": {
+    "NBA": {
+     "possession_pct": 59.8,
+     "shots": 15,
+     "shots_on_target": 5,
+     "xg": 1.46
+    },
+    "HCF": {
+     "possession_pct": 40.2,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     81
+    ],
+    "share": {
+     "NBA": 83,
+     "HCF": 17
+    }
+   }
+  },
+  {
+   "at_event": 1415,
+   "teams": {
+    "NBA": {
+     "possession_pct": 60.3,
+     "shots": 16,
+     "shots_on_target": 6,
+     "xg": 1.48
+    },
+    "HCF": {
+     "possession_pct": 39.7,
+     "shots": 10,
+     "shots_on_target": 5,
+     "xg": 1.71
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     82
+    ],
+    "share": {
+     "NBA": 90,
+     "HCF": 10
+    }
+   }
+  },
+  {
+   "at_event": 1429,
+   "teams": {
+    "NBA": {
+     "possession_pct": 60.1,
+     "shots": 16,
+     "shots_on_target": 6,
+     "xg": 1.48
+    },
+    "HCF": {
+     "possession_pct": 39.9,
+     "shots": 11,
+     "shots_on_target": 5,
+     "xg": 1.86
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     83
+    ],
+    "share": {
+     "NBA": 53,
+     "HCF": 47
+    }
+   }
+  },
+  {
+   "at_event": 1452,
+   "teams": {
+    "NBA": {
+     "possession_pct": 60.5,
+     "shots": 17,
+     "shots_on_target": 6,
+     "xg": 1.51
+    },
+    "HCF": {
+     "possession_pct": 39.5,
+     "shots": 11,
+     "shots_on_target": 5,
+     "xg": 1.86
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     84
+    ],
+    "share": {
+     "NBA": 57,
+     "HCF": 43
+    }
+   }
+  },
+  {
+   "at_event": 1472,
+   "teams": {
+    "NBA": {
+     "possession_pct": 60.3,
+     "shots": 17,
+     "shots_on_target": 6,
+     "xg": 1.51
+    },
+    "HCF": {
+     "possession_pct": 39.7,
+     "shots": 11,
+     "shots_on_target": 5,
+     "xg": 1.86
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     85
+    ],
+    "share": {
+     "NBA": 55,
+     "HCF": 45
+    }
+   }
+  },
+  {
+   "at_event": 1481,
+   "teams": {
+    "NBA": {
+     "possession_pct": 60.0,
+     "shots": 17,
+     "shots_on_target": 6,
+     "xg": 1.51
+    },
+    "HCF": {
+     "possession_pct": 40.0,
+     "shots": 12,
+     "shots_on_target": 5,
+     "xg": 2.02
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     86
+    ],
+    "share": {
+     "NBA": 42,
+     "HCF": 58
+    }
+   }
+  },
+  {
+   "at_event": 1501,
+   "teams": {
+    "NBA": {
+     "possession_pct": 60.6,
+     "shots": 17,
+     "shots_on_target": 6,
+     "xg": 1.51
+    },
+    "HCF": {
+     "possession_pct": 39.4,
+     "shots": 12,
+     "shots_on_target": 5,
+     "xg": 2.02
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     87
+    ],
+    "share": {
+     "NBA": 44,
+     "HCF": 56
+    }
+   }
+  },
+  {
+   "at_event": 1523,
+   "teams": {
+    "NBA": {
+     "possession_pct": 61.1,
+     "shots": 17,
+     "shots_on_target": 6,
+     "xg": 1.51
+    },
+    "HCF": {
+     "possession_pct": 38.9,
+     "shots": 12,
+     "shots_on_target": 5,
+     "xg": 2.02
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     88
+    ],
+    "share": {
+     "NBA": 44,
+     "HCF": 56
+    }
+   }
+  },
+  {
+   "at_event": 1543,
+   "teams": {
+    "NBA": {
+     "possession_pct": 61.2,
+     "shots": 17,
+     "shots_on_target": 6,
+     "xg": 1.51
+    },
+    "HCF": {
+     "possession_pct": 38.8,
+     "shots": 12,
+     "shots_on_target": 5,
+     "xg": 2.02
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     89
+    ],
+    "share": {
+     "NBA": 48,
+     "HCF": 52
+    }
+   }
+  },
+  {
+   "at_event": 1569,
+   "teams": {
+    "NBA": {
+     "possession_pct": 61.2,
+     "shots": 17,
+     "shots_on_target": 6,
+     "xg": 1.51
+    },
+    "HCF": {
+     "possession_pct": 38.8,
+     "shots": 12,
+     "shots_on_target": 5,
+     "xg": 2.02
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     90
+    ],
+    "share": {
+     "NBA": 48,
+     "HCF": 52
+    }
+   }
+  },
+  {
+   "at_event": 1591,
+   "teams": {
+    "NBA": {
+     "possession_pct": 61.6,
+     "shots": 17,
+     "shots_on_target": 6,
+     "xg": 1.51
+    },
+    "HCF": {
+     "possession_pct": 38.4,
+     "shots": 12,
+     "shots_on_target": 5,
+     "xg": 2.02
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     91
+    ],
+    "share": {
+     "NBA": 51,
+     "HCF": 49
+    }
+   }
+  },
+  {
+   "at_event": 1608,
+   "teams": {
+    "NBA": {
+     "possession_pct": 61.9,
+     "shots": 18,
+     "shots_on_target": 7,
+     "xg": 1.86
+    },
+    "HCF": {
+     "possession_pct": 38.1,
+     "shots": 12,
+     "shots_on_target": 5,
+     "xg": 2.02
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     92
+    ],
+    "share": {
+     "NBA": 66,
+     "HCF": 34
+    }
+   }
+  },
+  {
+   "at_event": 1611,
+   "teams": {
+    "NBA": {
+     "possession_pct": 61.8,
+     "shots": 18,
+     "shots_on_target": 7,
+     "xg": 1.86
+    },
+    "HCF": {
+     "possession_pct": 38.2,
+     "shots": 12,
+     "shots_on_target": 5,
+     "xg": 2.02
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     93
+    ],
+    "share": {
+     "NBA": 65,
+     "HCF": 35
+    }
+   }
+  },
+  {
+   "at_event": 1627,
+   "teams": {
+    "NBA": {
+     "possession_pct": 62.1,
+     "shots": 18,
+     "shots_on_target": 7,
+     "xg": 1.86
+    },
+    "HCF": {
+     "possession_pct": 37.9,
+     "shots": 12,
+     "shots_on_target": 5,
+     "xg": 2.02
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     94
+    ],
+    "share": {
+     "NBA": 66,
+     "HCF": 34
+    }
+   }
+  },
+  {
+   "at_event": 1629,
+   "teams": {
+    "NBA": {
+     "possession_pct": 62.1,
+     "shots": 19,
+     "shots_on_target": 7,
+     "xg": 1.99
+    },
+    "HCF": {
+     "possession_pct": 37.9,
+     "shots": 12,
+     "shots_on_target": 5,
+     "xg": 2.02
+    }
+   },
+   "momentum": {
+    "window": [
+     75,
+     95
+    ],
+    "share": {
+     "NBA": 69,
+     "HCF": 31
+    }
+   }
+  }
+ ]
+}

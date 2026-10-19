@@ -1,0 +1,2501 @@
+{
+ "full-time": {
+  "id": "full-time",
+  "kind": "full_time",
+  "summary": "Full time: Northbridge Athletic 3-1 Harbor City FC. Shots 19-12, xG 1.99-2.02, possession 62.1%-37.9%.",
+  "figures": {
+   "home_goals": 3,
+   "away_goals": 1,
+   "home_shots": 19,
+   "away_shots": 12,
+   "home_xg": 1.99,
+   "away_xg": 2.02,
+   "home_possession_pct": 62.1,
+   "away_possession_pct": 37.9
+  },
+  "players": [],
+  "teams": [
+   "NBA",
+   "HCF"
+  ],
+  "evidence": [
+   254,
+   794,
+   1120,
+   1608,
+   1629
+  ],
+  "minute": 94,
+  "importance": 0.0
+ },
+ "half-time": {
+  "id": "half-time",
+  "kind": "half_time",
+  "summary": "Half-time: Northbridge Athletic 2-0 Harbor City FC. Shots 9-6, xG 0.76-1.16, possession 57.3%-42.7%.",
+  "figures": {
+   "home_goals": 2,
+   "away_goals": 0,
+   "home_shots": 9,
+   "away_shots": 6,
+   "home_xg": 0.76,
+   "away_xg": 1.16,
+   "home_possession_pct": 57.3,
+   "away_possession_pct": 42.7
+  },
+  "players": [],
+  "teams": [
+   "NBA",
+   "HCF"
+  ],
+  "evidence": [
+   254,
+   794,
+   803
+  ],
+  "minute": 46,
+  "importance": 0.0
+ },
+ "kickoff": {
+  "id": "kickoff",
+  "kind": "kickoff",
+  "summary": "Kickoff: Northbridge Athletic against Harbor City FC.",
+  "figures": {},
+  "players": [],
+  "teams": [
+   "NBA",
+   "HCF"
+  ],
+  "evidence": [
+   1
+  ],
+  "minute": 0,
+  "importance": 0.0
+ },
+ "moment-1010": {
+  "id": "moment-1010",
+  "kind": "yellow_card",
+  "summary": "Yellow card for Jonah Haldane of Northbridge Athletic at 56'.",
+  "figures": {
+   "display_clock": "56'"
+  },
+  "players": [
+   "NBA-11"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1010,
+   1009
+  ],
+  "minute": 55,
+  "importance": 0.0
+ },
+ "moment-1035": {
+  "id": "moment-1035",
+  "kind": "substitution",
+  "summary": "Substitution for Harbor City FC at 58': Theo Gorsuch on, Ivo Dunmore off.",
+  "figures": {
+   "display_clock": "58'"
+  },
+  "players": [
+   "HCF-3",
+   "HCF-15"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   1035
+  ],
+  "minute": 57,
+  "importance": 0.0
+ },
+ "moment-1082": {
+  "id": "moment-1082",
+  "kind": "substitution",
+  "summary": "Substitution for Northbridge Athletic at 60': Mateo Ingram on, Luca Brennick off.",
+  "figures": {
+   "display_clock": "60'"
+  },
+  "players": [
+   "NBA-2",
+   "NBA-15"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1082
+  ],
+  "minute": 59,
+  "importance": 0.0
+ },
+ "moment-1120": {
+  "id": "moment-1120",
+  "kind": "goal",
+  "summary": "Cal Fairbank scored for Harbor City FC at 63'. The chance was worth 0.14 xG. Northbridge Athletic 2-1 Harbor City FC.",
+  "figures": {
+   "xg": 0.14,
+   "display_clock": "63'",
+   "home_goals": 2,
+   "away_goals": 1
+  },
+  "players": [
+   "HCF-11"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   1119,
+   1120
+  ],
+  "minute": 62,
+  "importance": 0.0
+ },
+ "moment-1149": {
+  "id": "moment-1149",
+  "kind": "substitution",
+  "summary": "Substitution for Northbridge Athletic at 66': Finn Abara on, Jonah Moorcroft off.",
+  "figures": {
+   "display_clock": "66'"
+  },
+  "players": [
+   "NBA-3",
+   "NBA-16"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1149
+  ],
+  "minute": 65,
+  "importance": 0.0
+ },
+ "moment-1158": {
+  "id": "moment-1158",
+  "kind": "substitution",
+  "summary": "Substitution for Harbor City FC at 67': Rafi Radley on, Dario Langstone off.",
+  "figures": {
+   "display_clock": "67'"
+  },
+  "players": [
+   "HCF-6",
+   "HCF-16"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   1158
+  ],
+  "minute": 66,
+  "importance": 0.0
+ },
+ "moment-1203": {
+  "id": "moment-1203",
+  "kind": "save",
+  "summary": "Tariq Blackmore saved from Finn Abara at 70', a chance worth 0.13 xG.",
+  "figures": {
+   "xg": 0.13,
+   "display_clock": "70'"
+  },
+  "players": [
+   "HCF-1",
+   "NBA-16"
+  ],
+  "teams": [
+   "HCF",
+   "NBA"
+  ],
+  "evidence": [
+   1202,
+   1203
+  ],
+  "minute": 69,
+  "importance": 0.0
+ },
+ "moment-1234": {
+  "id": "moment-1234",
+  "kind": "substitution",
+  "summary": "Substitution for Harbor City FC at 72': Alex Merrow on, Milo Galbraith off.",
+  "figures": {
+   "display_clock": "72'"
+  },
+  "players": [
+   "HCF-10",
+   "HCF-18"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   1234
+  ],
+  "minute": 71,
+  "importance": 0.0
+ },
+ "moment-1292": {
+  "id": "moment-1292",
+  "kind": "substitution",
+  "summary": "Substitution for Northbridge Athletic at 76': Yusuf Dellacourt on, Pavel Ivers off.",
+  "figures": {
+   "display_clock": "76'"
+  },
+  "players": [
+   "NBA-7",
+   "NBA-19"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1292
+  ],
+  "minute": 75,
+  "importance": 0.0
+ },
+ "moment-1608": {
+  "id": "moment-1608",
+  "kind": "goal",
+  "summary": "Kai Underhill scored for Northbridge Athletic at 90+2', set up by Leon Okonjo. The chance was worth 0.35 xG. Northbridge Athletic 3-1 Harbor City FC.",
+  "figures": {
+   "xg": 0.35,
+   "display_clock": "90+2'",
+   "home_goals": 3,
+   "away_goals": 1
+  },
+  "players": [
+   "NBA-10",
+   "NBA-5"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1606,
+   1607,
+   1608
+  ],
+  "minute": 91,
+  "importance": 0.0
+ },
+ "moment-254": {
+  "id": "moment-254",
+  "kind": "goal",
+  "summary": "Finn Holloway scored for Northbridge Athletic at 14', set up by Pavel Ivers. The chance was worth 0.01 xG. Northbridge Athletic 1-0 Harbor City FC.",
+  "figures": {
+   "xg": 0.01,
+   "display_clock": "14'",
+   "home_goals": 1,
+   "away_goals": 0
+  },
+  "players": [
+   "NBA-6",
+   "NBA-7"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   252,
+   253,
+   254
+  ],
+  "minute": 13,
+  "importance": 0.0
+ },
+ "moment-34": {
+  "id": "moment-34",
+  "kind": "big_chance_missed",
+  "summary": "Big chance for Milo Galbraith of Harbor City FC at 2': 0.40 xG, off target.",
+  "figures": {
+   "xg": 0.4,
+   "display_clock": "2'",
+   "outcome": "off_target"
+  },
+  "players": [
+   "HCF-10"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   34
+  ],
+  "minute": 1,
+  "importance": 0.0
+ },
+ "moment-423": {
+  "id": "moment-423",
+  "kind": "save",
+  "summary": "Pavel Selbourne saved from Cal Fairbank at 24', a chance worth 0.33 xG.",
+  "figures": {
+   "xg": 0.33,
+   "display_clock": "24'"
+  },
+  "players": [
+   "NBA-1",
+   "HCF-11"
+  ],
+  "teams": [
+   "NBA",
+   "HCF"
+  ],
+  "evidence": [
+   422,
+   423
+  ],
+  "minute": 23,
+  "importance": 0.0
+ },
+ "moment-475": {
+  "id": "moment-475",
+  "kind": "save",
+  "summary": "Pavel Selbourne saved from Dario Langstone at 28', a chance worth 0.17 xG.",
+  "figures": {
+   "xg": 0.17,
+   "display_clock": "28'"
+  },
+  "players": [
+   "NBA-1",
+   "HCF-6"
+  ],
+  "teams": [
+   "NBA",
+   "HCF"
+  ],
+  "evidence": [
+   474,
+   475
+  ],
+  "minute": 27,
+  "importance": 0.0
+ },
+ "moment-580": {
+  "id": "moment-580",
+  "kind": "big_chance_missed",
+  "summary": "Big chance for Kai Underhill of Northbridge Athletic at 33': 0.38 xG, off target.",
+  "figures": {
+   "xg": 0.38,
+   "display_clock": "33'",
+   "outcome": "off_target"
+  },
+  "players": [
+   "NBA-10"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   580
+  ],
+  "minute": 32,
+  "importance": 0.0
+ },
+ "moment-688": {
+  "id": "moment-688",
+  "kind": "yellow_card",
+  "summary": "Yellow card for Milo Upworth of Northbridge Athletic at 39'.",
+  "figures": {
+   "display_clock": "39'"
+  },
+  "players": [
+   "NBA-9"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   688,
+   687
+  ],
+  "minute": 38,
+  "importance": 0.0
+ },
+ "moment-794": {
+  "id": "moment-794",
+  "kind": "goal",
+  "summary": "Jonah Haldane scored for Northbridge Athletic at 45'. The chance was worth 0.08 xG. Northbridge Athletic 2-0 Harbor City FC.",
+  "figures": {
+   "xg": 0.08,
+   "display_clock": "45'",
+   "home_goals": 2,
+   "away_goals": 0
+  },
+  "players": [
+   "NBA-11"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   793,
+   794
+  ],
+  "minute": 44,
+  "importance": 0.0
+ },
+ "moment-910": {
+  "id": "moment-910",
+  "kind": "save",
+  "summary": "Pavel Selbourne saved from Cal Fairbank at 51', a chance worth 0.25 xG.",
+  "figures": {
+   "xg": 0.25,
+   "display_clock": "51'"
+  },
+  "players": [
+   "NBA-1",
+   "HCF-11"
+  ],
+  "teams": [
+   "NBA",
+   "HCF"
+  ],
+  "evidence": [
+   909,
+   910
+  ],
+  "minute": 50,
+  "importance": 0.0
+ },
+ "player-HCF-11@1119": {
+  "id": "player-HCF-11@1119",
+  "kind": "player_card",
+  "summary": "Cal Fairbank: 46 touches, 12/21 passes, 3 shots (0.71 xG), 0 goals, 2 ball wins, 0 saves.",
+  "figures": {
+   "touches": 46,
+   "passes_completed": 12,
+   "passes_attempted": 21,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 2
+  },
+  "players": [
+   "HCF-11"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   779,
+   791,
+   807,
+   808,
+   809,
+   811,
+   812,
+   885,
+   909,
+   944,
+   1019,
+   1119
+  ],
+  "minute": 62,
+  "importance": 0.0
+ },
+ "player-HCF-11@1479": {
+  "id": "player-HCF-11@1479",
+  "kind": "player_card",
+  "summary": "Cal Fairbank: 52 touches, 16/26 passes, 3 shots (0.71 xG), 1 goals, 3 ball wins, 0 saves.",
+  "figures": {
+   "touches": 52,
+   "passes_completed": 16,
+   "passes_attempted": 26,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 3
+  },
+  "players": [
+   "HCF-11"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   885,
+   909,
+   944,
+   1019,
+   1119,
+   1120,
+   1126,
+   1164,
+   1289,
+   1383,
+   1474,
+   1479
+  ],
+  "minute": 85,
+  "importance": 0.0
+ },
+ "player-HCF-11@1629": {
+  "id": "player-HCF-11@1629",
+  "kind": "player_card",
+  "summary": "Cal Fairbank: 55 touches, 16/27 passes, 3 shots (0.71 xG), 1 goals, 3 ball wins, 0 saves.",
+  "figures": {
+   "touches": 55,
+   "passes_completed": 16,
+   "passes_attempted": 27,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 3
+  },
+  "players": [
+   "HCF-11"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   1019,
+   1119,
+   1120,
+   1126,
+   1164,
+   1289,
+   1383,
+   1474,
+   1479,
+   1550,
+   1611,
+   1612
+  ],
+  "minute": 94,
+  "importance": 0.0
+ },
+ "player-HCF-11@23": {
+  "id": "player-HCF-11@23",
+  "kind": "player_card",
+  "summary": "Cal Fairbank: 4 touches, 2/2 passes, 0 shots (0.00 xG), 0 goals, 0 ball wins, 0 saves.",
+  "figures": {
+   "touches": 4,
+   "passes_completed": 2,
+   "passes_attempted": 2,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 1
+  },
+  "players": [
+   "HCF-11"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   15,
+   16,
+   17,
+   23
+  ],
+  "minute": 0,
+  "importance": 0.0
+ },
+ "player-HCF-11@422": {
+  "id": "player-HCF-11@422",
+  "kind": "player_card",
+  "summary": "Cal Fairbank: 21 touches, 7/10 passes, 1 shots (0.33 xG), 0 goals, 1 ball wins, 0 saves.",
+  "figures": {
+   "touches": 21,
+   "passes_completed": 7,
+   "passes_attempted": 10,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 1
+  },
+  "players": [
+   "HCF-11"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   262,
+   264,
+   273,
+   277,
+   295,
+   339,
+   348,
+   389,
+   391,
+   418,
+   419,
+   422
+  ],
+  "minute": 23,
+  "importance": 0.0
+ },
+ "player-HCF-11@803": {
+  "id": "player-HCF-11@803",
+  "kind": "player_card",
+  "summary": "Cal Fairbank: 36 touches, 10/17 passes, 1 shots (0.33 xG), 0 goals, 2 ball wins, 0 saves.",
+  "figures": {
+   "touches": 36,
+   "passes_completed": 10,
+   "passes_attempted": 17,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  "players": [
+   "HCF-11"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   492,
+   518,
+   532,
+   533,
+   586,
+   630,
+   631,
+   689,
+   696,
+   725,
+   779,
+   791
+  ],
+  "minute": 46,
+  "importance": 0.0
+ },
+ "player-HCF-11@885": {
+  "id": "player-HCF-11@885",
+  "kind": "player_card",
+  "summary": "Cal Fairbank: 42 touches, 12/20 passes, 1 shots (0.33 xG), 0 goals, 2 ball wins, 0 saves.",
+  "figures": {
+   "touches": 42,
+   "passes_completed": 12,
+   "passes_attempted": 20,
+   "shots": 1,
+   "xg": 0.33,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 2
+  },
+  "players": [
+   "HCF-11"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   631,
+   689,
+   696,
+   725,
+   779,
+   791,
+   807,
+   808,
+   809,
+   811,
+   812,
+   885
+  ],
+  "minute": 49,
+  "importance": 0.0
+ },
+ "player-HCF-11@909": {
+  "id": "player-HCF-11@909",
+  "kind": "player_card",
+  "summary": "Cal Fairbank: 43 touches, 12/20 passes, 2 shots (0.58 xG), 0 goals, 2 ball wins, 0 saves.",
+  "figures": {
+   "touches": 43,
+   "passes_completed": 12,
+   "passes_attempted": 20,
+   "shots": 2,
+   "xg": 0.58,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 2
+  },
+  "players": [
+   "HCF-11"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   689,
+   696,
+   725,
+   779,
+   791,
+   807,
+   808,
+   809,
+   811,
+   812,
+   885,
+   909
+  ],
+  "minute": 50,
+  "importance": 0.0
+ },
+ "player-HCF-1@1203": {
+  "id": "player-HCF-1@1203",
+  "kind": "player_card",
+  "summary": "Tariq Blackmore: 3 touches, 0/0 passes, 0 shots (0.00 xG), 0 goals, 0 ball wins, 3 saves.",
+  "figures": {
+   "touches": 3,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 3,
+   "key_passes": 0
+  },
+  "players": [
+   "HCF-1"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   80,
+   972,
+   1203
+  ],
+  "minute": 69,
+  "importance": 0.0
+ },
+ "player-HCF-1@1414": {
+  "id": "player-HCF-1@1414",
+  "kind": "player_card",
+  "summary": "Tariq Blackmore: 4 touches, 0/0 passes, 0 shots (0.00 xG), 0 goals, 0 ball wins, 4 saves.",
+  "figures": {
+   "touches": 4,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 4,
+   "key_passes": 0
+  },
+  "players": [
+   "HCF-1"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   80,
+   972,
+   1203,
+   1414
+  ],
+  "minute": 81,
+  "importance": 0.0
+ },
+ "player-HCF-1@1629": {
+  "id": "player-HCF-1@1629",
+  "kind": "player_card",
+  "summary": "Tariq Blackmore: 4 touches, 0/0 passes, 0 shots (0.00 xG), 0 goals, 0 ball wins, 4 saves.",
+  "figures": {
+   "touches": 4,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 4,
+   "key_passes": 0
+  },
+  "players": [
+   "HCF-1"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   80,
+   972,
+   1203,
+   1414
+  ],
+  "minute": 94,
+  "importance": 0.0
+ },
+ "player-HCF-1@80": {
+  "id": "player-HCF-1@80",
+  "kind": "player_card",
+  "summary": "Tariq Blackmore: 1 touches, 0/0 passes, 0 shots (0.00 xG), 0 goals, 0 ball wins, 1 saves.",
+  "figures": {
+   "touches": 1,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 1,
+   "key_passes": 0
+  },
+  "players": [
+   "HCF-1"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   80
+  ],
+  "minute": 4,
+  "importance": 0.0
+ },
+ "player-HCF-1@803": {
+  "id": "player-HCF-1@803",
+  "kind": "player_card",
+  "summary": "Tariq Blackmore: 1 touches, 0/0 passes, 0 shots (0.00 xG), 0 goals, 0 ball wins, 1 saves.",
+  "figures": {
+   "touches": 1,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 1,
+   "key_passes": 0
+  },
+  "players": [
+   "HCF-1"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   80
+  ],
+  "minute": 46,
+  "importance": 0.0
+ },
+ "player-HCF-1@972": {
+  "id": "player-HCF-1@972",
+  "kind": "player_card",
+  "summary": "Tariq Blackmore: 2 touches, 0/0 passes, 0 shots (0.00 xG), 0 goals, 0 ball wins, 2 saves.",
+  "figures": {
+   "touches": 2,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 2,
+   "key_passes": 0
+  },
+  "players": [
+   "HCF-1"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   80,
+   972
+  ],
+  "minute": 54,
+  "importance": 0.0
+ },
+ "player-NBA-10@1250": {
+  "id": "player-NBA-10@1250",
+  "kind": "player_card",
+  "summary": "Kai Underhill: 99 touches, 57/69 passes, 1 shots (0.38 xG), 0 goals, 14 ball wins, 0 saves.",
+  "figures": {
+   "touches": 99,
+   "passes_completed": 57,
+   "passes_attempted": 69,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 14,
+   "saves": 0,
+   "key_passes": 3
+  },
+  "players": [
+   "NBA-10"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1131,
+   1132,
+   1133,
+   1161,
+   1163,
+   1182,
+   1193,
+   1238,
+   1239,
+   1247,
+   1249,
+   1250
+  ],
+  "minute": 73,
+  "importance": 0.0
+ },
+ "player-NBA-10@1607": {
+  "id": "player-NBA-10@1607",
+  "kind": "player_card",
+  "summary": "Kai Underhill: 129 touches, 74/88 passes, 2 shots (0.73 xG), 0 goals, 17 ball wins, 0 saves.",
+  "figures": {
+   "touches": 129,
+   "passes_completed": 74,
+   "passes_attempted": 88,
+   "shots": 2,
+   "xg": 0.73,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  "players": [
+   "NBA-10"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1511,
+   1512,
+   1517,
+   1524,
+   1531,
+   1532,
+   1548,
+   1556,
+   1560,
+   1570,
+   1605,
+   1607
+  ],
+  "minute": 91,
+  "importance": 0.0
+ },
+ "player-NBA-10@1629": {
+  "id": "player-NBA-10@1629",
+  "kind": "player_card",
+  "summary": "Kai Underhill: 132 touches, 76/90 passes, 2 shots (0.73 xG), 1 goals, 18 ball wins, 0 saves.",
+  "figures": {
+   "touches": 132,
+   "passes_completed": 76,
+   "passes_attempted": 90,
+   "shots": 2,
+   "xg": 0.73,
+   "goals": 1,
+   "ball_wins": 18,
+   "saves": 0,
+   "key_passes": 3
+  },
+  "players": [
+   "NBA-10"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1531,
+   1532,
+   1548,
+   1556,
+   1560,
+   1570,
+   1605,
+   1607,
+   1608,
+   1613,
+   1616,
+   1624
+  ],
+  "minute": 94,
+  "importance": 0.0
+ },
+ "player-NBA-10@494": {
+  "id": "player-NBA-10@494",
+  "kind": "player_card",
+  "summary": "Kai Underhill: 39 touches, 21/25 passes, 0 shots (0.00 xG), 0 goals, 6 ball wins, 0 saves.",
+  "figures": {
+   "touches": 39,
+   "passes_completed": 21,
+   "passes_attempted": 25,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 1
+  },
+  "players": [
+   "NBA-10"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   360,
+   365,
+   369,
+   370,
+   404,
+   443,
+   445,
+   453,
+   468,
+   484,
+   486,
+   494
+  ],
+  "minute": 28,
+  "importance": 0.0
+ },
+ "player-NBA-10@580": {
+  "id": "player-NBA-10@580",
+  "kind": "player_card",
+  "summary": "Kai Underhill: 46 touches, 25/30 passes, 1 shots (0.38 xG), 0 goals, 7 ball wins, 0 saves.",
+  "figures": {
+   "touches": 46,
+   "passes_completed": 25,
+   "passes_attempted": 30,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 1
+  },
+  "players": [
+   "NBA-10"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   453,
+   468,
+   484,
+   486,
+   494,
+   514,
+   517,
+   522,
+   535,
+   559,
+   569,
+   580
+  ],
+  "minute": 32,
+  "importance": 0.0
+ },
+ "player-NBA-10@683": {
+  "id": "player-NBA-10@683",
+  "kind": "player_card",
+  "summary": "Kai Underhill: 54 touches, 31/36 passes, 1 shots (0.38 xG), 0 goals, 8 ball wins, 0 saves.",
+  "figures": {
+   "touches": 54,
+   "passes_completed": 31,
+   "passes_attempted": 36,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 2
+  },
+  "players": [
+   "NBA-10"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   535,
+   559,
+   569,
+   580,
+   601,
+   608,
+   662,
+   664,
+   665,
+   670,
+   679,
+   683
+  ],
+  "minute": 37,
+  "importance": 0.0
+ },
+ "player-NBA-10@803": {
+  "id": "player-NBA-10@803",
+  "kind": "player_card",
+  "summary": "Kai Underhill: 64 touches, 39/45 passes, 1 shots (0.38 xG), 0 goals, 9 ball wins, 0 saves.",
+  "figures": {
+   "touches": 64,
+   "passes_completed": 39,
+   "passes_attempted": 45,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  "players": [
+   "NBA-10"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   679,
+   683,
+   700,
+   702,
+   706,
+   708,
+   712,
+   720,
+   731,
+   737,
+   759,
+   801
+  ],
+  "minute": 46,
+  "importance": 0.0
+ },
+ "player-NBA-11@1190": {
+  "id": "player-NBA-11@1190",
+  "kind": "player_card",
+  "summary": "Jonah Haldane: 56 touches, 34/39 passes, 3 shots (0.13 xG), 1 goals, 2 ball wins, 0 saves.",
+  "figures": {
+   "touches": 56,
+   "passes_completed": 34,
+   "passes_attempted": 39,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  "players": [
+   "NBA-11"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1024,
+   1025,
+   1051,
+   1077,
+   1079,
+   1121,
+   1135,
+   1138,
+   1178,
+   1186,
+   1188,
+   1190
+  ],
+  "minute": 68,
+  "importance": 0.0
+ },
+ "player-NBA-11@1412": {
+  "id": "player-NBA-11@1412",
+  "kind": "player_card",
+  "summary": "Jonah Haldane: 72 touches, 44/52 passes, 3 shots (0.13 xG), 1 goals, 3 ball wins, 0 saves.",
+  "figures": {
+   "touches": 72,
+   "passes_completed": 44,
+   "passes_attempted": 52,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 2
+  },
+  "players": [
+   "NBA-11"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1257,
+   1259,
+   1273,
+   1282,
+   1301,
+   1311,
+   1317,
+   1353,
+   1366,
+   1375,
+   1399,
+   1412
+  ],
+  "minute": 81,
+  "importance": 0.0
+ },
+ "player-NBA-11@1629": {
+  "id": "player-NBA-11@1629",
+  "kind": "player_card",
+  "summary": "Jonah Haldane: 81 touches, 51/60 passes, 3 shots (0.13 xG), 1 goals, 4 ball wins, 0 saves.",
+  "figures": {
+   "touches": 81,
+   "passes_completed": 51,
+   "passes_attempted": 60,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 2
+  },
+  "players": [
+   "NBA-11"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1375,
+   1399,
+   1412,
+   1435,
+   1445,
+   1493,
+   1506,
+   1514,
+   1523,
+   1562,
+   1584,
+   1593
+  ],
+  "minute": 94,
+  "importance": 0.0
+ },
+ "player-NBA-11@79": {
+  "id": "player-NBA-11@79",
+  "kind": "player_card",
+  "summary": "Jonah Haldane: 5 touches, 2/2 passes, 1 shots (0.01 xG), 0 goals, 1 ball wins, 0 saves.",
+  "figures": {
+   "touches": 5,
+   "passes_completed": 2,
+   "passes_attempted": 2,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-11"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   63,
+   72,
+   73,
+   78,
+   79
+  ],
+  "minute": 4,
+  "importance": 0.0
+ },
+ "player-NBA-11@793": {
+  "id": "player-NBA-11@793",
+  "kind": "player_card",
+  "summary": "Jonah Haldane: 32 touches, 20/22 passes, 2 shots (0.09 xG), 0 goals, 2 ball wins, 0 saves.",
+  "figures": {
+   "touches": 32,
+   "passes_completed": 20,
+   "passes_attempted": 22,
+   "shots": 2,
+   "xg": 0.09,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-11"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   572,
+   577,
+   597,
+   647,
+   709,
+   710,
+   711,
+   752,
+   753,
+   762,
+   784,
+   793
+  ],
+  "minute": 44,
+  "importance": 0.0
+ },
+ "player-NBA-11@803": {
+  "id": "player-NBA-11@803",
+  "kind": "player_card",
+  "summary": "Jonah Haldane: 32 touches, 20/22 passes, 2 shots (0.09 xG), 1 goals, 2 ball wins, 0 saves.",
+  "figures": {
+   "touches": 32,
+   "passes_completed": 20,
+   "passes_attempted": 22,
+   "shots": 2,
+   "xg": 0.09,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-11"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   577,
+   597,
+   647,
+   709,
+   710,
+   711,
+   752,
+   753,
+   762,
+   784,
+   793,
+   794
+  ],
+  "minute": 46,
+  "importance": 0.0
+ },
+ "player-NBA-11@971": {
+  "id": "player-NBA-11@971",
+  "kind": "player_card",
+  "summary": "Jonah Haldane: 41 touches, 25/28 passes, 3 shots (0.13 xG), 1 goals, 2 ball wins, 0 saves.",
+  "figures": {
+   "touches": 41,
+   "passes_completed": 25,
+   "passes_attempted": 28,
+   "shots": 3,
+   "xg": 0.13,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-11"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   784,
+   793,
+   794,
+   842,
+   849,
+   852,
+   876,
+   877,
+   954,
+   962,
+   965,
+   971
+  ],
+  "minute": 54,
+  "importance": 0.0
+ },
+ "player-NBA-1@1117": {
+  "id": "player-NBA-1@1117",
+  "kind": "player_card",
+  "summary": "Pavel Selbourne: 6 touches, 1/1 passes, 0 shots (0.00 xG), 0 goals, 1 ball wins, 4 saves.",
+  "figures": {
+   "touches": 6,
+   "passes_completed": 1,
+   "passes_attempted": 1,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 4,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-1"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   423,
+   475,
+   620,
+   638,
+   910,
+   1117
+  ],
+  "minute": 62,
+  "importance": 0.0
+ },
+ "player-NBA-1@1629": {
+  "id": "player-NBA-1@1629",
+  "kind": "player_card",
+  "summary": "Pavel Selbourne: 6 touches, 1/1 passes, 0 shots (0.00 xG), 0 goals, 1 ball wins, 4 saves.",
+  "figures": {
+   "touches": 6,
+   "passes_completed": 1,
+   "passes_attempted": 1,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 4,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-1"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   423,
+   475,
+   620,
+   638,
+   910,
+   1117
+  ],
+  "minute": 94,
+  "importance": 0.0
+ },
+ "player-NBA-1@423": {
+  "id": "player-NBA-1@423",
+  "kind": "player_card",
+  "summary": "Pavel Selbourne: 1 touches, 0/0 passes, 0 shots (0.00 xG), 0 goals, 0 ball wins, 1 saves.",
+  "figures": {
+   "touches": 1,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 1,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-1"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   423
+  ],
+  "minute": 23,
+  "importance": 0.0
+ },
+ "player-NBA-1@475": {
+  "id": "player-NBA-1@475",
+  "kind": "player_card",
+  "summary": "Pavel Selbourne: 2 touches, 0/0 passes, 0 shots (0.00 xG), 0 goals, 0 ball wins, 2 saves.",
+  "figures": {
+   "touches": 2,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 2,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-1"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   423,
+   475
+  ],
+  "minute": 27,
+  "importance": 0.0
+ },
+ "player-NBA-1@803": {
+  "id": "player-NBA-1@803",
+  "kind": "player_card",
+  "summary": "Pavel Selbourne: 4 touches, 1/1 passes, 0 shots (0.00 xG), 0 goals, 1 ball wins, 2 saves.",
+  "figures": {
+   "touches": 4,
+   "passes_completed": 1,
+   "passes_attempted": 1,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 2,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-1"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   423,
+   475,
+   620,
+   638
+  ],
+  "minute": 46,
+  "importance": 0.0
+ },
+ "player-NBA-1@910": {
+  "id": "player-NBA-1@910",
+  "kind": "player_card",
+  "summary": "Pavel Selbourne: 5 touches, 1/1 passes, 0 shots (0.00 xG), 0 goals, 1 ball wins, 3 saves.",
+  "figures": {
+   "touches": 5,
+   "passes_completed": 1,
+   "passes_attempted": 1,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 3,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-1"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   423,
+   475,
+   620,
+   638,
+   910
+  ],
+  "minute": 50,
+  "importance": 0.0
+ },
+ "player-NBA-6@1145": {
+  "id": "player-NBA-6@1145",
+  "kind": "player_card",
+  "summary": "Finn Holloway: 88 touches, 54/61 passes, 3 shots (0.17 xG), 1 goals, 6 ball wins, 0 saves.",
+  "figures": {
+   "touches": 88,
+   "passes_completed": 54,
+   "passes_attempted": 61,
+   "shots": 3,
+   "xg": 0.17,
+   "goals": 1,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-6"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1067,
+   1069,
+   1072,
+   1073,
+   1075,
+   1096,
+   1102,
+   1104,
+   1130,
+   1139,
+   1140,
+   1145
+  ],
+  "minute": 64,
+  "importance": 0.0
+ },
+ "player-NBA-6@1191": {
+  "id": "player-NBA-6@1191",
+  "kind": "player_card",
+  "summary": "Finn Holloway: 94 touches, 58/65 passes, 4 shots (0.23 xG), 1 goals, 6 ball wins, 0 saves.",
+  "figures": {
+   "touches": 94,
+   "passes_completed": 58,
+   "passes_attempted": 65,
+   "shots": 4,
+   "xg": 0.23,
+   "goals": 1,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-6"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1102,
+   1104,
+   1130,
+   1139,
+   1140,
+   1145,
+   1159,
+   1160,
+   1175,
+   1181,
+   1189,
+   1191
+  ],
+  "minute": 68,
+  "importance": 0.0
+ },
+ "player-NBA-6@1629": {
+  "id": "player-NBA-6@1629",
+  "kind": "player_card",
+  "summary": "Finn Holloway: 126 touches, 83/92 passes, 4 shots (0.23 xG), 1 goals, 8 ball wins, 0 saves.",
+  "figures": {
+   "touches": 126,
+   "passes_completed": 83,
+   "passes_attempted": 92,
+   "shots": 4,
+   "xg": 0.23,
+   "goals": 1,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-6"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1482,
+   1484,
+   1508,
+   1535,
+   1552,
+   1558,
+   1559,
+   1571,
+   1580,
+   1591,
+   1598,
+   1600
+  ],
+  "minute": 94,
+  "importance": 0.0
+ },
+ "player-NBA-6@253": {
+  "id": "player-NBA-6@253",
+  "kind": "player_card",
+  "summary": "Finn Holloway: 23 touches, 12/12 passes, 1 shots (0.01 xG), 0 goals, 1 ball wins, 0 saves.",
+  "figures": {
+   "touches": 23,
+   "passes_completed": 12,
+   "passes_attempted": 12,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-6"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   194,
+   204,
+   205,
+   212,
+   213,
+   214,
+   216,
+   219,
+   228,
+   231,
+   232,
+   253
+  ],
+  "minute": 13,
+  "importance": 0.0
+ },
+ "player-NBA-6@310": {
+  "id": "player-NBA-6@310",
+  "kind": "player_card",
+  "summary": "Finn Holloway: 28 touches, 14/14 passes, 2 shots (0.02 xG), 1 goals, 1 ball wins, 0 saves.",
+  "figures": {
+   "touches": 28,
+   "passes_completed": 14,
+   "passes_attempted": 14,
+   "shots": 2,
+   "xg": 0.02,
+   "goals": 1,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-6"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   216,
+   219,
+   228,
+   231,
+   232,
+   253,
+   254,
+   270,
+   281,
+   297,
+   304,
+   310
+  ],
+  "minute": 17,
+  "importance": 0.0
+ },
+ "player-NBA-6@803": {
+  "id": "player-NBA-6@803",
+  "kind": "player_card",
+  "summary": "Finn Holloway: 61 touches, 37/40 passes, 2 shots (0.02 xG), 1 goals, 3 ball wins, 0 saves.",
+  "figures": {
+   "touches": 61,
+   "passes_completed": 37,
+   "passes_attempted": 40,
+   "shots": 2,
+   "xg": 0.02,
+   "goals": 1,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-6"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   668,
+   677,
+   680,
+   682,
+   707,
+   719,
+   732,
+   739,
+   749,
+   750,
+   754,
+   786
+  ],
+  "minute": 46,
+  "importance": 0.0
+ },
+ "player-NBA-8@1200": {
+  "id": "player-NBA-8@1200",
+  "kind": "player_card",
+  "summary": "Rafi Marlow: 86 touches, 54/60 passes, 2 shots (0.11 xG), 0 goals, 12 ball wins, 0 saves.",
+  "figures": {
+   "touches": 86,
+   "passes_completed": 54,
+   "passes_attempted": 60,
+   "shots": 2,
+   "xg": 0.11,
+   "goals": 0,
+   "ball_wins": 12,
+   "saves": 0,
+   "key_passes": 3
+  },
+  "players": [
+   "NBA-8"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1027,
+   1049,
+   1050,
+   1070,
+   1071,
+   1105,
+   1127,
+   1134,
+   1174,
+   1176,
+   1199,
+   1200
+  ],
+  "minute": 69,
+  "importance": 0.0
+ },
+ "player-NBA-8@1251": {
+  "id": "player-NBA-8@1251",
+  "kind": "player_card",
+  "summary": "Rafi Marlow: 89 touches, 54/60 passes, 3 shots (0.34 xG), 0 goals, 13 ball wins, 0 saves.",
+  "figures": {
+   "touches": 89,
+   "passes_completed": 54,
+   "passes_attempted": 60,
+   "shots": 3,
+   "xg": 0.34,
+   "goals": 0,
+   "ball_wins": 13,
+   "saves": 0,
+   "key_passes": 3
+  },
+  "players": [
+   "NBA-8"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1070,
+   1071,
+   1105,
+   1127,
+   1134,
+   1174,
+   1176,
+   1199,
+   1200,
+   1208,
+   1233,
+   1251
+  ],
+  "minute": 73,
+  "importance": 0.0
+ },
+ "player-NBA-8@1629": {
+  "id": "player-NBA-8@1629",
+  "kind": "player_card",
+  "summary": "Rafi Marlow: 122 touches, 76/86 passes, 3 shots (0.34 xG), 0 goals, 14 ball wins, 0 saves.",
+  "figures": {
+   "touches": 122,
+   "passes_completed": 76,
+   "passes_attempted": 86,
+   "shots": 3,
+   "xg": 0.34,
+   "goals": 0,
+   "ball_wins": 14,
+   "saves": 0,
+   "key_passes": 3
+  },
+  "players": [
+   "NBA-8"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1530,
+   1536,
+   1553,
+   1555,
+   1561,
+   1578,
+   1585,
+   1599,
+   1602,
+   1622,
+   1623,
+   1625
+  ],
+  "minute": 94,
+  "importance": 0.0
+ },
+ "player-NBA-8@221": {
+  "id": "player-NBA-8@221",
+  "kind": "player_card",
+  "summary": "Rafi Marlow: 15 touches, 7/9 passes, 1 shots (0.07 xG), 0 goals, 1 ball wins, 0 saves.",
+  "figures": {
+   "touches": 15,
+   "passes_completed": 7,
+   "passes_attempted": 9,
+   "shots": 1,
+   "xg": 0.07,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-8"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   54,
+   55,
+   66,
+   82,
+   99,
+   141,
+   142,
+   146,
+   180,
+   186,
+   206,
+   221
+  ],
+  "minute": 11,
+  "importance": 0.0
+ },
+ "player-NBA-8@309": {
+  "id": "player-NBA-8@309",
+  "kind": "player_card",
+  "summary": "Rafi Marlow: 17 touches, 8/10 passes, 1 shots (0.07 xG), 0 goals, 2 ball wins, 0 saves.",
+  "figures": {
+   "touches": 17,
+   "passes_completed": 8,
+   "passes_attempted": 10,
+   "shots": 1,
+   "xg": 0.07,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 1
+  },
+  "players": [
+   "NBA-8"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   66,
+   82,
+   99,
+   141,
+   142,
+   146,
+   180,
+   186,
+   206,
+   221,
+   278,
+   309
+  ],
+  "minute": 17,
+  "importance": 0.0
+ },
+ "player-NBA-8@579": {
+  "id": "player-NBA-8@579",
+  "kind": "player_card",
+  "summary": "Rafi Marlow: 33 touches, 18/21 passes, 1 shots (0.07 xG), 0 goals, 6 ball wins, 0 saves.",
+  "figures": {
+   "touches": 33,
+   "passes_completed": 18,
+   "passes_attempted": 21,
+   "shots": 1,
+   "xg": 0.07,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 2
+  },
+  "players": [
+   "NBA-8"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   401,
+   439,
+   452,
+   487,
+   521,
+   528,
+   534,
+   552,
+   554,
+   555,
+   557,
+   579
+  ],
+  "minute": 32,
+  "importance": 0.0
+ },
+ "player-NBA-8@684": {
+  "id": "player-NBA-8@684",
+  "kind": "player_card",
+  "summary": "Rafi Marlow: 39 touches, 22/26 passes, 2 shots (0.11 xG), 0 goals, 6 ball wins, 0 saves.",
+  "figures": {
+   "touches": 39,
+   "passes_completed": 22,
+   "passes_attempted": 26,
+   "shots": 2,
+   "xg": 0.11,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 2
+  },
+  "players": [
+   "NBA-8"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   534,
+   552,
+   554,
+   555,
+   557,
+   579,
+   594,
+   600,
+   623,
+   663,
+   669,
+   684
+  ],
+  "minute": 37,
+  "importance": 0.0
+ },
+ "player-NBA-8@803": {
+  "id": "player-NBA-8@803",
+  "kind": "player_card",
+  "summary": "Rafi Marlow: 54 touches, 31/36 passes, 2 shots (0.11 xG), 0 goals, 9 ball wins, 0 saves.",
+  "figures": {
+   "touches": 54,
+   "passes_completed": 31,
+   "passes_attempted": 36,
+   "shots": 2,
+   "xg": 0.11,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  "players": [
+   "NBA-8"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   733,
+   746,
+   748,
+   763,
+   780,
+   781,
+   782,
+   787,
+   789,
+   799,
+   800,
+   802
+  ],
+  "minute": 46,
+  "importance": 0.0
+ },
+ "player-NBA-9@1144": {
+  "id": "player-NBA-9@1144",
+  "kind": "player_card",
+  "summary": "Milo Upworth: 67 touches, 35/43 passes, 2 shots (0.16 xG), 0 goals, 8 ball wins, 0 saves.",
+  "figures": {
+   "touches": 67,
+   "passes_completed": 35,
+   "passes_attempted": 43,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 1
+  },
+  "players": [
+   "NBA-9"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   830,
+   840,
+   844,
+   872,
+   973,
+   986,
+   1004,
+   1026,
+   1074,
+   1076,
+   1137,
+   1144
+  ],
+  "minute": 64,
+  "importance": 0.0
+ },
+ "player-NBA-9@117": {
+  "id": "player-NBA-9@117",
+  "kind": "player_card",
+  "summary": "Milo Upworth: 9 touches, 5/6 passes, 1 shots (0.01 xG), 0 goals, 1 ball wins, 0 saves.",
+  "figures": {
+   "touches": 9,
+   "passes_completed": 5,
+   "passes_attempted": 6,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-9"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   7,
+   25,
+   53,
+   74,
+   76,
+   98,
+   111,
+   112,
+   117
+  ],
+  "minute": 6,
+  "importance": 0.0
+ },
+ "player-NBA-9@1413": {
+  "id": "player-NBA-9@1413",
+  "kind": "player_card",
+  "summary": "Milo Upworth: 87 touches, 47/55 passes, 3 shots (0.18 xG), 0 goals, 10 ball wins, 0 saves.",
+  "figures": {
+   "touches": 87,
+   "passes_completed": 47,
+   "passes_attempted": 55,
+   "shots": 3,
+   "xg": 0.18,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  "players": [
+   "NBA-9"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1241,
+   1242,
+   1315,
+   1316,
+   1335,
+   1339,
+   1340,
+   1370,
+   1376,
+   1403,
+   1408,
+   1413
+  ],
+  "minute": 81,
+  "importance": 0.0
+ },
+ "player-NBA-9@1441": {
+  "id": "player-NBA-9@1441",
+  "kind": "player_card",
+  "summary": "Milo Upworth: 88 touches, 47/55 passes, 4 shots (0.21 xG), 0 goals, 10 ball wins, 0 saves.",
+  "figures": {
+   "touches": 88,
+   "passes_completed": 47,
+   "passes_attempted": 55,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  "players": [
+   "NBA-9"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1242,
+   1315,
+   1316,
+   1335,
+   1339,
+   1340,
+   1370,
+   1376,
+   1403,
+   1408,
+   1413,
+   1441
+  ],
+  "minute": 83,
+  "importance": 0.0
+ },
+ "player-NBA-9@1629": {
+  "id": "player-NBA-9@1629",
+  "kind": "player_card",
+  "summary": "Milo Upworth: 105 touches, 59/70 passes, 4 shots (0.21 xG), 0 goals, 11 ball wins, 0 saves.",
+  "figures": {
+   "touches": 105,
+   "passes_completed": 59,
+   "passes_attempted": 70,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 11,
+   "saves": 0,
+   "key_passes": 1
+  },
+  "players": [
+   "NBA-9"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1495,
+   1499,
+   1509,
+   1513,
+   1518,
+   1522,
+   1528,
+   1590,
+   1594,
+   1601,
+   1619,
+   1621
+  ],
+  "minute": 94,
+  "importance": 0.0
+ },
+ "player-NBA-9@495": {
+  "id": "player-NBA-9@495",
+  "kind": "player_card",
+  "summary": "Milo Upworth: 35 touches, 16/24 passes, 2 shots (0.16 xG), 0 goals, 4 ball wins, 0 saves.",
+  "figures": {
+   "touches": 35,
+   "passes_completed": 16,
+   "passes_attempted": 24,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-9"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   367,
+   372,
+   390,
+   406,
+   407,
+   408,
+   412,
+   432,
+   479,
+   489,
+   493,
+   495
+  ],
+  "minute": 28,
+  "importance": 0.0
+ },
+ "player-NBA-9@803": {
+  "id": "player-NBA-9@803",
+  "kind": "player_card",
+  "summary": "Milo Upworth: 53 touches, 25/33 passes, 2 shots (0.16 xG), 0 goals, 7 ball wins, 0 saves.",
+  "figures": {
+   "touches": 53,
+   "passes_completed": 25,
+   "passes_attempted": 33,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-9"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   645,
+   681,
+   687,
+   688,
+   691,
+   717,
+   718,
+   724,
+   747,
+   761,
+   788,
+   792
+  ],
+  "minute": 46,
+  "importance": 0.0
+ },
+ "swing-30": {
+  "id": "swing-30",
+  "kind": "momentum_swing",
+  "summary": "Momentum check: between minutes 30 and 45, Northbridge Athletic had 86% of the attacking threat, up from 29%.",
+  "figures": {
+   "start_minute": 30,
+   "end_minute": 45,
+   "share_after_pct": 86,
+   "share_before_pct": 29
+  },
+  "players": [],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   580,
+   684,
+   793
+  ],
+  "minute": 30,
+  "importance": 0.0
+ },
+ "swing-45": {
+  "id": "swing-45",
+  "kind": "momentum_swing",
+  "summary": "Momentum check: between minutes 45 and 60, Harbor City FC had 71% of the attacking threat, up from 14%.",
+  "figures": {
+   "start_minute": 45,
+   "end_minute": 60,
+   "share_after_pct": 71,
+   "share_before_pct": 14
+  },
+  "players": [],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   886,
+   909,
+   971
+  ],
+  "minute": 45,
+  "importance": 0.0
+ },
+ "swing-60": {
+  "id": "swing-60",
+  "kind": "momentum_swing",
+  "summary": "Momentum check: between minutes 60 and 75, Northbridge Athletic had 74% of the attacking threat, up from 29%.",
+  "figures": {
+   "start_minute": 60,
+   "end_minute": 75,
+   "share_after_pct": 74,
+   "share_before_pct": 29
+  },
+  "players": [],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1116,
+   1119,
+   1145,
+   1150,
+   1191,
+   1202,
+   1251
+  ],
+  "minute": 60,
+  "importance": 0.0
+ }
+}

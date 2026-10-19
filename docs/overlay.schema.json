@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "inside-the-game/overlay/v1",
+  "title": "Inside the Game overlay file (v1)",
+  "description": "A list of OverlayItems for one match, one viewer profile and an optional favourite club. Every item cites facts that passed the FactChecker.",
+  "type": "object",
+  "required": ["schema_version", "match_id", "profile", "favourite", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": 1},
+    "match_id": {"type": "string", "minLength": 1},
+    "profile": {"enum": ["analyst", "casual"]},
+    "favourite": {"type": ["string", "null"]},
+    "items": {"type": "array", "items": {"$ref": "#/$defs/OverlayItem"}}
+  },
+  "$defs": {
+    "Translation": {
+      "type": "object",
+      "required": ["text", "ok"],
+      "additionalProperties": false,
+      "properties": {
+        "text": {"type": "string"},
+        "ok": {"type": "boolean", "description": "true only if the translation passed the number and name checks; the page hides languages whose lines are not ok"}
+      }
+    },
+    "OverlayItem": {
+      "type": "object",
+      "required": ["id", "match_id", "profile", "lang", "at_event", "period", "clock", "display_clock", "show_for_s",
+                   "slot", "kind", "text", "translations", "fact_ids", "evidence", "source", "blocked"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "match_id": {"type": "string"},
+        "profile": {"enum": ["analyst", "casual"]},
+        "lang": {"const": "en", "description": "language of `text`; other languages are in `translations`"},
+        "at_event": {"type": "integer", "minimum": 1, "description": "event id that triggers the item"},
+        "period": {"enum": [1, 2]},
+        "clock": {"type": "number", "minimum": 0, "description": "seconds into the period"},
+        "display_clock": {"type": "string", "pattern": "^[0-9]+(\\+[0-9]+)?'$"},
+        "show_for_s": {"type": "number", "minimum": 1, "description": "minimum on-screen time in wall-clock seconds"},
+        "slot": {"enum": ["ticker", "score", "stats", "card", "alert"]},
+        "kind": {"type": "string"},
+        "text": {"type": "string", "minLength": 1},
+        "translations": {"type": "object", "additionalProperties": {"$ref": "#/$defs/Translation"}},
+        "fact_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "evidence": {"type": "array", "items": {"type": "integer", "minimum": 1}},
+        "source": {"enum": ["model", "template", "template-fallback"]},
+        "blocked": {"type": "array", "items": {"type": "string"}, "description": "why a model line was not used (fallbacks only)"},
+        "boost": {"type": "boolean", "description": "favourite-club moment: shown first and longer"}
+      }
+    }
+  }
+}

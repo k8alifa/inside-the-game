@@ -5,7 +5,7 @@
  "lines": [
   {
    "display_clock": "1'",
-   "text": "Kickoff: Northbridge Athletic against Harbor City FC.",
+   "text": "We're under way: Northbridge Athletic v Harbor City FC!",
    "fact_ids": [
     "kickoff"
    ],
@@ -22,7 +22,7 @@
    "translations": {
     "es": {
      "lang": "es",
-     "text": "Kickoff: Northbridge Athletic against Harbor City FC.",
+     "text": "We're under way: Northbridge Athletic v Harbor City FC!",
      "ok": false,
      "reasons": [
       "no model configured"
@@ -171,7 +171,7 @@
   },
   {
    "display_clock": "39'",
-   "text": "Yellow card for Milo Upworth of Northbridge Athletic at 39'.",
+   "text": "Booked: Milo Upworth of Northbridge Athletic.",
    "fact_ids": [
     "moment-688"
    ],
@@ -189,7 +189,7 @@
    "translations": {
     "es": {
      "lang": "es",
-     "text": "Yellow card for Milo Upworth of Northbridge Athletic at 39'.",
+     "text": "Booked: Milo Upworth of Northbridge Athletic.",
      "ok": false,
      "reasons": [
       "no model configured"
@@ -313,7 +313,7 @@
   },
   {
    "display_clock": "56'",
-   "text": "Yellow card for Jonah Haldane of Northbridge Athletic at 56'.",
+   "text": "Booked: Jonah Haldane of Northbridge Athletic.",
    "fact_ids": [
     "moment-1010"
    ],
@@ -331,7 +331,7 @@
    "translations": {
     "es": {
      "lang": "es",
-     "text": "Yellow card for Jonah Haldane of Northbridge Athletic at 56'.",
+     "text": "Booked: Jonah Haldane of Northbridge Athletic.",
      "ok": false,
      "reasons": [
       "no model configured"
@@ -341,7 +341,7 @@
   },
   {
    "display_clock": "58'",
-   "text": "Substitution for Harbor City FC at 58': Theo Gorsuch on, Ivo Dunmore off.",
+   "text": "Change for Harbor City FC: Theo Gorsuch comes on for Ivo Dunmore.",
    "fact_ids": [
     "moment-1035"
    ],
@@ -358,7 +358,7 @@
    "translations": {
     "es": {
      "lang": "es",
-     "text": "Substitution for Harbor City FC at 58': Theo Gorsuch on, Ivo Dunmore off.",
+     "text": "Change for Harbor City FC: Theo Gorsuch comes on for Ivo Dunmore.",
      "ok": false,
      "reasons": [
       "no model configured"
@@ -368,7 +368,7 @@
   },
   {
    "display_clock": "60'",
-   "text": "Substitution for Northbridge Athletic at 60': Mateo Ingram on, Luca Brennick off.",
+   "text": "Change for Northbridge Athletic: Mateo Ingram comes on for Luca Brennick.",
    "fact_ids": [
     "moment-1082"
    ],
@@ -385,7 +385,7 @@
    "translations": {
     "es": {
      "lang": "es",
-     "text": "Substitution for Northbridge Athletic at 60': Mateo Ingram on, Luca Brennick off.",
+     "text": "Change for Northbridge Athletic: Mateo Ingram comes on for Luca Brennick.",
      "ok": false,
      "reasons": [
       "no model configured"
@@ -452,7 +452,7 @@
   },
   {
    "display_clock": "66'",
-   "text": "Substitution for Northbridge Athletic at 66': Finn Abara on, Jonah Moorcroft off.",
+   "text": "Change for Northbridge Athletic: Finn Abara comes on for Jonah Moorcroft.",
    "fact_ids": [
     "moment-1149"
    ],
@@ -469,7 +469,7 @@
    "translations": {
     "es": {
      "lang": "es",
-     "text": "Substitution for Northbridge Athletic at 66': Finn Abara on, Jonah Moorcroft off.",
+     "text": "Change for Northbridge Athletic: Finn Abara comes on for Jonah Moorcroft.",
      "ok": false,
      "reasons": [
       "no model configured"
@@ -479,7 +479,7 @@
   },
   {
    "display_clock": "67'",
-   "text": "Substitution for Harbor City FC at 67': Rafi Radley on, Dario Langstone off.",
+   "text": "Change for Harbor City FC: Rafi Radley comes on for Dario Langstone.",
    "fact_ids": [
     "moment-1158"
    ],
@@ -496,7 +496,7 @@
    "translations": {
     "es": {
      "lang": "es",
-     "text": "Substitution for Harbor City FC at 67': Rafi Radley on, Dario Langstone off.",
+     "text": "Change for Harbor City FC: Rafi Radley comes on for Dario Langstone.",
      "ok": false,
      "reasons": [
       "no model configured"
@@ -534,7 +534,7 @@
   },
   {
    "display_clock": "72'",
-   "text": "Substitution for Harbor City FC at 72': Alex Merrow on, Milo Galbraith off.",
+   "text": "Change for Harbor City FC: Alex Merrow comes on for Milo Galbraith.",
    "fact_ids": [
     "moment-1234"
    ],
@@ -551,7 +551,7 @@
    "translations": {
     "es": {
      "lang": "es",
-     "text": "Substitution for Harbor City FC at 72': Alex Merrow on, Milo Galbraith off.",
+     "text": "Change for Harbor City FC: Alex Merrow comes on for Milo Galbraith.",
      "ok": false,
      "reasons": [
       "no model configured"
@@ -594,7 +594,7 @@
   },
   {
    "display_clock": "76'",
-   "text": "Substitution for Northbridge Athletic at 76': Yusuf Dellacourt on, Pavel Ivers off.",
+   "text": "Change for Northbridge Athletic: Yusuf Dellacourt comes on for Pavel Ivers.",
    "fact_ids": [
     "moment-1292"
    ],
@@ -611,7 +611,7 @@
    "translations": {
     "es": {
      "lang": "es",
-     "text": "Substitution for Northbridge Athletic at 76': Yusuf Dellacourt on, Pavel Ivers off.",
+     "text": "Change for Northbridge Athletic: Yusuf Dellacourt comes on for Pavel Ivers.",
      "ok": false,
      "reasons": [
       "no model configured"

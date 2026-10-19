@@ -1,0 +1,492 @@
+{
+ "schema_version": 1,
+ "match_id": "NBA-HCF-7",
+ "player": {
+  "id": "HCF-1",
+  "name": "Tariq Blackmore",
+  "team": "HCF",
+  "role": "GK"
+ },
+ "card": [
+  {
+   "at_event": 80,
+   "touches": 1,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 1,
+   "key_passes": 0
+  },
+  {
+   "at_event": 972,
+   "touches": 2,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 2,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1203,
+   "touches": 3,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 3,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1414,
+   "touches": 4,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 4,
+   "key_passes": 0
+  }
+ ],
+ "items": {
+  "analyst": [
+   {
+    "id": "NBA-HCF-7:analyst:HCF-1:card:player-HCF-1@80",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 80,
+    "period": 1,
+    "clock": 240.9,
+    "display_clock": "5'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Tariq Blackmore: 1 save, 1 touch, 0/0 passes.",
+    "translations": {
+     "es": {
+      "text": "Tariq Blackmore: 1 save, 1 touch, 0/0 passes.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-1@80"
+    ],
+    "evidence": [
+     80
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:HCF-1:card:player-HCF-1@803",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 803,
+    "period": 1,
+    "clock": 2767.2,
+    "display_clock": "45+2'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Tariq Blackmore: 1 save, 1 touch, 0/0 passes.",
+    "translations": {
+     "es": {
+      "text": "Tariq Blackmore: 1 save, 1 touch, 0/0 passes.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-1@803"
+    ],
+    "evidence": [
+     80
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:HCF-1:card:player-HCF-1@972",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 972,
+    "period": 2,
+    "clock": 543.4,
+    "display_clock": "55'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Tariq Blackmore: 2 saves, 2 touches, 0/0 passes.",
+    "translations": {
+     "es": {
+      "text": "Tariq Blackmore: 2 saves, 2 touches, 0/0 passes.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-1@972"
+    ],
+    "evidence": [
+     80,
+     972
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:all:ticker:moment-1203",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1203,
+    "period": 2,
+    "clock": 1460.6,
+    "display_clock": "70'",
+    "show_for_s": 5.6,
+    "slot": "ticker",
+    "kind": "save",
+    "text": "What a stop! Tariq Blackmore saved from Finn Abara at 70', a chance worth 0.13 xG.",
+    "translations": {
+     "es": {
+      "text": "What a stop! Tariq Blackmore saved from Finn Abara at 70', a chance worth 0.13 xG.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-1203"
+    ],
+    "evidence": [
+     1202,
+     1203
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:HCF-1:card:player-HCF-1@1203",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1203,
+    "period": 2,
+    "clock": 1460.6,
+    "display_clock": "70'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Tariq Blackmore: 3 saves, 3 touches, 0/0 passes.",
+    "translations": {
+     "es": {
+      "text": "Tariq Blackmore: 3 saves, 3 touches, 0/0 passes.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-1@1203"
+    ],
+    "evidence": [
+     80,
+     972,
+     1203
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:HCF-1:card:player-HCF-1@1414",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1414,
+    "period": 2,
+    "clock": 2203.3,
+    "display_clock": "82'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Tariq Blackmore: 4 saves, 4 touches, 0/0 passes.",
+    "translations": {
+     "es": {
+      "text": "Tariq Blackmore: 4 saves, 4 touches, 0/0 passes.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-1@1414"
+    ],
+    "evidence": [
+     80,
+     972,
+     1203,
+     1414
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:HCF-1:card:player-HCF-1@1629",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1629,
+    "period": 2,
+    "clock": 2968.2,
+    "display_clock": "90+5'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Tariq Blackmore: 4 saves, 4 touches, 0/0 passes.",
+    "translations": {
+     "es": {
+      "text": "Tariq Blackmore: 4 saves, 4 touches, 0/0 passes.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-1@1629"
+    ],
+    "evidence": [
+     80,
+     972,
+     1203,
+     1414
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   }
+  ],
+  "casual": [
+   {
+    "id": "NBA-HCF-7:casual:HCF-1:card:player-HCF-1@80",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 80,
+    "period": 1,
+    "clock": 240.9,
+    "display_clock": "5'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Tariq Blackmore has made a save so far.",
+    "translations": {
+     "es": {
+      "text": "Tariq Blackmore has made a save so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-1@80"
+    ],
+    "evidence": [
+     80
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:HCF-1:card:player-HCF-1@803",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 803,
+    "period": 1,
+    "clock": 2767.2,
+    "display_clock": "45+2'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Tariq Blackmore has made a save so far.",
+    "translations": {
+     "es": {
+      "text": "Tariq Blackmore has made a save so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-1@803"
+    ],
+    "evidence": [
+     80
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:HCF-1:card:player-HCF-1@972",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 972,
+    "period": 2,
+    "clock": 543.4,
+    "display_clock": "55'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Tariq Blackmore has made 2 saves so far.",
+    "translations": {
+     "es": {
+      "text": "Tariq Blackmore has made 2 saves so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-1@972"
+    ],
+    "evidence": [
+     80,
+     972
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:all:ticker:moment-1203",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1203,
+    "period": 2,
+    "clock": 1460.6,
+    "display_clock": "70'",
+    "show_for_s": 4.0,
+    "slot": "ticker",
+    "kind": "save",
+    "text": "Great save by Tariq Blackmore! Finn Abara is denied.",
+    "translations": {
+     "es": {
+      "text": "Great save by Tariq Blackmore! Finn Abara is denied.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-1203"
+    ],
+    "evidence": [
+     1202,
+     1203
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:HCF-1:card:player-HCF-1@1203",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1203,
+    "period": 2,
+    "clock": 1460.6,
+    "display_clock": "70'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Tariq Blackmore has made 3 saves so far.",
+    "translations": {
+     "es": {
+      "text": "Tariq Blackmore has made 3 saves so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-1@1203"
+    ],
+    "evidence": [
+     80,
+     972,
+     1203
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:HCF-1:card:player-HCF-1@1414",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1414,
+    "period": 2,
+    "clock": 2203.3,
+    "display_clock": "82'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Tariq Blackmore has made 4 saves so far.",
+    "translations": {
+     "es": {
+      "text": "Tariq Blackmore has made 4 saves so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-1@1414"
+    ],
+    "evidence": [
+     80,
+     972,
+     1203,
+     1414
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:HCF-1:card:player-HCF-1@1629",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1629,
+    "period": 2,
+    "clock": 2968.2,
+    "display_clock": "90+5'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Tariq Blackmore has made 4 saves so far.",
+    "translations": {
+     "es": {
+      "text": "Tariq Blackmore has made 4 saves so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-1@1629"
+    ],
+    "evidence": [
+     80,
+     972,
+     1203,
+     1414
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   }
+  ]
+ }
+}
