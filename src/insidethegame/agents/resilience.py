@@ -47,6 +47,61 @@ class ModelUnavailable(RuntimeError):
     """The model could not produce a response within policy; use the fallback."""
 
 
+class InvalidModelResponse(ModelUnavailable):
+    """The endpoint answered, but not with a chat completion. Never retried."""
+
+
+def check_chat_completion_json(data) -> str | None:
+    """None if `data` looks like a chat completion, else the reason it does not."""
+    if not isinstance(data, dict):
+        return f"body is {type(data).__name__}, not a JSON object"
+    choices = data.get("choices")
+    if not isinstance(choices, list) or not choices:
+        return "no choices"
+    msg = choices[0].get("message") if isinstance(choices[0], dict) else None
+    if not isinstance(msg, dict):
+        return "choices[0].message missing"
+    if isinstance(msg.get("content"), str) or msg.get("tool_calls"):
+        return None  # text, or a tool call (content is null then)
+    return "choices[0].message has neither content nor tool_calls"
+
+
+async def _validate_http_response(response) -> None:
+    """httpx response hook: a 200 from a chat-completions call must be real chat-completion JSON."""
+    if response.request.method != "POST" or not response.request.url.path.endswith("/chat/completions"):
+        return
+    if response.status_code != 200 or "text/event-stream" in response.headers.get("content-type", ""):
+        return  # status errors are classified by the guard; streams are not used here
+    await response.aread()
+    try:
+        data = json.loads(response.content or b"null")
+    except ValueError:
+        data = None
+    reason = check_chat_completion_json(data) if data is not None else "body is not JSON"
+    if reason:
+        head = (response.content or b"")[:40]
+        raise InvalidModelResponse(f"endpoint returned HTTP 200 but not a chat completion ({reason}; "
+                                   f"content-type {response.headers.get('content-type', '?')}; body starts {head!r})")
+
+
+def validated_http_client(timeout: float):
+    """An httpx client for the OpenAI SDK that rejects anything that is not a chat completion."""
+    import httpx
+
+    return httpx.AsyncClient(timeout=timeout, event_hooks={"response": [_validate_http_response]})
+
+
+def check_chat_response(resp) -> None:
+    """Agent Framework level check: the parsed response must carry text or a tool call."""
+    messages = getattr(resp, "messages", None) or []
+    for m in messages:
+        if (getattr(m, "text", "") or "").strip():
+            return
+        if any(getattr(c, "type", None) == "function_call" for c in (getattr(m, "contents", None) or [])):
+            return
+    raise InvalidModelResponse("model response had no text and no tool call")
+
+
 @dataclass
 class ModelPolicy:
     timeout_s: float = 15.0
@@ -167,6 +222,17 @@ def _status_and_retry_after(exc: BaseException) -> tuple[int | None, float | Non
     return None, None
 
 
+def _find_in_chain(exc: BaseException, kind: type) -> BaseException | None:
+    seen = set()
+    e: BaseException | None = exc
+    while e is not None and id(e) not in seen:
+        if isinstance(e, kind):
+            return e
+        seen.add(id(e))
+        e = e.__cause__ or e.__context__
+    return None
+
+
 def _is_connection_error(exc: BaseException) -> bool:
     names = set()
     e: BaseException | None = exc
@@ -203,7 +269,7 @@ class ModelGuard:
         self.check_prompt(prompt_tokens)
         attempt = 0
         while True:
-            if self.usage.count() >= p.daily_cap:
+            if p.daily_cap and self.usage.count() >= p.daily_cap:
                 self.stats["capped"] += 1
                 self.circuit_open = True
                 raise ModelUnavailable(f"daily cap of {p.daily_cap} model requests reached")
@@ -220,8 +286,13 @@ class ModelGuard:
                 self._fail()
                 raise ModelUnavailable(f"model call timed out after {p.timeout_s:g}s") from e
             except ModelUnavailable:
+                self._fail()
                 raise
             except Exception as e:  # noqa: BLE001 - classify, then retry or give up
+                invalid = _find_in_chain(e, InvalidModelResponse)
+                if invalid is not None:
+                    self._fail()
+                    raise ModelUnavailable(str(invalid)) from e
                 status, retry_after = _status_and_retry_after(e)
                 retryable = status == 429 or (status is not None and 500 <= status < 600) or _is_connection_error(e)
                 if retry_after is not None and retry_after > p.max_retry_after_s:
@@ -257,5 +328,9 @@ class ResilienceMixin:
         inner = super()._inner_get_response  # type: ignore[misc]
         if stream:
             return inner(messages=messages, options=options, stream=True, **kwargs)
-        return self.guard.call(lambda: inner(messages=messages, options=options, stream=False, **kwargs),
-                               prompt_tokens=messages_tokens(messages))
+        async def validated():
+            resp = await inner(messages=messages, options=options, stream=False, **kwargs)
+            check_chat_response(resp)
+            return resp
+
+        return self.guard.call(validated, prompt_tokens=messages_tokens(messages))

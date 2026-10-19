@@ -11,14 +11,14 @@ import asyncio
 from collections import Counter
 
 from .facts import load_match
-from .models import make_chat_client
+from .models import client_or_template
 from .recap import LLMRecapWriter, TemplateRecapWriter, render_markdown, write_recap
 from .translator import LANGUAGES, Translator, parse_langs
 
 
 async def _run(args: argparse.Namespace) -> int:
     events, ctx = load_match(args.match_dir)
-    client = make_chat_client()
+    client = client_or_template()
     writer = LLMRecapWriter(client, args.profile) if client else TemplateRecapWriter(args.profile)
     report = await write_recap(events, ctx, writer, n=args.paragraphs + 1, max_rounds=args.rounds)
     md = render_markdown(report, ctx)

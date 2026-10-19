@@ -13,7 +13,7 @@ import json
 
 from .analyst import LLMAnalyst, TemplateAnalyst
 from .facts import load_match
-from .models import make_chat_client
+from .models import client_or_template
 from .workflow import analyze
 
 
@@ -26,7 +26,7 @@ def main(argv: list[str] | None = None) -> int:
     args = p.parse_args(argv)
 
     events, ctx = load_match(args.match_dir)
-    client = make_chat_client()
+    client = client_or_template()
     backend = LLMAnalyst(client) if client else TemplateAnalyst()
     report = asyncio.run(analyze(events, ctx, backend, n_claims=args.claims, max_rounds=args.rounds))
 

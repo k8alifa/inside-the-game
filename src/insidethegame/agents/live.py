@@ -15,7 +15,7 @@ from typing import AsyncIterator
 
 from ..sim.schema import Event
 from .facts import load_match
-from .models import make_chat_client
+from .models import client_or_template
 from .narrator import LLMNarrator, TemplateNarrator, narrate
 from .translator import Translator, parse_langs
 
@@ -32,7 +32,7 @@ async def paced(events: list[Event], speed: float) -> AsyncIterator[Event]:
 
 async def _run(args: argparse.Namespace) -> int:
     events, ctx = load_match(args.match_dir)
-    client = make_chat_client()
+    client = client_or_template()
     narrator = LLMNarrator(client, args.profile) if client else TemplateNarrator(args.profile)
     langs = parse_langs(args.lang)
     if langs and not client:
@@ -52,6 +52,8 @@ async def _run(args: argparse.Namespace) -> int:
             for t in translations.values():
                 mark = "" if t.ok else f"  [translation blocked: {'; '.join(t.reasons)}]"
                 print(f"         {t.lang}: {t.text}{mark}", flush=True)
+        if args.limit and sum(sources.values()) >= args.limit:
+            break  # stop before the next moment costs a model call
     if not args.jsonl:
         print(f"\nlines by source: {dict(sources)}", flush=True)
         if client:
@@ -67,6 +69,7 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--jsonl", action="store_true")
     p.add_argument("--lang", default="", help="output languages: en (default) and/or es (Spanish needs a model)")
     p.add_argument("--profile", default="analyst", choices=["analyst", "casual"])
+    p.add_argument("--limit", type=int, default=0, help="stop after N narrated moments (cheap smoke tests)")
     args = p.parse_args(argv)
     try:
         parse_langs(args.lang)
