@@ -26,7 +26,7 @@ import sys
 from dataclasses import dataclass, replace
 
 from .resilience import (DailyUsage, ModelGuard, ModelPolicy, ModelUnavailable, ResilienceMixin,
-                         validated_http_client)
+                         attach_response_validation)
 
 PROVIDERS = ("foundry-local", "foundry", "openai", "github")
 FOUNDRY_LOCAL_DEFAULT_MODEL = "phi-4-mini"
@@ -100,8 +100,8 @@ def make_chat_client(guard: ModelGuard | None = None):
         if not cfg.model:
             raise RuntimeError("set ITG_MODEL (or OPENAI_MODEL) for the openai provider")
         # SDK retries off: the guard owns retries, so attempts are counted once.
-        sdk = AsyncOpenAI(api_key=key, base_url=cfg.base_url, max_retries=0, timeout=timeout,
-                          http_client=validated_http_client(timeout))
+        sdk = AsyncOpenAI(api_key=key, base_url=cfg.base_url, max_retries=0, timeout=timeout)
+        attach_response_validation(sdk)
         client = ResilientOpenAIChatClient(model=cfg.model, async_client=sdk)
         client.guard = guard
         return client
@@ -118,8 +118,8 @@ def make_chat_client(guard: ModelGuard | None = None):
 
         client = ResilientFoundryLocalClient(model=cfg.model)  # starts the local service, loads the model
         mgr = client.manager
-        client.client = AsyncOpenAI(base_url=mgr.endpoint, api_key=mgr.api_key, max_retries=0, timeout=timeout,
-                                    http_client=validated_http_client(timeout))
+        client.client = AsyncOpenAI(base_url=mgr.endpoint, api_key=mgr.api_key, max_retries=0, timeout=timeout)
+        attach_response_validation(client.client)
         client.guard = guard
         return client
 

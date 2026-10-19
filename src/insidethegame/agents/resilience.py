@@ -84,11 +84,18 @@ async def _validate_http_response(response) -> None:
                                    f"content-type {response.headers.get('content-type', '?')}; body starts {head!r})")
 
 
-def validated_http_client(timeout: float):
-    """An httpx client for the OpenAI SDK that rejects anything that is not a chat completion."""
-    import httpx
+def attach_response_validation(sdk) -> bool:
+    """Add the chat-completion check to an OpenAI SDK client's own HTTP client.
 
-    return httpx.AsyncClient(timeout=timeout, event_hooks={"response": [_validate_http_response]})
+    Works whichever HTTP library the installed openai version uses (httpx or its
+    successor), because it hooks the client the SDK built. Returns False if the
+    client has no hooks; the parsed-response check in ResilienceMixin still applies.
+    """
+    hooks = getattr(getattr(sdk, "_client", None), "event_hooks", None)
+    if not isinstance(hooks, dict):
+        return False
+    hooks.setdefault("response", []).append(_validate_http_response)
+    return True
 
 
 def check_chat_response(resp) -> None:
