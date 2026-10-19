@@ -1,0 +1,2374 @@
+{
+ "schema_version": 1,
+ "match_id": "NBA-HCF-7",
+ "player": {
+  "id": "NBA-10",
+  "name": "Kai Underhill",
+  "team": "NBA",
+  "role": "MF"
+ },
+ "card": [
+  {
+   "at_event": 6,
+   "touches": 1,
+   "passes_completed": 1,
+   "passes_attempted": 1,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 41,
+   "touches": 2,
+   "passes_completed": 1,
+   "passes_attempted": 1,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 42,
+   "touches": 3,
+   "passes_completed": 2,
+   "passes_attempted": 2,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 44,
+   "touches": 4,
+   "passes_completed": 3,
+   "passes_attempted": 3,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 46,
+   "touches": 5,
+   "passes_completed": 3,
+   "passes_attempted": 3,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 47,
+   "touches": 6,
+   "passes_completed": 4,
+   "passes_attempted": 4,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 93,
+   "touches": 7,
+   "passes_completed": 4,
+   "passes_attempted": 4,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 94,
+   "touches": 8,
+   "passes_completed": 4,
+   "passes_attempted": 4,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 95,
+   "touches": 9,
+   "passes_completed": 5,
+   "passes_attempted": 5,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 100,
+   "touches": 10,
+   "passes_completed": 5,
+   "passes_attempted": 6,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 109,
+   "touches": 11,
+   "passes_completed": 6,
+   "passes_attempted": 7,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 113,
+   "touches": 12,
+   "passes_completed": 7,
+   "passes_attempted": 8,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 147,
+   "touches": 13,
+   "passes_completed": 7,
+   "passes_attempted": 8,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 148,
+   "touches": 14,
+   "passes_completed": 8,
+   "passes_attempted": 9,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 181,
+   "touches": 15,
+   "passes_completed": 9,
+   "passes_attempted": 10,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 196,
+   "touches": 16,
+   "passes_completed": 9,
+   "passes_attempted": 11,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 202,
+   "touches": 17,
+   "passes_completed": 9,
+   "passes_attempted": 11,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 218,
+   "touches": 18,
+   "passes_completed": 10,
+   "passes_attempted": 12,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 227,
+   "touches": 19,
+   "passes_completed": 10,
+   "passes_attempted": 12,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 251,
+   "touches": 20,
+   "passes_completed": 10,
+   "passes_attempted": 12,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 269,
+   "touches": 21,
+   "passes_completed": 11,
+   "passes_attempted": 13,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 272,
+   "touches": 22,
+   "passes_completed": 11,
+   "passes_attempted": 14,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 296,
+   "touches": 23,
+   "passes_completed": 11,
+   "passes_attempted": 14,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 301,
+   "touches": 24,
+   "passes_completed": 11,
+   "passes_attempted": 14,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 302,
+   "touches": 25,
+   "passes_completed": 12,
+   "passes_attempted": 15,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 321,
+   "touches": 26,
+   "passes_completed": 13,
+   "passes_attempted": 16,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 326,
+   "touches": 27,
+   "passes_completed": 14,
+   "passes_attempted": 17,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 360,
+   "touches": 28,
+   "passes_completed": 14,
+   "passes_attempted": 17,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 5,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 365,
+   "touches": 29,
+   "passes_completed": 14,
+   "passes_attempted": 17,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 369,
+   "touches": 30,
+   "passes_completed": 14,
+   "passes_attempted": 17,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 370,
+   "touches": 31,
+   "passes_completed": 15,
+   "passes_attempted": 18,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 404,
+   "touches": 32,
+   "passes_completed": 16,
+   "passes_attempted": 19,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 443,
+   "touches": 33,
+   "passes_completed": 17,
+   "passes_attempted": 20,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 445,
+   "touches": 34,
+   "passes_completed": 18,
+   "passes_attempted": 21,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 453,
+   "touches": 35,
+   "passes_completed": 18,
+   "passes_attempted": 22,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 468,
+   "touches": 36,
+   "passes_completed": 18,
+   "passes_attempted": 22,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 484,
+   "touches": 37,
+   "passes_completed": 19,
+   "passes_attempted": 23,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 486,
+   "touches": 38,
+   "passes_completed": 20,
+   "passes_attempted": 24,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 494,
+   "touches": 39,
+   "passes_completed": 21,
+   "passes_attempted": 25,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 514,
+   "touches": 40,
+   "passes_completed": 21,
+   "passes_attempted": 25,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 517,
+   "touches": 41,
+   "passes_completed": 21,
+   "passes_attempted": 26,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 522,
+   "touches": 42,
+   "passes_completed": 22,
+   "passes_attempted": 27,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 535,
+   "touches": 43,
+   "passes_completed": 23,
+   "passes_attempted": 28,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 559,
+   "touches": 44,
+   "passes_completed": 24,
+   "passes_attempted": 29,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 569,
+   "touches": 45,
+   "passes_completed": 25,
+   "passes_attempted": 30,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 580,
+   "touches": 46,
+   "passes_completed": 25,
+   "passes_attempted": 30,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 601,
+   "touches": 47,
+   "passes_completed": 26,
+   "passes_attempted": 31,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 608,
+   "touches": 48,
+   "passes_completed": 27,
+   "passes_attempted": 32,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 662,
+   "touches": 49,
+   "passes_completed": 27,
+   "passes_attempted": 32,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 664,
+   "touches": 50,
+   "passes_completed": 27,
+   "passes_attempted": 32,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 665,
+   "touches": 51,
+   "passes_completed": 28,
+   "passes_attempted": 33,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 670,
+   "touches": 52,
+   "passes_completed": 29,
+   "passes_attempted": 34,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 679,
+   "touches": 53,
+   "passes_completed": 30,
+   "passes_attempted": 35,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 683,
+   "touches": 54,
+   "passes_completed": 31,
+   "passes_attempted": 36,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 700,
+   "touches": 55,
+   "passes_completed": 32,
+   "passes_attempted": 37,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 702,
+   "touches": 56,
+   "passes_completed": 33,
+   "passes_attempted": 38,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 706,
+   "touches": 57,
+   "passes_completed": 34,
+   "passes_attempted": 39,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 708,
+   "touches": 58,
+   "passes_completed": 35,
+   "passes_attempted": 40,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 712,
+   "touches": 59,
+   "passes_completed": 36,
+   "passes_attempted": 41,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 720,
+   "touches": 60,
+   "passes_completed": 36,
+   "passes_attempted": 42,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 731,
+   "touches": 61,
+   "passes_completed": 36,
+   "passes_attempted": 42,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 737,
+   "touches": 62,
+   "passes_completed": 37,
+   "passes_attempted": 43,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 759,
+   "touches": 63,
+   "passes_completed": 38,
+   "passes_attempted": 44,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 801,
+   "touches": 64,
+   "passes_completed": 39,
+   "passes_attempted": 45,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 826,
+   "touches": 65,
+   "passes_completed": 39,
+   "passes_attempted": 45,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 827,
+   "touches": 66,
+   "passes_completed": 39,
+   "passes_attempted": 46,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 843,
+   "touches": 67,
+   "passes_completed": 40,
+   "passes_attempted": 47,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 846,
+   "touches": 68,
+   "passes_completed": 41,
+   "passes_attempted": 48,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 848,
+   "touches": 69,
+   "passes_completed": 42,
+   "passes_attempted": 49,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 856,
+   "touches": 70,
+   "passes_completed": 42,
+   "passes_attempted": 49,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 857,
+   "touches": 71,
+   "passes_completed": 43,
+   "passes_attempted": 50,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 863,
+   "touches": 72,
+   "passes_completed": 43,
+   "passes_attempted": 51,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 868,
+   "touches": 73,
+   "passes_completed": 43,
+   "passes_attempted": 51,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 892,
+   "touches": 74,
+   "passes_completed": 44,
+   "passes_attempted": 52,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 897,
+   "touches": 75,
+   "passes_completed": 44,
+   "passes_attempted": 53,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 922,
+   "touches": 76,
+   "passes_completed": 45,
+   "passes_attempted": 54,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 950,
+   "touches": 77,
+   "passes_completed": 46,
+   "passes_attempted": 55,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 963,
+   "touches": 78,
+   "passes_completed": 47,
+   "passes_attempted": 56,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 981,
+   "touches": 79,
+   "passes_completed": 48,
+   "passes_attempted": 57,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 983,
+   "touches": 80,
+   "passes_completed": 49,
+   "passes_attempted": 58,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1040,
+   "touches": 81,
+   "passes_completed": 50,
+   "passes_attempted": 59,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1048,
+   "touches": 82,
+   "passes_completed": 50,
+   "passes_attempted": 59,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 11,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1062,
+   "touches": 83,
+   "passes_completed": 50,
+   "passes_attempted": 59,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 12,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1068,
+   "touches": 84,
+   "passes_completed": 51,
+   "passes_attempted": 60,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 12,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1080,
+   "touches": 85,
+   "passes_completed": 51,
+   "passes_attempted": 61,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 12,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1101,
+   "touches": 86,
+   "passes_completed": 51,
+   "passes_attempted": 61,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 13,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1109,
+   "touches": 87,
+   "passes_completed": 51,
+   "passes_attempted": 62,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 13,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1131,
+   "touches": 88,
+   "passes_completed": 51,
+   "passes_attempted": 62,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 13,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1132,
+   "touches": 89,
+   "passes_completed": 51,
+   "passes_attempted": 62,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 13,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1133,
+   "touches": 90,
+   "passes_completed": 52,
+   "passes_attempted": 63,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 13,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1161,
+   "touches": 91,
+   "passes_completed": 53,
+   "passes_attempted": 64,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 13,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1163,
+   "touches": 92,
+   "passes_completed": 53,
+   "passes_attempted": 65,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 13,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1182,
+   "touches": 93,
+   "passes_completed": 54,
+   "passes_attempted": 66,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 13,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1193,
+   "touches": 94,
+   "passes_completed": 54,
+   "passes_attempted": 66,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 14,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1238,
+   "touches": 95,
+   "passes_completed": 54,
+   "passes_attempted": 66,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 14,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1239,
+   "touches": 96,
+   "passes_completed": 55,
+   "passes_attempted": 67,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 14,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1247,
+   "touches": 97,
+   "passes_completed": 56,
+   "passes_attempted": 68,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 14,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1249,
+   "touches": 98,
+   "passes_completed": 56,
+   "passes_attempted": 68,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 14,
+   "saves": 0,
+   "key_passes": 2
+  },
+  {
+   "at_event": 1250,
+   "touches": 99,
+   "passes_completed": 57,
+   "passes_attempted": 69,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 14,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1260,
+   "touches": 100,
+   "passes_completed": 57,
+   "passes_attempted": 69,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 14,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1307,
+   "touches": 101,
+   "passes_completed": 57,
+   "passes_attempted": 69,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 15,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1342,
+   "touches": 102,
+   "passes_completed": 57,
+   "passes_attempted": 70,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 15,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1354,
+   "touches": 103,
+   "passes_completed": 57,
+   "passes_attempted": 71,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 15,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1367,
+   "touches": 104,
+   "passes_completed": 58,
+   "passes_attempted": 72,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 15,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1369,
+   "touches": 105,
+   "passes_completed": 59,
+   "passes_attempted": 73,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 15,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1373,
+   "touches": 106,
+   "passes_completed": 59,
+   "passes_attempted": 73,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 15,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1374,
+   "touches": 107,
+   "passes_completed": 60,
+   "passes_attempted": 74,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 15,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1378,
+   "touches": 108,
+   "passes_completed": 61,
+   "passes_attempted": 75,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 15,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1400,
+   "touches": 109,
+   "passes_completed": 62,
+   "passes_attempted": 76,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 15,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1418,
+   "touches": 110,
+   "passes_completed": 62,
+   "passes_attempted": 76,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 16,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1439,
+   "touches": 111,
+   "passes_completed": 63,
+   "passes_attempted": 77,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 16,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1442,
+   "touches": 112,
+   "passes_completed": 63,
+   "passes_attempted": 77,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 16,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1452,
+   "touches": 113,
+   "passes_completed": 63,
+   "passes_attempted": 77,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1465,
+   "touches": 114,
+   "passes_completed": 63,
+   "passes_attempted": 77,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1468,
+   "touches": 115,
+   "passes_completed": 64,
+   "passes_attempted": 78,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1483,
+   "touches": 116,
+   "passes_completed": 65,
+   "passes_attempted": 79,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1487,
+   "touches": 117,
+   "passes_completed": 66,
+   "passes_attempted": 80,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1511,
+   "touches": 118,
+   "passes_completed": 66,
+   "passes_attempted": 80,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1512,
+   "touches": 119,
+   "passes_completed": 67,
+   "passes_attempted": 81,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1517,
+   "touches": 120,
+   "passes_completed": 68,
+   "passes_attempted": 82,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1524,
+   "touches": 121,
+   "passes_completed": 69,
+   "passes_attempted": 83,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1531,
+   "touches": 122,
+   "passes_completed": 69,
+   "passes_attempted": 83,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1532,
+   "touches": 123,
+   "passes_completed": 70,
+   "passes_attempted": 84,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1548,
+   "touches": 124,
+   "passes_completed": 70,
+   "passes_attempted": 84,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1556,
+   "touches": 125,
+   "passes_completed": 71,
+   "passes_attempted": 85,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1560,
+   "touches": 126,
+   "passes_completed": 72,
+   "passes_attempted": 86,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1570,
+   "touches": 127,
+   "passes_completed": 73,
+   "passes_attempted": 87,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1605,
+   "touches": 128,
+   "passes_completed": 74,
+   "passes_attempted": 88,
+   "shots": 1,
+   "xg": 0.38,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1607,
+   "touches": 129,
+   "passes_completed": 74,
+   "passes_attempted": 88,
+   "shots": 2,
+   "xg": 0.73,
+   "goals": 0,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1608,
+   "touches": 129,
+   "passes_completed": 74,
+   "passes_attempted": 88,
+   "shots": 2,
+   "xg": 0.73,
+   "goals": 1,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1613,
+   "touches": 130,
+   "passes_completed": 74,
+   "passes_attempted": 88,
+   "shots": 2,
+   "xg": 0.73,
+   "goals": 1,
+   "ball_wins": 18,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1616,
+   "touches": 131,
+   "passes_completed": 75,
+   "passes_attempted": 89,
+   "shots": 2,
+   "xg": 0.73,
+   "goals": 1,
+   "ball_wins": 18,
+   "saves": 0,
+   "key_passes": 3
+  },
+  {
+   "at_event": 1624,
+   "touches": 132,
+   "passes_completed": 76,
+   "passes_attempted": 90,
+   "shots": 2,
+   "xg": 0.73,
+   "goals": 1,
+   "ball_wins": 18,
+   "saves": 0,
+   "key_passes": 3
+  }
+ ],
+ "items": {
+  "analyst": [
+   {
+    "id": "NBA-HCF-7:analyst:NBA-10:card:player-NBA-10@494",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 494,
+    "period": 1,
+    "clock": 1704.5,
+    "display_clock": "29'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill: 39 touches, 21/25 passes, 0 shots (0.00 xG), 0 goals, 1 key pass, 6 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill: 39 touches, 21/25 passes, 0 shots (0.00 xG), 0 goals, 1 key pass, 6 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@494"
+    ],
+    "evidence": [
+     360,
+     365,
+     369,
+     370,
+     404,
+     443,
+     445,
+     453,
+     468,
+     484,
+     486,
+     494
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:all:ticker:moment-580",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 580,
+    "period": 1,
+    "clock": 1977.2,
+    "display_clock": "33'",
+    "show_for_s": 6.6,
+    "slot": "ticker",
+    "kind": "big_chance_missed",
+    "text": "He has to score there. Big chance for Kai Underhill of Northbridge Athletic at 33': 0.38 xG, off target.",
+    "translations": {
+     "es": {
+      "text": "He has to score there. Big chance for Kai Underhill of Northbridge Athletic at 33': 0.38 xG, off target.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-580"
+    ],
+    "evidence": [
+     580
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-10:card:player-NBA-10@580",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 580,
+    "period": 1,
+    "clock": 1977.2,
+    "display_clock": "33'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill: 46 touches, 25/30 passes, 1 shot (0.38 xG), 0 goals, 1 key pass, 7 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill: 46 touches, 25/30 passes, 1 shot (0.38 xG), 0 goals, 1 key pass, 7 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@580"
+    ],
+    "evidence": [
+     453,
+     468,
+     484,
+     486,
+     494,
+     514,
+     517,
+     522,
+     535,
+     559,
+     569,
+     580
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-10:card:player-NBA-10@683",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 683,
+    "period": 1,
+    "clock": 2276.6,
+    "display_clock": "38'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill: 54 touches, 31/36 passes, 1 shot (0.38 xG), 0 goals, 2 key passes, 8 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill: 54 touches, 31/36 passes, 1 shot (0.38 xG), 0 goals, 2 key passes, 8 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@683"
+    ],
+    "evidence": [
+     535,
+     559,
+     569,
+     580,
+     601,
+     608,
+     662,
+     664,
+     665,
+     670,
+     679,
+     683
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-10:card:player-NBA-10@803",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 803,
+    "period": 1,
+    "clock": 2767.2,
+    "display_clock": "45+2'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill: 64 touches, 39/45 passes, 1 shot (0.38 xG), 0 goals, 2 key passes, 9 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill: 64 touches, 39/45 passes, 1 shot (0.38 xG), 0 goals, 2 key passes, 9 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@803"
+    ],
+    "evidence": [
+     679,
+     683,
+     700,
+     702,
+     706,
+     708,
+     712,
+     720,
+     731,
+     737,
+     759,
+     801
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-10:card:player-NBA-10@1250",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1250,
+    "period": 2,
+    "clock": 1684.9,
+    "display_clock": "74'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill: 99 touches, 57/69 passes, 1 shot (0.38 xG), 0 goals, 3 key passes, 14 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill: 99 touches, 57/69 passes, 1 shot (0.38 xG), 0 goals, 3 key passes, 14 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@1250"
+    ],
+    "evidence": [
+     1131,
+     1132,
+     1133,
+     1161,
+     1163,
+     1182,
+     1193,
+     1238,
+     1239,
+     1247,
+     1249,
+     1250
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-10:card:player-NBA-10@1607",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1607,
+    "period": 2,
+    "clock": 2796.1,
+    "display_clock": "90+2'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill: 129 touches, 74/88 passes, 2 shots (0.73 xG), 0 goals, 3 key passes, 17 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill: 129 touches, 74/88 passes, 2 shots (0.73 xG), 0 goals, 3 key passes, 17 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@1607"
+    ],
+    "evidence": [
+     1511,
+     1512,
+     1517,
+     1524,
+     1531,
+     1532,
+     1548,
+     1556,
+     1560,
+     1570,
+     1605,
+     1607
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:all:alert:moment-1608",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1608,
+    "period": 2,
+    "clock": 2796.1,
+    "display_clock": "90+2'",
+    "show_for_s": 6.0,
+    "slot": "alert",
+    "kind": "goal",
+    "text": "What a moment! Kai Underhill scored for Northbridge Athletic at 90+2', set up by Leon Okonjo. The chance was worth 0.35 xG. Northbridge Athletic 3-1 Harbor City FC.",
+    "translations": {
+     "es": {
+      "text": "What a moment! Kai Underhill scored for Northbridge Athletic at 90+2', set up by Leon Okonjo. The chance was worth 0.35 xG. Northbridge Athletic 3-1 Harbor City FC.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-1608"
+    ],
+    "evidence": [
+     1606,
+     1607,
+     1608
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-10:card:player-NBA-10@1608",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1608,
+    "period": 2,
+    "clock": 2796.1,
+    "display_clock": "90+2'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill: 129 touches, 74/88 passes, 2 shots (0.73 xG), 1 goal, 3 key passes, 17 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill: 129 touches, 74/88 passes, 2 shots (0.73 xG), 1 goal, 3 key passes, 17 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@1608"
+    ],
+    "evidence": [
+     1512,
+     1517,
+     1524,
+     1531,
+     1532,
+     1548,
+     1556,
+     1560,
+     1570,
+     1605,
+     1607,
+     1608
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-10:card:player-NBA-10@1629",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1629,
+    "period": 2,
+    "clock": 2968.2,
+    "display_clock": "90+5'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill: 132 touches, 76/90 passes, 2 shots (0.73 xG), 1 goal, 3 key passes, 18 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill: 132 touches, 76/90 passes, 2 shots (0.73 xG), 1 goal, 3 key passes, 18 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@1629"
+    ],
+    "evidence": [
+     1531,
+     1532,
+     1548,
+     1556,
+     1560,
+     1570,
+     1605,
+     1607,
+     1608,
+     1613,
+     1616,
+     1624
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   }
+  ],
+  "casual": [
+   {
+    "id": "NBA-HCF-7:casual:NBA-10:card:player-NBA-10@494",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 494,
+    "period": 1,
+    "clock": 1704.5,
+    "display_clock": "29'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill has had 39 touches so far.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill has had 39 touches so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@494"
+    ],
+    "evidence": [
+     360,
+     365,
+     369,
+     370,
+     404,
+     443,
+     445,
+     453,
+     468,
+     484,
+     486,
+     494
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:all:ticker:moment-580",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 580,
+    "period": 1,
+    "clock": 1977.2,
+    "display_clock": "33'",
+    "show_for_s": 4.0,
+    "slot": "ticker",
+    "kind": "big_chance_missed",
+    "text": "So close! Kai Underhill should have scored for Northbridge Athletic.",
+    "translations": {
+     "es": {
+      "text": "So close! Kai Underhill should have scored for Northbridge Athletic.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-580"
+    ],
+    "evidence": [
+     580
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-10:card:player-NBA-10@580",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 580,
+    "period": 1,
+    "clock": 1977.2,
+    "display_clock": "33'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill has had a shot so far.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill has had a shot so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@580"
+    ],
+    "evidence": [
+     453,
+     468,
+     484,
+     486,
+     494,
+     514,
+     517,
+     522,
+     535,
+     559,
+     569,
+     580
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-10:card:player-NBA-10@683",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 683,
+    "period": 1,
+    "clock": 2276.6,
+    "display_clock": "38'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill has had a shot so far.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill has had a shot so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@683"
+    ],
+    "evidence": [
+     535,
+     559,
+     569,
+     580,
+     601,
+     608,
+     662,
+     664,
+     665,
+     670,
+     679,
+     683
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-10:card:player-NBA-10@803",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 803,
+    "period": 1,
+    "clock": 2767.2,
+    "display_clock": "45+2'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill has had a shot so far.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill has had a shot so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@803"
+    ],
+    "evidence": [
+     679,
+     683,
+     700,
+     702,
+     706,
+     708,
+     712,
+     720,
+     731,
+     737,
+     759,
+     801
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-10:card:player-NBA-10@1250",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1250,
+    "period": 2,
+    "clock": 1684.9,
+    "display_clock": "74'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill has had a shot so far.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill has had a shot so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@1250"
+    ],
+    "evidence": [
+     1131,
+     1132,
+     1133,
+     1161,
+     1163,
+     1182,
+     1193,
+     1238,
+     1239,
+     1247,
+     1249,
+     1250
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-10:card:player-NBA-10@1607",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1607,
+    "period": 2,
+    "clock": 2796.1,
+    "display_clock": "90+2'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill has had 2 shots so far.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill has had 2 shots so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@1607"
+    ],
+    "evidence": [
+     1511,
+     1512,
+     1517,
+     1524,
+     1531,
+     1532,
+     1548,
+     1556,
+     1560,
+     1570,
+     1605,
+     1607
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:all:alert:moment-1608",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1608,
+    "period": 2,
+    "clock": 2796.1,
+    "display_clock": "90+2'",
+    "show_for_s": 6.0,
+    "slot": "alert",
+    "kind": "goal",
+    "text": "What a moment! Kai Underhill scores for Northbridge Athletic! Northbridge Athletic 3-1 Harbor City FC.",
+    "translations": {
+     "es": {
+      "text": "What a moment! Kai Underhill scores for Northbridge Athletic! Northbridge Athletic 3-1 Harbor City FC.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-1608"
+    ],
+    "evidence": [
+     1606,
+     1607,
+     1608
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-10:card:player-NBA-10@1608",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1608,
+    "period": 2,
+    "clock": 2796.1,
+    "display_clock": "90+2'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill is on the scoresheet today.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill is on the scoresheet today.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@1608"
+    ],
+    "evidence": [
+     1512,
+     1517,
+     1524,
+     1531,
+     1532,
+     1548,
+     1556,
+     1560,
+     1570,
+     1605,
+     1607,
+     1608
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-10:card:player-NBA-10@1629",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1629,
+    "period": 2,
+    "clock": 2968.2,
+    "display_clock": "90+5'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill is on the scoresheet today.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill is on the scoresheet today.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@1629"
+    ],
+    "evidence": [
+     1531,
+     1532,
+     1548,
+     1556,
+     1560,
+     1570,
+     1605,
+     1607,
+     1608,
+     1613,
+     1616,
+     1624
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   }
+  ]
+ }
+}

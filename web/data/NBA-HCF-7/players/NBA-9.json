@@ -1,0 +1,1940 @@
+{
+ "schema_version": 1,
+ "match_id": "NBA-HCF-7",
+ "player": {
+  "id": "NBA-9",
+  "name": "Milo Upworth",
+  "team": "NBA",
+  "role": "FW"
+ },
+ "card": [
+  {
+   "at_event": 7,
+   "touches": 1,
+   "passes_completed": 0,
+   "passes_attempted": 1,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 25,
+   "touches": 2,
+   "passes_completed": 1,
+   "passes_attempted": 2,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 53,
+   "touches": 3,
+   "passes_completed": 1,
+   "passes_attempted": 2,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 74,
+   "touches": 4,
+   "passes_completed": 2,
+   "passes_attempted": 3,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 76,
+   "touches": 5,
+   "passes_completed": 3,
+   "passes_attempted": 4,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 98,
+   "touches": 6,
+   "passes_completed": 4,
+   "passes_attempted": 5,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 111,
+   "touches": 7,
+   "passes_completed": 4,
+   "passes_attempted": 5,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 112,
+   "touches": 8,
+   "passes_completed": 5,
+   "passes_attempted": 6,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 117,
+   "touches": 9,
+   "passes_completed": 5,
+   "passes_attempted": 6,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 143,
+   "touches": 10,
+   "passes_completed": 5,
+   "passes_attempted": 7,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 184,
+   "touches": 11,
+   "passes_completed": 6,
+   "passes_attempted": 8,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 207,
+   "touches": 12,
+   "passes_completed": 7,
+   "passes_attempted": 9,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 215,
+   "touches": 13,
+   "passes_completed": 8,
+   "passes_attempted": 10,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 217,
+   "touches": 14,
+   "passes_completed": 9,
+   "passes_attempted": 11,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 233,
+   "touches": 15,
+   "passes_completed": 10,
+   "passes_attempted": 12,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 237,
+   "touches": 16,
+   "passes_completed": 10,
+   "passes_attempted": 13,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 243,
+   "touches": 17,
+   "passes_completed": 10,
+   "passes_attempted": 13,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 246,
+   "touches": 18,
+   "passes_completed": 10,
+   "passes_attempted": 14,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 271,
+   "touches": 19,
+   "passes_completed": 11,
+   "passes_attempted": 15,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 279,
+   "touches": 20,
+   "passes_completed": 12,
+   "passes_attempted": 16,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 288,
+   "touches": 21,
+   "passes_completed": 12,
+   "passes_attempted": 16,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 305,
+   "touches": 22,
+   "passes_completed": 12,
+   "passes_attempted": 16,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 306,
+   "touches": 23,
+   "passes_completed": 12,
+   "passes_attempted": 16,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 307,
+   "touches": 24,
+   "passes_completed": 13,
+   "passes_attempted": 17,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 367,
+   "touches": 25,
+   "passes_completed": 14,
+   "passes_attempted": 18,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 372,
+   "touches": 26,
+   "passes_completed": 15,
+   "passes_attempted": 19,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 390,
+   "touches": 26,
+   "passes_completed": 15,
+   "passes_attempted": 19,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 406,
+   "touches": 27,
+   "passes_completed": 15,
+   "passes_attempted": 19,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 407,
+   "touches": 28,
+   "passes_completed": 15,
+   "passes_attempted": 19,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 408,
+   "touches": 29,
+   "passes_completed": 15,
+   "passes_attempted": 20,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 412,
+   "touches": 30,
+   "passes_completed": 15,
+   "passes_attempted": 21,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 432,
+   "touches": 31,
+   "passes_completed": 15,
+   "passes_attempted": 22,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 479,
+   "touches": 32,
+   "passes_completed": 15,
+   "passes_attempted": 23,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 489,
+   "touches": 33,
+   "passes_completed": 16,
+   "passes_attempted": 24,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 3,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 493,
+   "touches": 34,
+   "passes_completed": 16,
+   "passes_attempted": 24,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 0,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 495,
+   "touches": 35,
+   "passes_completed": 16,
+   "passes_attempted": 24,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 560,
+   "touches": 36,
+   "passes_completed": 16,
+   "passes_attempted": 24,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 561,
+   "touches": 37,
+   "passes_completed": 17,
+   "passes_attempted": 25,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 4,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 566,
+   "touches": 38,
+   "passes_completed": 17,
+   "passes_attempted": 25,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 5,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 568,
+   "touches": 39,
+   "passes_completed": 18,
+   "passes_attempted": 26,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 5,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 574,
+   "touches": 40,
+   "passes_completed": 18,
+   "passes_attempted": 26,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 5,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 575,
+   "touches": 41,
+   "passes_completed": 18,
+   "passes_attempted": 26,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 5,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 576,
+   "touches": 42,
+   "passes_completed": 19,
+   "passes_attempted": 27,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 5,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 607,
+   "touches": 43,
+   "passes_completed": 19,
+   "passes_attempted": 27,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 609,
+   "touches": 44,
+   "passes_completed": 19,
+   "passes_attempted": 27,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 645,
+   "touches": 45,
+   "passes_completed": 20,
+   "passes_attempted": 28,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 681,
+   "touches": 46,
+   "passes_completed": 21,
+   "passes_attempted": 29,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 687,
+   "touches": 46,
+   "passes_completed": 21,
+   "passes_attempted": 29,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 688,
+   "touches": 46,
+   "passes_completed": 21,
+   "passes_attempted": 29,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 6,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 691,
+   "touches": 47,
+   "passes_completed": 21,
+   "passes_attempted": 29,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 717,
+   "touches": 48,
+   "passes_completed": 21,
+   "passes_attempted": 29,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 718,
+   "touches": 49,
+   "passes_completed": 22,
+   "passes_attempted": 30,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 724,
+   "touches": 49,
+   "passes_completed": 22,
+   "passes_attempted": 30,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 747,
+   "touches": 50,
+   "passes_completed": 23,
+   "passes_attempted": 31,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 761,
+   "touches": 51,
+   "passes_completed": 24,
+   "passes_attempted": 32,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 788,
+   "touches": 52,
+   "passes_completed": 25,
+   "passes_attempted": 33,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 792,
+   "touches": 53,
+   "passes_completed": 25,
+   "passes_attempted": 33,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 824,
+   "touches": 54,
+   "passes_completed": 25,
+   "passes_attempted": 33,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 825,
+   "touches": 55,
+   "passes_completed": 26,
+   "passes_attempted": 34,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 7,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 830,
+   "touches": 56,
+   "passes_completed": 26,
+   "passes_attempted": 34,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 840,
+   "touches": 57,
+   "passes_completed": 26,
+   "passes_attempted": 34,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 844,
+   "touches": 58,
+   "passes_completed": 27,
+   "passes_attempted": 35,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 872,
+   "touches": 59,
+   "passes_completed": 28,
+   "passes_attempted": 36,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 973,
+   "touches": 60,
+   "passes_completed": 28,
+   "passes_attempted": 36,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 986,
+   "touches": 61,
+   "passes_completed": 29,
+   "passes_attempted": 37,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1004,
+   "touches": 62,
+   "passes_completed": 30,
+   "passes_attempted": 38,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1026,
+   "touches": 63,
+   "passes_completed": 31,
+   "passes_attempted": 39,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1074,
+   "touches": 64,
+   "passes_completed": 32,
+   "passes_attempted": 40,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1076,
+   "touches": 65,
+   "passes_completed": 33,
+   "passes_attempted": 41,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1137,
+   "touches": 66,
+   "passes_completed": 34,
+   "passes_attempted": 42,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1144,
+   "touches": 67,
+   "passes_completed": 35,
+   "passes_attempted": 43,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 8,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1148,
+   "touches": 68,
+   "passes_completed": 35,
+   "passes_attempted": 43,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1162,
+   "touches": 69,
+   "passes_completed": 36,
+   "passes_attempted": 44,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1179,
+   "touches": 70,
+   "passes_completed": 36,
+   "passes_attempted": 44,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1180,
+   "touches": 71,
+   "passes_completed": 37,
+   "passes_attempted": 45,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1194,
+   "touches": 72,
+   "passes_completed": 38,
+   "passes_attempted": 46,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1196,
+   "touches": 73,
+   "passes_completed": 39,
+   "passes_attempted": 47,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1222,
+   "touches": 74,
+   "passes_completed": 40,
+   "passes_attempted": 48,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1240,
+   "touches": 75,
+   "passes_completed": 40,
+   "passes_attempted": 48,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1241,
+   "touches": 76,
+   "passes_completed": 40,
+   "passes_attempted": 48,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1242,
+   "touches": 77,
+   "passes_completed": 41,
+   "passes_attempted": 49,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1315,
+   "touches": 78,
+   "passes_completed": 41,
+   "passes_attempted": 49,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1316,
+   "touches": 79,
+   "passes_completed": 42,
+   "passes_attempted": 50,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 9,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1335,
+   "touches": 80,
+   "passes_completed": 42,
+   "passes_attempted": 50,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1339,
+   "touches": 81,
+   "passes_completed": 42,
+   "passes_attempted": 50,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1340,
+   "touches": 82,
+   "passes_completed": 43,
+   "passes_attempted": 51,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1370,
+   "touches": 83,
+   "passes_completed": 44,
+   "passes_attempted": 52,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1376,
+   "touches": 84,
+   "passes_completed": 45,
+   "passes_attempted": 53,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1403,
+   "touches": 85,
+   "passes_completed": 46,
+   "passes_attempted": 54,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1408,
+   "touches": 86,
+   "passes_completed": 47,
+   "passes_attempted": 55,
+   "shots": 2,
+   "xg": 0.16,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1413,
+   "touches": 87,
+   "passes_completed": 47,
+   "passes_attempted": 55,
+   "shots": 3,
+   "xg": 0.18,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1441,
+   "touches": 88,
+   "passes_completed": 47,
+   "passes_attempted": 55,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1446,
+   "touches": 89,
+   "passes_completed": 47,
+   "passes_attempted": 55,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1447,
+   "touches": 90,
+   "passes_completed": 48,
+   "passes_attempted": 56,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1455,
+   "touches": 91,
+   "passes_completed": 48,
+   "passes_attempted": 57,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1488,
+   "touches": 92,
+   "passes_completed": 49,
+   "passes_attempted": 58,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1492,
+   "touches": 93,
+   "passes_completed": 50,
+   "passes_attempted": 59,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1495,
+   "touches": 94,
+   "passes_completed": 51,
+   "passes_attempted": 60,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1499,
+   "touches": 95,
+   "passes_completed": 52,
+   "passes_attempted": 61,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1509,
+   "touches": 96,
+   "passes_completed": 53,
+   "passes_attempted": 62,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1513,
+   "touches": 97,
+   "passes_completed": 54,
+   "passes_attempted": 63,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1518,
+   "touches": 98,
+   "passes_completed": 54,
+   "passes_attempted": 64,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 10,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1522,
+   "touches": 99,
+   "passes_completed": 54,
+   "passes_attempted": 64,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 11,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1528,
+   "touches": 100,
+   "passes_completed": 55,
+   "passes_attempted": 65,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 11,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1590,
+   "touches": 101,
+   "passes_completed": 56,
+   "passes_attempted": 66,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 11,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1594,
+   "touches": 102,
+   "passes_completed": 56,
+   "passes_attempted": 67,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 11,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1601,
+   "touches": 103,
+   "passes_completed": 57,
+   "passes_attempted": 68,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 11,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1619,
+   "touches": 104,
+   "passes_completed": 58,
+   "passes_attempted": 69,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 11,
+   "saves": 0,
+   "key_passes": 1
+  },
+  {
+   "at_event": 1621,
+   "touches": 105,
+   "passes_completed": 59,
+   "passes_attempted": 70,
+   "shots": 4,
+   "xg": 0.21,
+   "goals": 0,
+   "ball_wins": 11,
+   "saves": 0,
+   "key_passes": 1
+  }
+ ],
+ "items": {
+  "analyst": [
+   {
+    "id": "NBA-HCF-7:analyst:NBA-9:card:player-NBA-9@117",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 117,
+    "period": 1,
+    "clock": 390.4,
+    "display_clock": "7'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth: 9 touches, 5/6 passes, 1 shot (0.01 xG), 0 goals, 0 key passes, 1 ball win.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth: 9 touches, 5/6 passes, 1 shot (0.01 xG), 0 goals, 0 key passes, 1 ball win.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@117"
+    ],
+    "evidence": [
+     7,
+     25,
+     53,
+     74,
+     76,
+     98,
+     111,
+     112,
+     117
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-9:card:player-NBA-9@495",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 495,
+    "period": 1,
+    "clock": 1704.5,
+    "display_clock": "29'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth: 35 touches, 16/24 passes, 2 shots (0.16 xG), 0 goals, 0 key passes, 4 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth: 35 touches, 16/24 passes, 2 shots (0.16 xG), 0 goals, 0 key passes, 4 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@495"
+    ],
+    "evidence": [
+     367,
+     372,
+     390,
+     406,
+     407,
+     408,
+     412,
+     432,
+     479,
+     489,
+     493,
+     495
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:all:alert:moment-688",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 688,
+    "period": 1,
+    "clock": 2292.4,
+    "display_clock": "39'",
+    "show_for_s": 6.0,
+    "slot": "alert",
+    "kind": "yellow_card",
+    "text": "Yellow card for Milo Upworth of Northbridge Athletic at 39'.",
+    "translations": {
+     "es": {
+      "text": "Yellow card for Milo Upworth of Northbridge Athletic at 39'.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-688"
+    ],
+    "evidence": [
+     687,
+     688
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-9:card:player-NBA-9@803",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 803,
+    "period": 1,
+    "clock": 2767.2,
+    "display_clock": "45+2'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth: 53 touches, 25/33 passes, 2 shots (0.16 xG), 0 goals, 0 key passes, 7 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth: 53 touches, 25/33 passes, 2 shots (0.16 xG), 0 goals, 0 key passes, 7 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@803"
+    ],
+    "evidence": [
+     645,
+     681,
+     687,
+     688,
+     691,
+     717,
+     718,
+     724,
+     747,
+     761,
+     788,
+     792
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-9:card:player-NBA-9@1144",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1144,
+    "period": 2,
+    "clock": 1171.3,
+    "display_clock": "65'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth: 67 touches, 35/43 passes, 2 shots (0.16 xG), 0 goals, 1 key pass, 8 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth: 67 touches, 35/43 passes, 2 shots (0.16 xG), 0 goals, 1 key pass, 8 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@1144"
+    ],
+    "evidence": [
+     830,
+     840,
+     844,
+     872,
+     973,
+     986,
+     1004,
+     1026,
+     1074,
+     1076,
+     1137,
+     1144
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-9:card:player-NBA-9@1413",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1413,
+    "period": 2,
+    "clock": 2203.3,
+    "display_clock": "82'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth: 87 touches, 47/55 passes, 3 shots (0.18 xG), 0 goals, 1 key pass, 10 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth: 87 touches, 47/55 passes, 3 shots (0.18 xG), 0 goals, 1 key pass, 10 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@1413"
+    ],
+    "evidence": [
+     1241,
+     1242,
+     1315,
+     1316,
+     1335,
+     1339,
+     1340,
+     1370,
+     1376,
+     1403,
+     1408,
+     1413
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-9:card:player-NBA-9@1441",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1441,
+    "period": 2,
+    "clock": 2306.9,
+    "display_clock": "84'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth: 88 touches, 47/55 passes, 4 shots (0.21 xG), 0 goals, 1 key pass, 10 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth: 88 touches, 47/55 passes, 4 shots (0.21 xG), 0 goals, 1 key pass, 10 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@1441"
+    ],
+    "evidence": [
+     1242,
+     1315,
+     1316,
+     1335,
+     1339,
+     1340,
+     1370,
+     1376,
+     1403,
+     1408,
+     1413,
+     1441
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-9:card:player-NBA-9@1629",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1629,
+    "period": 2,
+    "clock": 2968.2,
+    "display_clock": "90+5'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth: 105 touches, 59/70 passes, 4 shots (0.21 xG), 0 goals, 1 key pass, 11 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth: 105 touches, 59/70 passes, 4 shots (0.21 xG), 0 goals, 1 key pass, 11 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@1629"
+    ],
+    "evidence": [
+     1495,
+     1499,
+     1509,
+     1513,
+     1518,
+     1522,
+     1528,
+     1590,
+     1594,
+     1601,
+     1619,
+     1621
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   }
+  ],
+  "casual": [
+   {
+    "id": "NBA-HCF-7:casual:NBA-9:card:player-NBA-9@117",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 117,
+    "period": 1,
+    "clock": 390.4,
+    "display_clock": "7'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth has had a shot so far.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth has had a shot so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@117"
+    ],
+    "evidence": [
+     7,
+     25,
+     53,
+     74,
+     76,
+     98,
+     111,
+     112,
+     117
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-9:card:player-NBA-9@495",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 495,
+    "period": 1,
+    "clock": 1704.5,
+    "display_clock": "29'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth has had 2 shots so far.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth has had 2 shots so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@495"
+    ],
+    "evidence": [
+     367,
+     372,
+     390,
+     406,
+     407,
+     408,
+     412,
+     432,
+     479,
+     489,
+     493,
+     495
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:all:alert:moment-688",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 688,
+    "period": 1,
+    "clock": 2292.4,
+    "display_clock": "39'",
+    "show_for_s": 6.0,
+    "slot": "alert",
+    "kind": "yellow_card",
+    "text": "Booked: Milo Upworth of Northbridge Athletic.",
+    "translations": {
+     "es": {
+      "text": "Booked: Milo Upworth of Northbridge Athletic.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-688"
+    ],
+    "evidence": [
+     687,
+     688
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-9:card:player-NBA-9@803",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 803,
+    "period": 1,
+    "clock": 2767.2,
+    "display_clock": "45+2'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth has had 2 shots so far.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth has had 2 shots so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@803"
+    ],
+    "evidence": [
+     645,
+     681,
+     687,
+     688,
+     691,
+     717,
+     718,
+     724,
+     747,
+     761,
+     788,
+     792
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-9:card:player-NBA-9@1144",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1144,
+    "period": 2,
+    "clock": 1171.3,
+    "display_clock": "65'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth has had 2 shots so far.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth has had 2 shots so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@1144"
+    ],
+    "evidence": [
+     830,
+     840,
+     844,
+     872,
+     973,
+     986,
+     1004,
+     1026,
+     1074,
+     1076,
+     1137,
+     1144
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-9:card:player-NBA-9@1413",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1413,
+    "period": 2,
+    "clock": 2203.3,
+    "display_clock": "82'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth has had 3 shots so far.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth has had 3 shots so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@1413"
+    ],
+    "evidence": [
+     1241,
+     1242,
+     1315,
+     1316,
+     1335,
+     1339,
+     1340,
+     1370,
+     1376,
+     1403,
+     1408,
+     1413
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-9:card:player-NBA-9@1441",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1441,
+    "period": 2,
+    "clock": 2306.9,
+    "display_clock": "84'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth has had 4 shots so far.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth has had 4 shots so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@1441"
+    ],
+    "evidence": [
+     1242,
+     1315,
+     1316,
+     1335,
+     1339,
+     1340,
+     1370,
+     1376,
+     1403,
+     1408,
+     1413,
+     1441
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-9:card:player-NBA-9@1629",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1629,
+    "period": 2,
+    "clock": 2968.2,
+    "display_clock": "90+5'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Milo Upworth has had 4 shots so far.",
+    "translations": {
+     "es": {
+      "text": "Milo Upworth has had 4 shots so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-9@1629"
+    ],
+    "evidence": [
+     1495,
+     1499,
+     1509,
+     1513,
+     1518,
+     1522,
+     1528,
+     1590,
+     1594,
+     1601,
+     1619,
+     1621
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   }
+  ]
+ }
+}

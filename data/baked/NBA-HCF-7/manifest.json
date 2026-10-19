@@ -5,17 +5,17 @@
   "NBA": "Northbridge Athletic",
   "HCF": "Harbor City FC"
  },
- "generated_at": "2026-10-18T13:36:02+00:00",
+ "generated_at": null,
  "provider": "template",
  "model": null,
  "profiles": [
   "analyst",
   "casual"
  ],
- "langs": [
-  "en",
-  "es"
- ],
+ "langs": {
+  "en": "verified",
+  "es": "unavailable"
+ },
  "files": {
   "narration.analyst.json": 24,
   "recap.analyst.json": 9,
@@ -26,8 +26,13 @@
   "sources": {
    "template": 64
   },
-  "translations": {
-   "unavailable": 64
+  "langs": {
+   "en": {
+    "verified": 64
+   },
+   "es": {
+    "unavailable": 64
+   }
   }
  },
  "model_calls": {},

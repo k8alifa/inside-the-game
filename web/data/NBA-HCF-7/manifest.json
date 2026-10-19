@@ -1,0 +1,326 @@
+{
+ "schema_version": 1,
+ "match_id": "NBA-HCF-7",
+ "teams": [
+  {
+   "id": "NBA",
+   "name": "Northbridge Athletic",
+   "short": "Northbridge",
+   "side": "home",
+   "colors": {
+    "primary": "#0f766e",
+    "secondary": "#f0fdfa"
+   },
+   "lineup": {
+    "starters": [
+     {
+      "id": "NBA-1",
+      "name": "Pavel Selbourne",
+      "number": 1,
+      "role": "GK"
+     },
+     {
+      "id": "NBA-2",
+      "name": "Luca Brennick",
+      "number": 2,
+      "role": "DF"
+     },
+     {
+      "id": "NBA-3",
+      "name": "Jonah Moorcroft",
+      "number": 3,
+      "role": "DF"
+     },
+     {
+      "id": "NBA-4",
+      "name": "Alex Dovecote",
+      "number": 4,
+      "role": "DF"
+     },
+     {
+      "id": "NBA-5",
+      "name": "Leon Okonjo",
+      "number": 5,
+      "role": "DF"
+     },
+     {
+      "id": "NBA-6",
+      "name": "Finn Holloway",
+      "number": 6,
+      "role": "MF"
+     },
+     {
+      "id": "NBA-8",
+      "name": "Rafi Marlow",
+      "number": 8,
+      "role": "MF"
+     },
+     {
+      "id": "NBA-10",
+      "name": "Kai Underhill",
+      "number": 10,
+      "role": "MF"
+     },
+     {
+      "id": "NBA-7",
+      "name": "Pavel Ivers",
+      "number": 7,
+      "role": "FW"
+     },
+     {
+      "id": "NBA-9",
+      "name": "Milo Upworth",
+      "number": 9,
+      "role": "FW"
+     },
+     {
+      "id": "NBA-11",
+      "name": "Jonah Haldane",
+      "number": 11,
+      "role": "FW"
+     }
+    ],
+    "bench": [
+     {
+      "id": "NBA-13",
+      "name": "Emre Benhali",
+      "number": 13,
+      "role": "GK"
+     },
+     {
+      "id": "NBA-15",
+      "name": "Mateo Ingram",
+      "number": 15,
+      "role": "DF"
+     },
+     {
+      "id": "NBA-16",
+      "name": "Finn Abara",
+      "number": 16,
+      "role": "MF"
+     },
+     {
+      "id": "NBA-18",
+      "name": "Kai Jessop",
+      "number": 18,
+      "role": "MF"
+     },
+     {
+      "id": "NBA-19",
+      "name": "Yusuf Dellacourt",
+      "number": 19,
+      "role": "FW"
+     }
+    ]
+   }
+  },
+  {
+   "id": "HCF",
+   "name": "Harbor City FC",
+   "short": "Harbor City",
+   "side": "away",
+   "colors": {
+    "primary": "#1e3a8a",
+    "secondary": "#f59e0b"
+   },
+   "lineup": {
+    "starters": [
+     {
+      "id": "HCF-1",
+      "name": "Tariq Blackmore",
+      "number": 1,
+      "role": "GK"
+     },
+     {
+      "id": "HCF-2",
+      "name": "Dario Castellan",
+      "number": 2,
+      "role": "DF"
+     },
+     {
+      "id": "HCF-3",
+      "name": "Ivo Dunmore",
+      "number": 3,
+      "role": "DF"
+     },
+     {
+      "id": "HCF-4",
+      "name": "Ivo Sutcombe",
+      "number": 4,
+      "role": "DF"
+     },
+     {
+      "id": "HCF-5",
+      "name": "Joel Hartwell",
+      "number": 5,
+      "role": "DF"
+     },
+     {
+      "id": "HCF-6",
+      "name": "Dario Langstone",
+      "number": 6,
+      "role": "MF"
+     },
+     {
+      "id": "HCF-8",
+      "name": "Yusuf Stavros",
+      "number": 8,
+      "role": "MF"
+     },
+     {
+      "id": "HCF-10",
+      "name": "Milo Galbraith",
+      "number": 10,
+      "role": "MF"
+     },
+     {
+      "id": "HCF-7",
+      "name": "Adam Eskdale",
+      "number": 7,
+      "role": "FW"
+     },
+     {
+      "id": "HCF-9",
+      "name": "Adam Ebbsworth",
+      "number": 9,
+      "role": "FW"
+     },
+     {
+      "id": "HCF-11",
+      "name": "Cal Fairbank",
+      "number": 11,
+      "role": "FW"
+     }
+    ],
+    "bench": [
+     {
+      "id": "HCF-13",
+      "name": "Omar Yardley",
+      "number": 13,
+      "role": "GK"
+     },
+     {
+      "id": "HCF-15",
+      "name": "Theo Gorsuch",
+      "number": 15,
+      "role": "DF"
+     },
+     {
+      "id": "HCF-16",
+      "name": "Rafi Radley",
+      "number": 16,
+      "role": "MF"
+     },
+     {
+      "id": "HCF-18",
+      "name": "Alex Merrow",
+      "number": 18,
+      "role": "MF"
+     },
+     {
+      "id": "HCF-19",
+      "name": "Nico Pemberton",
+      "number": 19,
+      "role": "FW"
+     }
+    ]
+   }
+  }
+ ],
+ "final_score": {
+  "NBA": 3,
+  "HCF": 1
+ },
+ "duration": {
+  "periods": 2,
+  "last_event": 1629
+ },
+ "langs": {
+  "en": "verified",
+  "es": "unavailable"
+ },
+ "profiles": [
+  "analyst",
+  "casual"
+ ],
+ "favourites": [
+  "NBA",
+  "HCF"
+ ],
+ "focus_players": [
+  {
+   "id": "HCF-11",
+   "name": "Cal Fairbank",
+   "team": "HCF",
+   "role": "FW"
+  },
+  {
+   "id": "NBA-10",
+   "name": "Kai Underhill",
+   "team": "NBA",
+   "role": "MF"
+  },
+  {
+   "id": "NBA-8",
+   "name": "Rafi Marlow",
+   "team": "NBA",
+   "role": "MF"
+  },
+  {
+   "id": "NBA-11",
+   "name": "Jonah Haldane",
+   "team": "NBA",
+   "role": "FW"
+  },
+  {
+   "id": "NBA-6",
+   "name": "Finn Holloway",
+   "team": "NBA",
+   "role": "MF"
+  },
+  {
+   "id": "NBA-9",
+   "name": "Milo Upworth",
+   "team": "NBA",
+   "role": "FW"
+  },
+  {
+   "id": "NBA-1",
+   "name": "Pavel Selbourne",
+   "team": "NBA",
+   "role": "GK"
+  },
+  {
+   "id": "HCF-1",
+   "name": "Tariq Blackmore",
+   "team": "HCF",
+   "role": "GK"
+  }
+ ],
+ "provider": "template",
+ "model": null,
+ "generated_at": null,
+ "disclaimer": "Synthetic data. All clubs, players and events are invented.",
+ "files": [
+  "facts.json",
+  "overlay.analyst.HCF.json",
+  "overlay.analyst.NBA.json",
+  "overlay.analyst.json",
+  "overlay.casual.HCF.json",
+  "overlay.casual.NBA.json",
+  "overlay.casual.json",
+  "players/HCF-1.json",
+  "players/HCF-11.json",
+  "players/NBA-1.json",
+  "players/NBA-10.json",
+  "players/NBA-11.json",
+  "players/NBA-6.json",
+  "players/NBA-8.json",
+  "players/NBA-9.json",
+  "recap.analyst.json",
+  "recap.casual.json",
+  "stats.json",
+  "timeline.json",
+  "manifest.json"
+ ]
+}

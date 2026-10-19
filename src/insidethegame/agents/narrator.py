@@ -228,6 +228,14 @@ def template_line(f: Fact, ctx: MatchContext, profile: str = "analyst") -> str:
             return f"{label}: {_scoreline(f, ctx)}."
         if f.kind == "momentum_swing":
             return f"{team} are on top now and pushing forward."
+        if f.kind == "kickoff":
+            return f"We're under way: {ctx.team_names[ctx.home]} v {ctx.team_names[ctx.away]}!"
+        if f.kind == "yellow_card":
+            return f"Booked: {name(0)} of {team}."
+        if f.kind == "red_card":
+            return f"Sent off! {name(0)} of {team} has to go."
+        if f.kind == "substitution":
+            return f"Change for {team}: {name(1)} comes on for {name(0)}."
         return f.summary
     if f.kind == "goal":
         return f"{rng.choice(_GOAL_OPENERS)} {f.summary}"

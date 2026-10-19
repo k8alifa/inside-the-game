@@ -80,23 +80,29 @@ def test_unset_provider_means_template(clean_env):
     assert models.make_chat_client() is None
 
 
-def test_github_provider_defaults(clean_env):
+def test_github_provider_is_retired_and_fails_fast(clean_env, monkeypatch):
+    import socket
+
+    def no_network(*a, **k):
+        raise AssertionError("network used")
+    monkeypatch.setattr(socket.socket, "connect", no_network)
     clean_env.setenv("ITG_MODEL_PROVIDER", "github")
     clean_env.setenv("GITHUB_TOKEN", "test-token")
-    client = models.make_chat_client()
-    assert type(client).__name__ == "ResilientOpenAIChatClient"
-    assert isinstance(client, ResilienceMixin)
-    assert client.model == "openai/gpt-4.1-mini"
-    assert str(client.client.base_url).rstrip("/") == "https://models.github.ai/inference"
-    assert client.client.max_retries == 0  # the guard owns retries
-
-
-def test_github_model_override_and_missing_token(clean_env):
-    clean_env.setenv("ITG_MODEL_PROVIDER", "github")
-    clean_env.setenv("ITG_MODEL", "openai/gpt-4.1")
-    assert models.provider_config().model == "openai/gpt-4.1"
-    with pytest.raises(RuntimeError, match="GITHUB_TOKEN"):
+    with pytest.raises(ModelUnavailable, match="retired on 2026-07-30; use ITG_MODEL_PROVIDER=foundry-local"):
         models.make_chat_client()
+    msgs = []
+    assert models.client_or_template(log=msgs.append) is None and "Continuing in template mode" in msgs[0]
+
+
+def test_openai_provider_uses_validated_client(clean_env):
+    clean_env.setenv("ITG_MODEL_PROVIDER", "openai")
+    clean_env.setenv("OPENAI_API_KEY", "k")
+    clean_env.setenv("ITG_MODEL", "some-model")
+    client = models.make_chat_client()
+    assert type(client).__name__ == "ResilientOpenAIChatClient" and isinstance(client, ResilienceMixin)
+    assert client.client.max_retries == 0  # the guard owns retries
+    hooks = client.client._client.event_hooks["response"]
+    assert any(h.__name__ == "_validate_http_response" for h in hooks)
 
 
 def test_other_providers_resolve_without_network(clean_env):

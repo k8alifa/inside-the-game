@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inside the Game: fan overlay</title>
+  <meta name="description" content="A personalized, fact-checked broadcast overlay for a synthetic football match.">
+  <link rel="stylesheet" href="overlay.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="brand">Inside the Game</h1>
+    <p class="brand-sub" id="match-title">Loading match…</p>
+    <a class="view-link" id="view-link" href="?view=compare">Compare analyst and casual</a>
+  </header>
+
+  <main>
+    <div class="stage" id="stage" aria-label="Broadcast overlay"></div>
+
+    <section class="controls" aria-label="Viewer and playback controls">
+      <div class="control-row">
+        <fieldset class="seg" id="profile-group">
+          <legend>Viewer</legend>
+          <button type="button" data-profile="analyst" aria-pressed="true">Analyst</button>
+          <button type="button" data-profile="casual" aria-pressed="false">Casual fan</button>
+        </fieldset>
+
+        <label class="field">Favourite club
+          <select id="fav-select"><option value="">None</option></select>
+        </label>
+
+        <label class="field">Focus player
+          <select id="player-select"><option value="">None</option></select>
+        </label>
+
+        <label class="field" id="lang-field">Language
+          <select id="lang-select">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="control-row playback">
+        <div class="buttons">
+          <button type="button" id="btn-restart" aria-label="Restart">⏮</button>
+          <button type="button" id="btn-play" aria-label="Play">⏯</button>
+          <button type="button" id="btn-next" aria-label="Jump to the next moment">⏭</button>
+        </div>
+        <fieldset class="seg" id="speed-group">
+          <legend>Speed</legend>
+          <button type="button" data-speed="1" aria-pressed="false">1×</button>
+          <button type="button" data-speed="10" aria-pressed="false">10×</button>
+          <button type="button" data-speed="60" aria-pressed="true">60×</button>
+          <button type="button" data-speed="120" aria-pressed="false">120×</button>
+        </fieldset>
+        <label class="scrub">
+          <span class="scrub-label">Minute <output id="scrub-out">0'</output></span>
+          <input type="range" id="scrub" min="0" max="95" step="1" value="0">
+        </label>
+      </div>
+      <p class="hint">Space plays or pauses. Arrow keys move one minute (Shift for five).</p>
+    </section>
+  </main>
+
+  <footer class="footer">Synthetic data. All clubs, players and events are invented.</footer>
+
+  <template id="pane-tpl">
+    <section class="pane">
+      <p class="pane-label"></p>
+      <div class="canvas">
+        <svg class="pitch" viewBox="0 0 160 90" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+          <g fill="none" stroke="currentColor" stroke-width="0.35">
+            <rect x="12" y="10" width="136" height="70"/>
+            <line x1="80" y1="10" x2="80" y2="80"/>
+            <circle cx="80" cy="45" r="9"/>
+            <rect x="12" y="27" width="20" height="36"/>
+            <rect x="128" y="27" width="20" height="36"/>
+            <rect x="12" y="37" width="7" height="16"/>
+            <rect x="141" y="37" width="7" height="16"/>
+          </g>
+        </svg>
+
+        <div class="scorebug" data-slot="score">
+          <span class="club home"><i class="chip"></i><b class="short"></b></span>
+          <span class="score"><b class="home-goals">0</b><span class="dash">-</span><b class="away-goals">0</b></span>
+          <span class="club away"><b class="short"></b><i class="chip"></i></span>
+          <span class="clock">0'</span>
+          <span class="period">Pre-match</span>
+        </div>
+        <div class="banner" data-slot="banner" hidden></div>
+
+        <div class="alert" data-slot="alert" hidden><span class="alert-kind"></span><p class="alert-text"></p></div>
+
+        <aside class="stats" data-slot="stats" hidden>
+          <div class="stat-row possession"><span class="label">Possession</span><div class="bar"><i class="h"></i><i class="a"></i></div><span class="vals"></span></div>
+          <div class="stat-row"><span class="label">Shots</span><span class="vals shots"></span></div>
+          <div class="stat-row"><span class="label">On target</span><span class="vals sot"></span></div>
+          <div class="stat-row"><span class="label">xG</span><span class="vals xg"></span></div>
+          <div class="stat-row momentum"><span class="label mom-label">Momentum</span><div class="bar"><i class="h"></i><i class="a"></i></div></div>
+          <p class="stats-note"></p>
+        </aside>
+
+        <aside class="card" data-slot="card" hidden>
+          <header><i class="chip"></i><b class="card-name"></b><span class="card-role"></span></header>
+          <dl class="card-grid"></dl>
+          <p class="card-line"></p>
+        </aside>
+
+        <div class="ticker" data-slot="ticker">
+          <i class="edge"></i>
+          <p class="ticker-text" aria-live="polite"></p>
+          <button type="button" class="proof" aria-expanded="false">Proof</button>
+          <div class="proof-pop" role="dialog" aria-label="Evidence for this line" hidden></div>
+        </div>
+      </div>
+    </section>
+  </template>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

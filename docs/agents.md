@@ -33,7 +33,7 @@ Deterministic code computes every fact from the raw events. Each fact has an id,
 
 Writes insights that cite fact ids. Two backends with one interface:
 
-- `LLMAnalyst`: an Agent Framework `Agent`. Sees the fact catalog, can call `get_fact_details` for figures, returns JSON claims. Model provider is a setting (`agents/models.py`): Foundry, any OpenAI-compatible endpoint, or none.
+- `LLMAnalyst`: an Agent Framework `Agent`. Sees the fact catalog, can call `get_fact_details` for figures, returns JSON claims. The model provider is a setting (`agents/models.py`): `foundry-local` (free, on your computer), `foundry` (Azure), any OpenAI-compatible endpoint, or none. `github` is retired (GitHub Models shut down on 2026-07-30) and falls back to templates without a network call.
 - `TemplateAnalyst`: offline stand-in with no model. Picks the most important facts, with variety.
 
 ## 3. Fact-checker (`agents/checker.py`)
@@ -44,6 +44,7 @@ Rebuilds the fact registry itself from the raw events, so it never trusts the an
 - any number in the text (digits, "one" to "twenty", "twice", "brace", "hat-trick"; idioms like "one of" and "no one" are skipped) does not match a cited figure at the precision written ("1.4" matches 1.38; "2" does not match 2.6)
 - it names a player, by full name, surname alone or first name alone, who is not in the cited facts (players from other clubs are blocked as not in this match)
 - it names a club that did not play, by full or short name ("Elmstead", "Kingsford")
+- it says a club won, lost, drew, leads or trails against the score: the latest score in a cited fact, else the final score, else the current score seen so far (live). "Won the ball", "won a corner" and "lost possession" are not results. Covered by 19 test cases (9 blocked, 9 allowed, 1 live).
 
 Rejected claims go back to the analyst with reasons for one revision round. Anything still wrong is kept out of the output and listed in the report as blocked.
 
@@ -57,9 +58,9 @@ Rejected claims go back to the analyst with reasons for one revision round. Anyt
 itg-analyze data/samples/NBA-HCF-7               # offline template analyst
 itg-analyze data/samples/NBA-HCF-7 --json        # full report with evidence ids
 
-# With a model (not yet run against a live endpoint)
-pip install -e ".[foundry]"
-ITG_MODEL_PROVIDER=foundry FOUNDRY_PROJECT_ENDPOINT=... FOUNDRY_MODEL=... itg-analyze data/samples/NBA-HCF-7
+# With a model (see docs/run-with-foundry-local.md; not yet run live)
+pip install -e ".[local]"
+ITG_MODEL_PROVIDER=foundry-local itg-analyze data/samples/NBA-HCF-7
 ```
 
 # Live narrator
@@ -104,4 +105,4 @@ itg-recap data/samples/NBA-HCF-7 --lang es
 
 # Model calls: resilience and fallback
 
-Every request to the model goes through `agents/resilience.py`: a prompt-size guard (about 7k tokens; batches are split and the fact list trimmed before this is ever hit), a daily cap (140 requests, persisted across runs), a rate limiter (12/min by default), a 15 s timeout (not retried), two retries with backoff on HTTP 429 or 5xx (a short Retry-After is honored; a long one, such as a daily quota, is not waited out), and a circuit breaker that skips the model after 3 failed calls in a row. Any failure falls back to the template output, which is marked `template-fallback` with the reason.
+Every request to the model goes through `agents/resilience.py`: a reply check (a 200 that is not chat-completion JSON, such as a bare `OK`, is rejected and never retried), a prompt-size guard (about 7k tokens; batches are split and the fact list trimmed before this is ever hit), a daily cap for hosted providers (140 requests, persisted across runs; not applied to Foundry Local), a rate limiter (12/min by default), a 15 s timeout (not retried), two retries with backoff on HTTP 429 or 5xx (a short Retry-After is honored; a long one, such as a daily quota, is not waited out), and a circuit breaker that skips the model after 3 failed calls in a row. Any failure falls back to the template output, which is marked `template-fallback` with the reason.

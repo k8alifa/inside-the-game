@@ -1,0 +1,654 @@
+{
+ "schema_version": 1,
+ "match_id": "NBA-HCF-7",
+ "player": {
+  "id": "NBA-1",
+  "name": "Pavel Selbourne",
+  "team": "NBA",
+  "role": "GK"
+ },
+ "card": [
+  {
+   "at_event": 423,
+   "touches": 1,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 1,
+   "key_passes": 0
+  },
+  {
+   "at_event": 475,
+   "touches": 2,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 0,
+   "saves": 2,
+   "key_passes": 0
+  },
+  {
+   "at_event": 620,
+   "touches": 3,
+   "passes_completed": 0,
+   "passes_attempted": 0,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 2,
+   "key_passes": 0
+  },
+  {
+   "at_event": 638,
+   "touches": 4,
+   "passes_completed": 1,
+   "passes_attempted": 1,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 2,
+   "key_passes": 0
+  },
+  {
+   "at_event": 910,
+   "touches": 5,
+   "passes_completed": 1,
+   "passes_attempted": 1,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 3,
+   "key_passes": 0
+  },
+  {
+   "at_event": 1117,
+   "touches": 6,
+   "passes_completed": 1,
+   "passes_attempted": 1,
+   "shots": 0,
+   "xg": 0.0,
+   "goals": 0,
+   "ball_wins": 1,
+   "saves": 4,
+   "key_passes": 0
+  }
+ ],
+ "items": {
+  "analyst": [
+   {
+    "id": "NBA-HCF-7:analyst:all:ticker:moment-423",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 423,
+    "period": 1,
+    "clock": 1433.1,
+    "display_clock": "24'",
+    "show_for_s": 5.6,
+    "slot": "ticker",
+    "kind": "save",
+    "text": "What a stop! Pavel Selbourne saved from Cal Fairbank at 24', a chance worth 0.33 xG.",
+    "translations": {
+     "es": {
+      "text": "What a stop! Pavel Selbourne saved from Cal Fairbank at 24', a chance worth 0.33 xG.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-423"
+    ],
+    "evidence": [
+     422,
+     423
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-1:card:player-NBA-1@423",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 423,
+    "period": 1,
+    "clock": 1433.1,
+    "display_clock": "24'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Pavel Selbourne: 1 save, 1 touch, 0/0 passes.",
+    "translations": {
+     "es": {
+      "text": "Pavel Selbourne: 1 save, 1 touch, 0/0 passes.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-1@423"
+    ],
+    "evidence": [
+     423
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:all:ticker:moment-475",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 475,
+    "period": 1,
+    "clock": 1623.3,
+    "display_clock": "28'",
+    "show_for_s": 5.6,
+    "slot": "ticker",
+    "kind": "save",
+    "text": "What a stop! Pavel Selbourne saved from Dario Langstone at 28', a chance worth 0.17 xG.",
+    "translations": {
+     "es": {
+      "text": "What a stop! Pavel Selbourne saved from Dario Langstone at 28', a chance worth 0.17 xG.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-475"
+    ],
+    "evidence": [
+     474,
+     475
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-1:card:player-NBA-1@475",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 475,
+    "period": 1,
+    "clock": 1623.3,
+    "display_clock": "28'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Pavel Selbourne: 2 saves, 2 touches, 0/0 passes.",
+    "translations": {
+     "es": {
+      "text": "Pavel Selbourne: 2 saves, 2 touches, 0/0 passes.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-1@475"
+    ],
+    "evidence": [
+     423,
+     475
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-1:card:player-NBA-1@803",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 803,
+    "period": 1,
+    "clock": 2767.2,
+    "display_clock": "45+2'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Pavel Selbourne: 2 saves, 4 touches, 1/1 passes.",
+    "translations": {
+     "es": {
+      "text": "Pavel Selbourne: 2 saves, 4 touches, 1/1 passes.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-1@803"
+    ],
+    "evidence": [
+     423,
+     475,
+     620,
+     638
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:all:ticker:moment-910",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 910,
+    "period": 2,
+    "clock": 355.5,
+    "display_clock": "51'",
+    "show_for_s": 5.6,
+    "slot": "ticker",
+    "kind": "save",
+    "text": "What a stop! Pavel Selbourne saved from Cal Fairbank at 51', a chance worth 0.25 xG.",
+    "translations": {
+     "es": {
+      "text": "What a stop! Pavel Selbourne saved from Cal Fairbank at 51', a chance worth 0.25 xG.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-910"
+    ],
+    "evidence": [
+     909,
+     910
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-1:card:player-NBA-1@910",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 910,
+    "period": 2,
+    "clock": 355.5,
+    "display_clock": "51'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Pavel Selbourne: 3 saves, 5 touches, 1/1 passes.",
+    "translations": {
+     "es": {
+      "text": "Pavel Selbourne: 3 saves, 5 touches, 1/1 passes.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-1@910"
+    ],
+    "evidence": [
+     423,
+     475,
+     620,
+     638,
+     910
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-1:card:player-NBA-1@1117",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1117,
+    "period": 2,
+    "clock": 1026.3,
+    "display_clock": "63'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Pavel Selbourne: 4 saves, 6 touches, 1/1 passes.",
+    "translations": {
+     "es": {
+      "text": "Pavel Selbourne: 4 saves, 6 touches, 1/1 passes.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-1@1117"
+    ],
+    "evidence": [
+     423,
+     475,
+     620,
+     638,
+     910,
+     1117
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:analyst:NBA-1:card:player-NBA-1@1629",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1629,
+    "period": 2,
+    "clock": 2968.2,
+    "display_clock": "90+5'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Pavel Selbourne: 4 saves, 6 touches, 1/1 passes.",
+    "translations": {
+     "es": {
+      "text": "Pavel Selbourne: 4 saves, 6 touches, 1/1 passes.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-1@1629"
+    ],
+    "evidence": [
+     423,
+     475,
+     620,
+     638,
+     910,
+     1117
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   }
+  ],
+  "casual": [
+   {
+    "id": "NBA-HCF-7:casual:all:ticker:moment-423",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 423,
+    "period": 1,
+    "clock": 1433.1,
+    "display_clock": "24'",
+    "show_for_s": 4.0,
+    "slot": "ticker",
+    "kind": "save",
+    "text": "Great save by Pavel Selbourne! Cal Fairbank is denied.",
+    "translations": {
+     "es": {
+      "text": "Great save by Pavel Selbourne! Cal Fairbank is denied.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-423"
+    ],
+    "evidence": [
+     422,
+     423
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-1:card:player-NBA-1@423",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 423,
+    "period": 1,
+    "clock": 1433.1,
+    "display_clock": "24'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Pavel Selbourne has made a save so far.",
+    "translations": {
+     "es": {
+      "text": "Pavel Selbourne has made a save so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-1@423"
+    ],
+    "evidence": [
+     423
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:all:ticker:moment-475",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 475,
+    "period": 1,
+    "clock": 1623.3,
+    "display_clock": "28'",
+    "show_for_s": 4.0,
+    "slot": "ticker",
+    "kind": "save",
+    "text": "Great save by Pavel Selbourne! Dario Langstone is denied.",
+    "translations": {
+     "es": {
+      "text": "Great save by Pavel Selbourne! Dario Langstone is denied.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-475"
+    ],
+    "evidence": [
+     474,
+     475
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-1:card:player-NBA-1@475",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 475,
+    "period": 1,
+    "clock": 1623.3,
+    "display_clock": "28'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Pavel Selbourne has made 2 saves so far.",
+    "translations": {
+     "es": {
+      "text": "Pavel Selbourne has made 2 saves so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-1@475"
+    ],
+    "evidence": [
+     423,
+     475
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-1:card:player-NBA-1@803",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 803,
+    "period": 1,
+    "clock": 2767.2,
+    "display_clock": "45+2'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Pavel Selbourne has made 2 saves so far.",
+    "translations": {
+     "es": {
+      "text": "Pavel Selbourne has made 2 saves so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-1@803"
+    ],
+    "evidence": [
+     423,
+     475,
+     620,
+     638
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:all:ticker:moment-910",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 910,
+    "period": 2,
+    "clock": 355.5,
+    "display_clock": "51'",
+    "show_for_s": 4.0,
+    "slot": "ticker",
+    "kind": "save",
+    "text": "Great save by Pavel Selbourne! Cal Fairbank is denied.",
+    "translations": {
+     "es": {
+      "text": "Great save by Pavel Selbourne! Cal Fairbank is denied.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "moment-910"
+    ],
+    "evidence": [
+     909,
+     910
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-1:card:player-NBA-1@910",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 910,
+    "period": 2,
+    "clock": 355.5,
+    "display_clock": "51'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Pavel Selbourne has made 3 saves so far.",
+    "translations": {
+     "es": {
+      "text": "Pavel Selbourne has made 3 saves so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-1@910"
+    ],
+    "evidence": [
+     423,
+     475,
+     620,
+     638,
+     910
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-1:card:player-NBA-1@1117",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1117,
+    "period": 2,
+    "clock": 1026.3,
+    "display_clock": "63'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Pavel Selbourne has made 4 saves so far.",
+    "translations": {
+     "es": {
+      "text": "Pavel Selbourne has made 4 saves so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-1@1117"
+    ],
+    "evidence": [
+     423,
+     475,
+     620,
+     638,
+     910,
+     1117
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-1:card:player-NBA-1@1629",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1629,
+    "period": 2,
+    "clock": 2968.2,
+    "display_clock": "90+5'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Pavel Selbourne has made 4 saves so far.",
+    "translations": {
+     "es": {
+      "text": "Pavel Selbourne has made 4 saves so far.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-1@1629"
+    ],
+    "evidence": [
+     423,
+     475,
+     620,
+     638,
+     910,
+     1117
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   }
+  ]
+ }
+}

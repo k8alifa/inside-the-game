@@ -13,9 +13,10 @@ Explainable, multi-agent match intelligence on synthetic football data. Built fo
 | Live narrator (fact-checked, safe fallback) | Done, offline |
 | Recap writer (fact-checked) | Done, offline |
 | Translator, English to Spanish (numbers and names re-checked) | Done; needs a model to run |
-| GitHub Models provider + resilience | Done; mocked tests only, no live run yet |
+| Model providers (Foundry Local, Foundry, OpenAI-compatible) + resilience | Done; mocked tests only, no live run yet |
 | Pre-generated demo bundle (`itg-bake`) | Done; current bundle is template mode |
-| Orchestration and hosting | Not started |
+| Fan overlay (static web, analyst/casual, favourite club, focus player, proof tooltips) | Done; template bundle |
+| Hosting (GitHub Pages workflow) | Next |
 
 ## Synthetic match generator
 
@@ -52,27 +53,14 @@ itg-recap data/samples/NBA-HCF-7 --lang es   # with a Spanish version (needs a m
 | `ITG_MODEL_PROVIDER` | What it uses | Cost | Needs | Status |
 |---|---|---|---|---|
 | *(unset)* | Offline templates | $0 | nothing | Tested |
-| `github` | GitHub Models, `openai/gpt-4.1-mini` by default (`ITG_MODEL` to change) | $0, free tier with rate limits | `GITHUB_TOKEN` with Models: read | Tested with a mocked model; no live run yet |
-| `openai` | Any OpenAI-compatible endpoint | depends | `OPENAI_API_KEY`, `ITG_MODEL`, optional `OPENAI_BASE_URL` | Untested live |
-| `foundry` | Microsoft Foundry project | Azure billing | `FOUNDRY_PROJECT_ENDPOINT`, `FOUNDRY_MODEL` | Untested live |
+| `foundry-local` (default for $0) | Microsoft Foundry Local on your computer, `phi-4-mini` by default (`ITG_MODEL` to change) | $0, no Azure account | `pip install -e ".[local]"` and Foundry Local installed | Mocked tests; run it with [docs/run-with-foundry-local.md](docs/run-with-foundry-local.md) |
+| `foundry` | Microsoft Foundry project on Azure (hosted) | Azure billing | `FOUNDRY_PROJECT_ENDPOINT`, `FOUNDRY_MODEL` | Untested live |
+| `openai` | Any OpenAI-compatible endpoint | depends | `OPENAI_API_KEY`, `ITG_MODEL`, optional `OPENAI_BASE_URL` | Mocked tests |
+| `github` | Retired: GitHub Models shut down on 2026-07-30 | n/a | n/a | Fails fast, falls back to templates |
 
-**$0 setup with GitHub Models**
+Every model reply must be real chat-completion JSON (`choices[0].message` with content or a tool call). Anything else, such as a bare `OK`, is rejected without retry and the template line is used.
 
-1. On GitHub: Settings › Developer settings › Fine-grained tokens › Generate new token. Under Account permissions, set **Models** to **Read**. No repository access is needed.
-2. Set the environment (see `.env.example`; never commit the token):
-   ```bash
-   pip install -e ".[openai]"
-   export ITG_MODEL_PROVIDER=github GITHUB_TOKEN=<your token>
-   ```
-3. Run it:
-   ```bash
-   itg-live data/samples/NBA-HCF-7 --speed 0
-   itg-recap data/samples/NBA-HCF-7 --lang es
-   ```
-
-**Resilience:** every model request is rate limited (`ITG_MODEL_RPM`, default 12/min), has a timeout (`ITG_MODEL_TIMEOUT`, default 15 s), and is retried twice with backoff on HTTP 429 or 5xx. Prompts are kept under about 7k tokens (`ITG_MODEL_MAX_PROMPT_TOKENS`) by splitting batches and trimming the fact list. A daily counter stops model calls at 140 (`ITG_MODEL_DAILY_CAP`, counted in `ITG_USAGE_FILE`, default `~/.cache/insidethegame/model-usage.json`, reset at midnight UTC). If anything fails, the template line is used and marked `template-fallback`. After 3 failed calls in a row the model is skipped for the rest of the run.
-
-GitHub Models free tier for `gpt-4.1-mini` (Low tier): 15 requests/min, 150/day, 8k input and 4k output tokens per request, 5 concurrent.
+**Resilience:** every model request is rate limited (`ITG_MODEL_RPM`, default 12/min), has a timeout (`ITG_MODEL_TIMEOUT`, default 15 s), and is retried twice with backoff on HTTP 429 or 5xx. Prompts are kept under about 7k tokens (`ITG_MODEL_MAX_PROMPT_TOKENS`) by splitting batches and trimming the fact list. A daily counter stops hosted model calls at 140 (`ITG_MODEL_DAILY_CAP`, counted in `ITG_USAGE_FILE`, default `~/.cache/insidethegame/model-usage.json`, reset at midnight UTC; not applied to `foundry-local`). If anything fails, the template line is used and marked `template-fallback`. After 3 failed calls in a row the model is skipped for the rest of the run.
 
 **Languages:** English (primary) and Spanish (`--lang es`). Names are never translated.
 
@@ -93,10 +81,27 @@ itg-bake --match data/samples/NBA-HCF-7 --profiles analyst,casual --langs en,es 
 
 Narration and translation are batched, so a two-profile, two-language bake takes about 12 model calls with no revisions (more if the model calls tools or the checker sends drafts back). The copy in `data/baked/NBA-HCF-7/` was baked in template mode; rebake with a model before recording the demo.
 
+## Run the demo locally
+
+```bash
+itg-bake --match data/samples/NBA-HCF-7 --web
+python -m http.server -d web 8000
+```
+
+Open http://localhost:8000/ for the overlay and http://localhost:8000/?view=compare for analyst and casual side by side. Hover **Proof** on any line to see its facts and match events. Details: [docs/overlay.md](docs/overlay.md).
+
+![Compare view](docs/img/overlay-compare.png)
+
+## Deploy to GitHub Pages
+
+Serve the `web/` folder as a static site. Everything it loads is a relative path inside `web/`, so a project sub-path such as `https://<user>.github.io/inside-the-game/` works. The bundle holds only synthetic data and verified text: no keys, no tokens, no raw files. The Pages workflow itself comes next.
+
 ## Tests
 
 ```bash
-pytest
+pip install -e ".[dev]"
+pytest -q                               # browser tests skip without Playwright
+node --test web/tests/engine.test.mjs   # playback logic, if Node is installed
 ```
 
 ## License

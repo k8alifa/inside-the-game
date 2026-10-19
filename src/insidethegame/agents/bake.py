@@ -25,7 +25,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 from .facts import build_facts, load_match
-from .models import make_chat_client, model_guard, provider_config
+from .models import client_or_template, model_guard, provider_config
 from .narrator import LLMNarrator, TemplateNarrator, narrate_all
 from .recap import LLMRecapWriter, TemplateRecapWriter, write_recap
 from .translator import Translator, parse_langs
@@ -54,19 +54,22 @@ async def _translate(translator, texts: list[str], langs: list[str], ctx) -> lis
 
 
 async def bake(match_dir: str | Path, out_dir: str | Path, profiles: list[str], langs: list[str],
-               client=None, recap_paragraphs: int = 8) -> dict:
+               client=None, recap_paragraphs: int = 8, web_out: str | Path | None = None) -> dict:
     events, ctx = load_match(match_dir)
     out = Path(out_dir)
     out.mkdir(parents=True, exist_ok=True)
     targets = parse_langs(",".join(langs))
     translator = Translator(client) if client else None
     sources: Counter = Counter()
-    translations: Counter = Counter()
+    lang_counts: dict[str, Counter] = {lang: Counter() for lang in targets}
+    english_lines = 0
 
     facts = build_facts(events, ctx)
     (out / "facts.json").write_text(json.dumps({k: f.to_dict() for k, f in facts.items()}, indent=1))
 
     files = {}
+    narration: dict[str, list[dict]] = {}
+    recaps: dict[str, dict] = {}
     for profile in profiles:
         narrator = LLMNarrator(client, profile) if client else TemplateNarrator(profile)
         lines = await narrate_all(events, ctx, narrator)
@@ -74,8 +77,11 @@ async def bake(match_dir: str | Path, out_dir: str | Path, profiles: list[str], 
         rows = []
         for line, tr in zip(lines, trans):
             sources[line.source] += 1
-            translations.update(_status(t) for t in tr.values())
+            english_lines += 1
+            for lang, t in tr.items():
+                lang_counts[lang][_status(t)] += 1
             rows.append({**line.to_dict(), "translations": tr})
+        narration[profile] = rows
         name = f"narration.{profile}.json"
         (out / name).write_text(json.dumps({"schema_version": SCHEMA_VERSION, "match_id": ctx.match_id,
                                             "profile": profile, "lines": rows}, indent=1, ensure_ascii=False))
@@ -88,33 +94,49 @@ async def bake(match_dir: str | Path, out_dir: str | Path, profiles: list[str], 
         recap_rows = []
         for v, tr in zip(items, trans):
             sources[v.claim.source] += 1
-            translations.update(_status(t) for t in tr.values())
+            english_lines += 1
+            for lang, t in tr.items():
+                lang_counts[lang][_status(t)] += 1
             recap_rows.append({**v.to_dict(), "translations": tr})
         headline = next((r for r in recap_rows if r["kind"] == "headline"), None)
         name = f"recap.{profile}.json"
-        (out / name).write_text(json.dumps({
+        recaps[profile] = {
             "schema_version": SCHEMA_VERSION, "match_id": ctx.match_id, "profile": profile,
             "headline": headline, "paragraphs": [r for r in recap_rows if r is not headline],
             "blocked": [v.to_dict() for v in report.rejected], "rounds": report.rounds,
-        }, indent=1, ensure_ascii=False))
+        }
+        (out / name).write_text(json.dumps(recaps[profile], indent=1, ensure_ascii=False))
         files[name] = len(recap_rows)
 
     cfg = provider_config()
+    langs_status = {"en": "verified"}
+    lang_detail = {"en": {"verified": english_lines}}
+    for lang, c in lang_counts.items():
+        ok, total = c.get("ok", 0), sum(c.values())
+        langs_status[lang] = "verified" if total and ok == total else ("partial" if ok else "unavailable")
+        lang_detail[lang] = dict(sorted(c.items()))
     manifest = {
         "schema_version": SCHEMA_VERSION,
         "match_id": ctx.match_id,
         "teams": ctx.team_names,
-        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        # Template bakes are deterministic, so they carry no timestamp (no git churn on re-bake).
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds") if client else None,
         "provider": cfg.provider if client else "template",
         "model": cfg.model if client else None,
         "profiles": profiles,
-        "langs": ["en", *targets],
+        "langs": langs_status,  # "verified" | "partial" | "unavailable" per language
         "files": files,
-        "counts": {"sources": dict(sources), "translations": dict(translations)},
+        "counts": {"sources": dict(sorted(sources.items())), "langs": lang_detail},
         "model_calls": dict(model_guard().stats) if client else {},
         "disclaimer": "Synthetic data. All clubs, players and events are invented.",
     }
     (out / "manifest.json").write_text(json.dumps(manifest, indent=1))
+    if web_out is not None:
+        from ..personalize.web_bundle import write_web_bundle
+
+        write_web_bundle(match_dir, web_out, narration, recaps,
+                         {"langs": langs_status, "provider": manifest["provider"], "model": manifest["model"],
+                          "generated_at": manifest["generated_at"]})
     return manifest
 
 
@@ -122,23 +144,28 @@ def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser(prog="itg-bake", description="Pre-generate verified demo outputs")
     p.add_argument("--match", required=True, help="match folder with events.jsonl and match.json")
     p.add_argument("--profiles", default="analyst,casual")
-    p.add_argument("--langs", default="en", help="en and/or es")
-    p.add_argument("--out", required=True)
+    p.add_argument("--langs", default="en,es", help="en and/or es (Spanish needs a model to be verified)")
+    p.add_argument("--out", default=None, help="bake folder (default data/baked/<match_id>)")
     p.add_argument("--paragraphs", type=int, default=8)
+    p.add_argument("--web", nargs="?", const="web/data", default=None,
+                   help="also write the static overlay bundle (default folder web/data)")
     args = p.parse_args(argv)
     try:
         parse_langs(args.langs)
     except ValueError as e:
         p.error(str(e))
-    client = make_chat_client()
+    client = client_or_template()
+    if args.out is None:
+        args.out = str(Path("data/baked") / Path(args.match).resolve().name)
     m = asyncio.run(bake(args.match, args.out, [x for x in args.profiles.split(",") if x],
-                         [x for x in args.langs.split(",") if x], client, args.paragraphs))
+                         [x for x in args.langs.split(",") if x], client, args.paragraphs, args.web))
     print(f"Baked {m['match_id']} with {m['provider']}{' / ' + m['model'] if m['model'] else ''} -> {args.out}")
     print(f"  lines by source: {m['counts']['sources']}")
-    if m["counts"]["translations"]:
-        print(f"  translations: {m['counts']['translations']}")
+    print(f"  languages: {m['langs']}  {m['counts']['langs']}")
     if m["model_calls"]:
         print(f"  model calls: {m['model_calls']}")
+    if args.web:
+        print(f"  web bundle: {Path(args.web) / m['match_id']}")
     return 0
 
 
