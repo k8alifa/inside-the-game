@@ -125,7 +125,8 @@ REQUIRED_PARA = {"text", "fact_ids", "kind", "order", "source", "verified", "evi
 def validate_bundle(out: Path, profiles, langs):
     m = json.loads((out / "manifest.json").read_text())
     assert m["schema_version"] == SCHEMA_VERSION and m["match_id"] == "NBA-HCF-7"
-    assert m["profiles"] == profiles and m["langs"][0] == "en"
+    assert m["profiles"] == profiles and m["langs"]["en"] == "verified"
+    assert set(m["langs"]) == set(langs) and set(m["counts"]["langs"]) == set(langs)
     facts = json.loads((out / "facts.json").read_text())
     for p in profiles:
         n = json.loads((out / f"narration.{p}.json").read_text())
@@ -149,7 +150,8 @@ def test_bake_template_schema(tmp_path):
     m = asyncio.run(bake(SAMPLE, tmp_path, ["analyst", "casual"], ["en", "es"]))
     validate_bundle(tmp_path, ["analyst", "casual"], ["en", "es"])
     assert m["provider"] == "template" and set(m["counts"]["sources"]) == {"template"}
-    assert set(m["counts"]["translations"]) == {"unavailable"}
+    assert m["langs"]["es"] == "unavailable" and set(m["counts"]["langs"]["es"]) == {"unavailable"}
+    assert m["generated_at"] is None  # deterministic template bake
 
 
 class FakeModel(BaseChatClient):
@@ -181,7 +183,7 @@ def test_bake_with_model_schema_and_counts(tmp_path):
     assert sum(l["source"] == "template-fallback" for l in n) == batches  # the 99th-goal lines
     assert sum(l["source"] == "model" for l in n) == len(n) - batches
     assert all("number '99'" in l["blocked"][0] for l in n if l["source"] == "template-fallback")
-    assert m["counts"]["translations"].get("ok", 0) > 0
+    assert m["counts"]["langs"]["es"].get("ok", 0) > 0 and m["langs"]["es"] in ("verified", "partial")
     first_model = next(l for l in n if l["source"] == "model")
     assert first_model["translations"]["es"]["ok"] and set(first_model["translations"]) == {"es"}
 

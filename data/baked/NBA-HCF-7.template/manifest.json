@@ -1,0 +1,40 @@
+{
+ "schema_version": 1,
+ "match_id": "NBA-HCF-7",
+ "teams": {
+  "NBA": "Northbridge Athletic",
+  "HCF": "Harbor City FC"
+ },
+ "generated_at": null,
+ "provider": "template",
+ "model": null,
+ "profiles": [
+  "analyst",
+  "casual"
+ ],
+ "langs": {
+  "en": "verified",
+  "es": "unavailable"
+ },
+ "files": {
+  "narration.analyst.json": 24,
+  "recap.analyst.json": 9,
+  "narration.casual.json": 24,
+  "recap.casual.json": 7
+ },
+ "counts": {
+  "sources": {
+   "template": 64
+  },
+  "langs": {
+   "en": {
+    "verified": 64
+   },
+   "es": {
+    "unavailable": 64
+   }
+  }
+ },
+ "model_calls": {},
+ "disclaimer": "Synthetic data. All clubs, players and events are invented."
+}
