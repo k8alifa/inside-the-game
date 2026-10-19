@@ -124,7 +124,7 @@ def build_card(events: list[Event], ctx: MatchContext, pid: str) -> PlayerCard:
         if involved:
             card.snapshots.append({"at_event": e.event_id, **t.figures()})
         reason = None
-        if e.player == pid and e.type in ("shot", "save"):
+        if e.player == pid and e.type in ("shot", "goal", "save"):
             reason = e.type
         elif e.player == pid and e.type == "pass" and e.event_id in kp_ids:
             reason = "key_pass"

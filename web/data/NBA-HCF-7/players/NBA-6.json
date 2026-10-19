@@ -1607,6 +1607,46 @@
     "boost": false
    },
    {
+    "id": "NBA-HCF-7:analyst:NBA-6:card:player-NBA-6@254",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 254,
+    "period": 1,
+    "clock": 804.1,
+    "display_clock": "14'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Finn Holloway: 23 touches, 12/12 passes, 1 shot (0.01 xG), 1 goal, 0 key passes, 1 ball win.",
+    "translations": {
+     "es": {
+      "text": "Finn Holloway: 23 touches, 12/12 passes, 1 shot (0.01 xG), 1 goal, 0 key passes, 1 ball win.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-6@254"
+    ],
+    "evidence": [
+     204,
+     205,
+     212,
+     213,
+     214,
+     216,
+     219,
+     228,
+     231,
+     232,
+     253,
+     254
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
     "id": "NBA-HCF-7:analyst:NBA-6:card:player-NBA-6@310",
     "match_id": "NBA-HCF-7",
     "profile": "analyst",
@@ -1872,6 +1912,46 @@
     ],
     "evidence": [
      252,
+     253,
+     254
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-6:card:player-NBA-6@254",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 254,
+    "period": 1,
+    "clock": 804.1,
+    "display_clock": "14'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Finn Holloway is on the scoresheet today.",
+    "translations": {
+     "es": {
+      "text": "Finn Holloway is on the scoresheet today.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-6@254"
+    ],
+    "evidence": [
+     204,
+     205,
+     212,
+     213,
+     214,
+     216,
+     219,
+     228,
+     231,
+     232,
      253,
      254
     ],

@@ -499,6 +499,44 @@
   "minute": 62,
   "importance": 0.0
  },
+ "player-HCF-11@1120": {
+  "id": "player-HCF-11@1120",
+  "kind": "player_card",
+  "summary": "Cal Fairbank: 46 touches, 12/21 passes, 3 shots (0.71 xG), 1 goals, 2 ball wins, 0 saves.",
+  "figures": {
+   "touches": 46,
+   "passes_completed": 12,
+   "passes_attempted": 21,
+   "shots": 3,
+   "xg": 0.71,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 2
+  },
+  "players": [
+   "HCF-11"
+  ],
+  "teams": [
+   "HCF"
+  ],
+  "evidence": [
+   791,
+   807,
+   808,
+   809,
+   811,
+   812,
+   885,
+   909,
+   944,
+   1019,
+   1119,
+   1120
+  ],
+  "minute": 62,
+  "importance": 0.0
+ },
  "player-HCF-11@1479": {
   "id": "player-HCF-11@1479",
   "kind": "player_card",
@@ -1004,6 +1042,44 @@
   "minute": 91,
   "importance": 0.0
  },
+ "player-NBA-10@1608": {
+  "id": "player-NBA-10@1608",
+  "kind": "player_card",
+  "summary": "Kai Underhill: 129 touches, 74/88 passes, 2 shots (0.73 xG), 1 goals, 17 ball wins, 0 saves.",
+  "figures": {
+   "touches": 129,
+   "passes_completed": 74,
+   "passes_attempted": 88,
+   "shots": 2,
+   "xg": 0.73,
+   "goals": 1,
+   "ball_wins": 17,
+   "saves": 0,
+   "key_passes": 3
+  },
+  "players": [
+   "NBA-10"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   1512,
+   1517,
+   1524,
+   1531,
+   1532,
+   1548,
+   1556,
+   1560,
+   1570,
+   1605,
+   1607,
+   1608
+  ],
+  "minute": 91,
+  "importance": 0.0
+ },
  "player-NBA-10@1629": {
   "id": "player-NBA-10@1629",
   "kind": "player_card",
@@ -1373,6 +1449,44 @@
    762,
    784,
    793
+  ],
+  "minute": 44,
+  "importance": 0.0
+ },
+ "player-NBA-11@794": {
+  "id": "player-NBA-11@794",
+  "kind": "player_card",
+  "summary": "Jonah Haldane: 32 touches, 20/22 passes, 2 shots (0.09 xG), 1 goals, 2 ball wins, 0 saves.",
+  "figures": {
+   "touches": 32,
+   "passes_completed": 20,
+   "passes_attempted": 22,
+   "shots": 2,
+   "xg": 0.09,
+   "goals": 1,
+   "ball_wins": 2,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-11"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   577,
+   597,
+   647,
+   709,
+   710,
+   711,
+   752,
+   753,
+   762,
+   784,
+   793,
+   794
   ],
   "minute": 44,
   "importance": 0.0
@@ -1781,6 +1895,44 @@
    231,
    232,
    253
+  ],
+  "minute": 13,
+  "importance": 0.0
+ },
+ "player-NBA-6@254": {
+  "id": "player-NBA-6@254",
+  "kind": "player_card",
+  "summary": "Finn Holloway: 23 touches, 12/12 passes, 1 shots (0.01 xG), 1 goals, 1 ball wins, 0 saves.",
+  "figures": {
+   "touches": 23,
+   "passes_completed": 12,
+   "passes_attempted": 12,
+   "shots": 1,
+   "xg": 0.01,
+   "goals": 1,
+   "ball_wins": 1,
+   "saves": 0,
+   "key_passes": 0
+  },
+  "players": [
+   "NBA-6"
+  ],
+  "teams": [
+   "NBA"
+  ],
+  "evidence": [
+   204,
+   205,
+   212,
+   213,
+   214,
+   216,
+   219,
+   228,
+   231,
+   232,
+   253,
+   254
   ],
   "minute": 13,
   "importance": 0.0

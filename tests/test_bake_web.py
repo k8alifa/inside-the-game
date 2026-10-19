@@ -48,6 +48,11 @@ def test_template_bundle_is_byte_identical_across_runs(tmp_path):
 
 def test_committed_web_bundle_is_current(tmp_path):
     """web/data in the repo equals a fresh template bake (re-run itg-bake --web if this fails)."""
+    import json
+    import pytest
+    committed_manifest = json.loads((ROOT / "web" / "data" / "NBA-HCF-7" / "manifest.json").read_text())
+    if committed_manifest.get("provider") != "template":
+        pytest.skip("committed web bundle is a live (model) bake; template comparison does not apply")
     fresh = run(tmp_path, "fresh") / "NBA-HCF-7"
     committed = ROOT / "web" / "data" / "NBA-HCF-7"
     for f in sorted(fresh.rglob("*.json")):

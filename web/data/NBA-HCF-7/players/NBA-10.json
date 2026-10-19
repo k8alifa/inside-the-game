@@ -1908,6 +1908,46 @@
     "boost": false
    },
    {
+    "id": "NBA-HCF-7:analyst:NBA-10:card:player-NBA-10@1608",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1608,
+    "period": 2,
+    "clock": 2796.1,
+    "display_clock": "90+2'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill: 129 touches, 74/88 passes, 2 shots (0.73 xG), 1 goal, 3 key passes, 17 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill: 129 touches, 74/88 passes, 2 shots (0.73 xG), 1 goal, 3 key passes, 17 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@1608"
+    ],
+    "evidence": [
+     1512,
+     1517,
+     1524,
+     1531,
+     1532,
+     1548,
+     1556,
+     1560,
+     1570,
+     1605,
+     1607,
+     1608
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
     "id": "NBA-HCF-7:analyst:NBA-10:card:player-NBA-10@1629",
     "match_id": "NBA-HCF-7",
     "profile": "analyst",
@@ -2242,6 +2282,46 @@
     ],
     "evidence": [
      1606,
+     1607,
+     1608
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-10:card:player-NBA-10@1608",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1608,
+    "period": 2,
+    "clock": 2796.1,
+    "display_clock": "90+2'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Kai Underhill is on the scoresheet today.",
+    "translations": {
+     "es": {
+      "text": "Kai Underhill is on the scoresheet today.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-10@1608"
+    ],
+    "evidence": [
+     1512,
+     1517,
+     1524,
+     1531,
+     1532,
+     1548,
+     1556,
+     1560,
+     1570,
+     1605,
      1607,
      1608
     ],

@@ -1147,6 +1147,46 @@
     "boost": false
    },
    {
+    "id": "NBA-HCF-7:analyst:NBA-11:card:player-NBA-11@794",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 794,
+    "period": 1,
+    "clock": 2678.5,
+    "display_clock": "45'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane: 32 touches, 20/22 passes, 2 shots (0.09 xG), 1 goal, 0 key passes, 2 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane: 32 touches, 20/22 passes, 2 shots (0.09 xG), 1 goal, 0 key passes, 2 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@794"
+    ],
+    "evidence": [
+     577,
+     597,
+     647,
+     709,
+     710,
+     711,
+     752,
+     753,
+     762,
+     784,
+     793,
+     794
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
     "id": "NBA-HCF-7:analyst:NBA-11:card:player-NBA-11@803",
     "match_id": "NBA-HCF-7",
     "profile": "analyst",
@@ -1474,6 +1514,46 @@
      "moment-794"
     ],
     "evidence": [
+     793,
+     794
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:NBA-11:card:player-NBA-11@794",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 794,
+    "period": 1,
+    "clock": 2678.5,
+    "display_clock": "45'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Jonah Haldane is on the scoresheet today.",
+    "translations": {
+     "es": {
+      "text": "Jonah Haldane is on the scoresheet today.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-NBA-11@794"
+    ],
+    "evidence": [
+     577,
+     597,
+     647,
+     709,
+     710,
+     711,
+     752,
+     753,
+     762,
+     784,
      793,
      794
     ],

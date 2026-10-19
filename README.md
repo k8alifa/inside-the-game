@@ -15,7 +15,8 @@ Explainable, multi-agent match intelligence on synthetic football data. Built fo
 | Translator, English to Spanish (numbers and names re-checked) | Done; needs a model to run |
 | Model providers (Foundry Local, Foundry, OpenAI-compatible) + resilience | Done; mocked tests only, no live run yet |
 | Pre-generated demo bundle (`itg-bake`) | Done; current bundle is template mode |
-| Orchestration and hosting | Not started |
+| Fan overlay (static web, analyst/casual, favourite club, focus player, proof tooltips) | Done; template bundle |
+| Hosting (GitHub Pages workflow) | Next |
 
 ## Synthetic match generator
 
@@ -80,10 +81,27 @@ itg-bake --match data/samples/NBA-HCF-7 --profiles analyst,casual --langs en,es 
 
 Narration and translation are batched, so a two-profile, two-language bake takes about 12 model calls with no revisions (more if the model calls tools or the checker sends drafts back). The copy in `data/baked/NBA-HCF-7/` was baked in template mode; rebake with a model before recording the demo.
 
+## Run the demo locally
+
+```bash
+itg-bake --match data/samples/NBA-HCF-7 --web
+python -m http.server -d web 8000
+```
+
+Open http://localhost:8000/ for the overlay and http://localhost:8000/?view=compare for analyst and casual side by side. Hover **Proof** on any line to see its facts and match events. Details: [docs/overlay.md](docs/overlay.md).
+
+![Compare view](docs/img/overlay-compare.png)
+
+## Deploy to GitHub Pages
+
+Serve the `web/` folder as a static site. Everything it loads is a relative path inside `web/`, so a project sub-path such as `https://<user>.github.io/inside-the-game/` works. The bundle holds only synthetic data and verified text: no keys, no tokens, no raw files. The Pages workflow itself comes next.
+
 ## Tests
 
 ```bash
-pytest
+pip install -e ".[dev]"
+pytest -q                               # browser tests skip without Playwright
+node --test web/tests/engine.test.mjs   # playback logic, if Node is installed
 ```
 
 ## License

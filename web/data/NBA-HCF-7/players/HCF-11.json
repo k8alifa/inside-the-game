@@ -1006,6 +1006,46 @@
     "boost": false
    },
    {
+    "id": "NBA-HCF-7:analyst:HCF-11:card:player-HCF-11@1120",
+    "match_id": "NBA-HCF-7",
+    "profile": "analyst",
+    "lang": "en",
+    "at_event": 1120,
+    "period": 2,
+    "clock": 1044.7,
+    "display_clock": "63'",
+    "show_for_s": 6.3,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank: 46 touches, 12/21 passes, 3 shots (0.71 xG), 1 goal, 2 key passes, 2 ball wins.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank: 46 touches, 12/21 passes, 3 shots (0.71 xG), 1 goal, 2 key passes, 2 ball wins.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@1120"
+    ],
+    "evidence": [
+     791,
+     807,
+     808,
+     809,
+     811,
+     812,
+     885,
+     909,
+     944,
+     1019,
+     1119,
+     1120
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
     "id": "NBA-HCF-7:analyst:HCF-11:card:player-HCF-11@1479",
     "match_id": "NBA-HCF-7",
     "profile": "analyst",
@@ -1402,6 +1442,46 @@
      "moment-1120"
     ],
     "evidence": [
+     1119,
+     1120
+    ],
+    "source": "template",
+    "blocked": [],
+    "boost": false
+   },
+   {
+    "id": "NBA-HCF-7:casual:HCF-11:card:player-HCF-11@1120",
+    "match_id": "NBA-HCF-7",
+    "profile": "casual",
+    "lang": "en",
+    "at_event": 1120,
+    "period": 2,
+    "clock": 1044.7,
+    "display_clock": "63'",
+    "show_for_s": 4.0,
+    "slot": "card",
+    "kind": "player_card",
+    "text": "Cal Fairbank is on the scoresheet today.",
+    "translations": {
+     "es": {
+      "text": "Cal Fairbank is on the scoresheet today.",
+      "ok": false
+     }
+    },
+    "fact_ids": [
+     "player-HCF-11@1120"
+    ],
+    "evidence": [
+     791,
+     807,
+     808,
+     809,
+     811,
+     812,
+     885,
+     909,
+     944,
+     1019,
      1119,
      1120
     ],
